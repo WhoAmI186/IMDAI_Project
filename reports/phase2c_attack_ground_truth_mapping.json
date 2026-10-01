@@ -1,0 +1,546 @@
+{
+  "metadata": {
+    "database": "dataset/merged_datasets.duckdb",
+    "impact_database": "dataset/impact_assessment.duckdb",
+    "timestamp_utc_audit": "2026-09-29T01:15:00Z",
+    "description": "Read-only audit of attack ground truth and process telemetry alignment for Phase 2C.4.1"
+  },
+  "runs": {
+    "20260225_normal": {
+      "dataset_id": "21c851bc-384f-5b81-8747-6dcacdceff35",
+      "run_type": "normal_baseline",
+      "process_telemetry": {
+        "pv_rows": 11992,
+        "wind_rows": 11992,
+        "battery_rows": 11992,
+        "demand_rows": 6310,
+        "earliest_ts": "2026-02-25 22:02:01.852703+05:30",
+        "latest_ts": "2026-02-25 23:47:11.926490+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525491,
+          "mean": 0.5262341578684013,
+          "min": 0.522036,
+          "max": 0.545777
+        },
+        "sequence_60_duration_sec": 31.529460000000004
+      }
+    },
+    "20260228_multi_openai": {
+      "dataset_id": "12f0d001-77a0-5d04-8adf-6d002702478b",
+      "run_type": "attack_run",
+      "process_telemetry": {
+        "pv_rows": 31084,
+        "wind_rows": 31084,
+        "battery_rows": 31084,
+        "demand_rows": 16360,
+        "earliest_ts": "2026-03-01 03:08:43.597945+05:30",
+        "latest_ts": "2026-03-01 07:41:24.448789+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525412,
+          "mean": 0.526360095357591,
+          "min": 0.522052,
+          "max": 0.552879
+        },
+        "sequence_60_duration_sec": 31.52472
+      },
+      "attack_sessions": {
+        "session_count": 149,
+        "attacker_model": "openai/gpt-5.3-codex",
+        "coordinated_count": 26,
+        "single_agent_count": 123,
+        "target_states": {
+          "Manipulation of Monitoring Data": 35,
+          "Battery Storage Mismanagement": 31,
+          "Manipulation of Control Commands": 31,
+          "Compromise of Remote Connections to Control Center": 28,
+          "Compromise of Maintenance Capabilities": 24
+        }
+      },
+      "execution_steps": {
+        "total_steps": 411,
+        "valid_steps_with_bounds": 411,
+        "missing_bounds_steps": 0,
+        "earliest_step_start": "2026-03-01 03:21:37.310409+05:30",
+        "latest_step_stop": "2026-03-01 07:26:46.583908+05:30",
+        "durations_sec": {
+          "median": 9.800667,
+          "mean": 26.604684591240876,
+          "p25": 7.606927000000001,
+          "p75": 49.999471,
+          "min": 2.60056,
+          "max": 79.99936
+        }
+      },
+      "temporal_alignment": {
+        "steps_overlapping_process": 411,
+        "steps_outside_process": 0,
+        "overlap_percentage": 100.0,
+        "clean_lead_in_margin_sec": 773.712464,
+        "clean_lead_in_margin_min": 12.9,
+        "clean_lead_out_margin_sec": 877.864881,
+        "clean_lead_out_margin_min": 14.63
+      },
+      "packet_modifications": {
+        "explicit_modified_packets": 2332
+      },
+      "physical_impact_ground_truth": {
+        "evaluated_steps": 233,
+        "physically_impactful_steps": 77,
+        "physical_impact_rate_pct": 33.05,
+        "subsystem_breakdown": {
+          "wind_process_data": 115,
+          "battery_process_data": 85,
+          "pv_process_data": 33
+        }
+      }
+    },
+    "20260301_multi_google": {
+      "dataset_id": "cb4f94e7-6470-544e-bc72-9184d54f4ee1",
+      "run_type": "attack_run",
+      "process_telemetry": {
+        "pv_rows": 42027,
+        "wind_rows": 42027,
+        "battery_rows": 42027,
+        "demand_rows": 22115,
+        "earliest_ts": "2026-03-01 08:53:56.312589+05:30",
+        "latest_ts": "2026-03-01 15:02:31.470258+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525445,
+          "mean": 0.5262256143577785,
+          "min": 0.521574,
+          "max": 0.547532
+        },
+        "sequence_60_duration_sec": 31.5267
+      },
+      "attack_sessions": {
+        "session_count": 54,
+        "attacker_model": "google/gemini-3.1-pro-preview",
+        "coordinated_count": 13,
+        "single_agent_count": 41,
+        "target_states": {
+          "Compromise of Maintenance Capabilities": 16,
+          "Manipulation of Control Commands": 11,
+          "Manipulation of Monitoring Data": 10,
+          "Battery Storage Mismanagement": 10,
+          "Compromise of Remote Connections to Control Center": 7
+        }
+      },
+      "execution_steps": {
+        "total_steps": 172,
+        "valid_steps_with_bounds": 172,
+        "missing_bounds_steps": 0,
+        "earliest_step_start": "2026-03-01 09:06:09.858014+05:30",
+        "latest_step_stop": "2026-03-01 10:49:30.720288+05:30",
+        "durations_sec": {
+          "median": 15.000948000000001,
+          "mean": 16.374422523255816,
+          "p25": 10.00104475,
+          "p75": 20.000573499999998,
+          "min": 2.998496,
+          "max": 45.004103
+        }
+      },
+      "temporal_alignment": {
+        "steps_overlapping_process": 172,
+        "steps_outside_process": 0,
+        "overlap_percentage": 100.0,
+        "clean_lead_in_margin_sec": 733.545425,
+        "clean_lead_in_margin_min": 12.23,
+        "clean_lead_out_margin_sec": 15180.74997,
+        "clean_lead_out_margin_min": 253.01
+      },
+      "packet_modifications": {
+        "explicit_modified_packets": 1651
+      },
+      "physical_impact_ground_truth": {
+        "evaluated_steps": 89,
+        "physically_impactful_steps": 15,
+        "physical_impact_rate_pct": 16.85,
+        "subsystem_breakdown": {
+          "wind_process_data": 44,
+          "battery_process_data": 33,
+          "pv_process_data": 12
+        }
+      }
+    },
+    "20260301_multi_sonnet": {
+      "dataset_id": "022b85dc-6b64-5f70-b46e-886824460c0b",
+      "run_type": "attack_run",
+      "process_telemetry": {
+        "pv_rows": 17624,
+        "wind_rows": 17624,
+        "battery_rows": 17624,
+        "demand_rows": 9283,
+        "earliest_ts": "2026-03-01 15:46:24.593917+05:30",
+        "latest_ts": "2026-03-01 18:21:07.748532+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525484,
+          "mean": 0.5267635825341882,
+          "min": 0.522052,
+          "max": 0.552792
+        },
+        "sequence_60_duration_sec": 31.52904
+      },
+      "attack_sessions": {
+        "session_count": 69,
+        "attacker_model": "anthropic/claude-sonnet-4.6",
+        "coordinated_count": 62,
+        "single_agent_count": 7,
+        "target_states": {
+          "Manipulation of Monitoring Data": 16,
+          "Compromise of Remote Connections to Control Center": 15,
+          "Battery Storage Mismanagement": 14,
+          "Compromise of Maintenance Capabilities": 14,
+          "Manipulation of Control Commands": 10
+        }
+      },
+      "execution_steps": {
+        "total_steps": 406,
+        "valid_steps_with_bounds": 402,
+        "missing_bounds_steps": 4,
+        "earliest_step_start": "2026-03-01 15:59:06.723066+05:30",
+        "latest_step_stop": "2026-03-01 18:19:45.843653+05:30",
+        "durations_sec": {
+          "median": 12.9994955,
+          "mean": 34.392311572139306,
+          "p25": 11.99988025,
+          "p75": 74.99926074999999,
+          "min": 9.999589,
+          "max": 90.000009
+        }
+      },
+      "temporal_alignment": {
+        "steps_overlapping_process": 402,
+        "steps_outside_process": 0,
+        "overlap_percentage": 100.0,
+        "clean_lead_in_margin_sec": 762.129149,
+        "clean_lead_in_margin_min": 12.7,
+        "clean_lead_out_margin_sec": 81.904879,
+        "clean_lead_out_margin_min": 1.37
+      },
+      "packet_modifications": {
+        "explicit_modified_packets": 2475
+      },
+      "physical_impact_ground_truth": {
+        "evaluated_steps": 264,
+        "physically_impactful_steps": 117,
+        "physical_impact_rate_pct": 44.32,
+        "subsystem_breakdown": {
+          "battery_process_data": 108,
+          "wind_process_data": 104,
+          "pv_process_data": 52
+        }
+      }
+    },
+    "20260302_multi_minimax": {
+      "dataset_id": "202eb955-4715-51b0-817d-ed423e0b55d8",
+      "run_type": "attack_run",
+      "process_telemetry": {
+        "pv_rows": 47707,
+        "wind_rows": 47707,
+        "battery_rows": 47707,
+        "demand_rows": 25110,
+        "earliest_ts": "2026-03-03 00:32:35.715191+05:30",
+        "latest_ts": "2026-03-03 07:31:06.625742+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525443,
+          "mean": 0.526367973651113,
+          "min": 0.522012,
+          "max": 0.552872
+        },
+        "sequence_60_duration_sec": 31.52658
+      },
+      "attack_sessions": {
+        "session_count": 118,
+        "attacker_model": "minimax/minimax-m2.5",
+        "coordinated_count": 88,
+        "single_agent_count": 30,
+        "target_states": {
+          "Battery Storage Mismanagement": 32,
+          "Compromise of Remote Connections to Control Center": 24,
+          "Manipulation of Control Commands": 23,
+          "Manipulation of Monitoring Data": 22,
+          "Compromise of Maintenance Capabilities": 17
+        }
+      },
+      "execution_steps": {
+        "total_steps": 464,
+        "valid_steps_with_bounds": 463,
+        "missing_bounds_steps": 1,
+        "earliest_step_start": "2026-03-03 00:52:50.585246+05:30",
+        "latest_step_stop": "2026-03-03 05:11:36.733231+05:30",
+        "durations_sec": {
+          "median": 24.999443,
+          "mean": 32.78600025701944,
+          "p25": 18.0005065,
+          "p75": 51.998255,
+          "min": 8.808542,
+          "max": 69.999484
+        }
+      },
+      "temporal_alignment": {
+        "steps_overlapping_process": 463,
+        "steps_outside_process": 0,
+        "overlap_percentage": 100.0,
+        "clean_lead_in_margin_sec": 1214.870055,
+        "clean_lead_in_margin_min": 20.25,
+        "clean_lead_out_margin_sec": 8369.892511,
+        "clean_lead_out_margin_min": 139.5
+      },
+      "packet_modifications": {
+        "explicit_modified_packets": 2330
+      },
+      "physical_impact_ground_truth": {
+        "evaluated_steps": 244,
+        "physically_impactful_steps": 79,
+        "physical_impact_rate_pct": 32.38,
+        "subsystem_breakdown": {
+          "battery_process_data": 136,
+          "wind_process_data": 80,
+          "pv_process_data": 28
+        }
+      }
+    },
+    "20260303_multi_sonnet": {
+      "dataset_id": "62783187-c55c-5a73-a657-6d38f13e2fd4",
+      "run_type": "attack_run",
+      "process_telemetry": {
+        "pv_rows": 15049,
+        "wind_rows": 15049,
+        "battery_rows": 15049,
+        "demand_rows": 7923,
+        "earliest_ts": "2026-03-03 08:53:10.081025+05:30",
+        "latest_ts": "2026-03-03 11:05:13.226483+05:30",
+        "is_monotonic_increasing": true,
+        "sampling_interval_sec": {
+          "median": 0.525525,
+          "mean": 0.5265248177830941,
+          "min": 0.522114,
+          "max": 0.548551
+        },
+        "sequence_60_duration_sec": 31.5315
+      },
+      "attack_sessions": {
+        "session_count": 46,
+        "attacker_model": "anthropic/claude-sonnet-4.6",
+        "coordinated_count": 23,
+        "single_agent_count": 23,
+        "target_states": {
+          "Manipulation of Monitoring Data": 12,
+          "Manipulation of Control Commands": 10,
+          "Compromise of Maintenance Capabilities": 9,
+          "Compromise of Remote Connections to Control Center": 9,
+          "Battery Storage Mismanagement": 6
+        }
+      },
+      "execution_steps": {
+        "total_steps": 270,
+        "valid_steps_with_bounds": 268,
+        "missing_bounds_steps": 2,
+        "earliest_step_start": "2026-03-03 09:07:46.062172+05:30",
+        "latest_step_stop": "2026-03-03 11:03:33.108050+05:30",
+        "durations_sec": {
+          "median": 11.5003135,
+          "mean": 30.29787845522388,
+          "p25": 9.499935,
+          "p75": 54.999064,
+          "min": 7.077694,
+          "max": 119.999439
+        }
+      },
+      "temporal_alignment": {
+        "steps_overlapping_process": 268,
+        "steps_outside_process": 0,
+        "overlap_percentage": 100.0,
+        "clean_lead_in_margin_sec": 875.981147,
+        "clean_lead_in_margin_min": 14.6,
+        "clean_lead_out_margin_sec": 100.118433,
+        "clean_lead_out_margin_min": 1.67
+      },
+      "packet_modifications": {
+        "explicit_modified_packets": 2285
+      },
+      "physical_impact_ground_truth": {
+        "evaluated_steps": 179,
+        "physically_impactful_steps": 76,
+        "physical_impact_rate_pct": 42.46,
+        "subsystem_breakdown": {
+          "battery_process_data": 78,
+          "wind_process_data": 68,
+          "pv_process_data": 33
+        }
+      }
+    }
+  },
+  "subsystem_targeting_summary": {
+    "pv_process_data": {
+      "total_attack_steps": 158,
+      "physically_impactful_steps": 102,
+      "physical_impact_pct": 64.56
+    },
+    "wind_process_data": {
+      "total_attack_steps": 411,
+      "physically_impactful_steps": 202,
+      "physical_impact_pct": 49.15
+    },
+    "battery_process_data": {
+      "total_attack_steps": 440,
+      "physically_impactful_steps": 60,
+      "physical_impact_pct": 13.64
+    }
+  },
+  "strategy_comparison_summary": {
+    "description": "Comparison of candidate sequence labeling strategies across all 5 attack runs (window length = 60 steps = ~31.5s, stride = 1 step = ~0.525s)",
+    "strategies": {
+      "A_any_overlap": "Sequence labeled positive if >= 1 of 60 timesteps intersects an active attack step interval.",
+      "B_midpoint": "Sequence labeled positive if the midpoint timestep (t+30) falls inside an active attack step interval.",
+      "C1_overlap_50pct": "Sequence labeled positive if >= 30 of 60 timesteps (>= 50%) fall inside an active attack step interval.",
+      "C2_overlap_80pct": "Sequence labeled positive if >= 48 of 60 timesteps (>= 80%) fall inside an active attack step interval.",
+      "D_sequence_end_causal": "Sequence labeled positive if the newest timestep (t+59) falls inside an active attack step interval (online real-time detection paradigm)."
+    },
+    "runs": {
+      "20260228_multi_openai": {
+        "total_sequences": 31025,
+        "point_level_attack_pct": 47.76,
+        "strategy_A_any_overlap": {
+          "count": 22806,
+          "pct": 73.51
+        },
+        "strategy_B_midpoint": {
+          "count": 14847,
+          "pct": 47.85
+        },
+        "strategy_C1_50pct": {
+          "count": 15173,
+          "pct": 48.91
+        },
+        "strategy_C2_80pct": {
+          "count": 9816,
+          "pct": 31.64
+        },
+        "strategy_D_end_causal": {
+          "count": 14847,
+          "pct": 47.85
+        }
+      },
+      "20260301_multi_google": {
+        "total_sequences": 41968,
+        "point_level_attack_pct": 6.84,
+        "strategy_A_any_overlap": {
+          "count": 6238,
+          "pct": 14.86
+        },
+        "strategy_B_midpoint": {
+          "count": 2876,
+          "pct": 6.85
+        },
+        "strategy_C1_50pct": {
+          "count": 2936,
+          "pct": 7.0
+        },
+        "strategy_C2_80pct": {
+          "count": 704,
+          "pct": 1.68
+        },
+        "strategy_D_end_causal": {
+          "count": 2876,
+          "pct": 6.85
+        }
+      },
+      "20260301_multi_sonnet": {
+        "total_sequences": 17565,
+        "point_level_attack_pct": 61.5,
+        "strategy_A_any_overlap": {
+          "count": 13628,
+          "pct": 77.59
+        },
+        "strategy_B_midpoint": {
+          "count": 10838,
+          "pct": 61.7
+        },
+        "strategy_C1_50pct": {
+          "count": 11456,
+          "pct": 65.22
+        },
+        "strategy_C2_80pct": {
+          "count": 8598,
+          "pct": 48.95
+        },
+        "strategy_D_end_causal": {
+          "count": 10838,
+          "pct": 61.7
+        }
+      },
+      "20260302_multi_minimax": {
+        "total_sequences": 47648,
+        "point_level_attack_pct": 24.18,
+        "strategy_A_any_overlap": {
+          "count": 17619,
+          "pct": 36.98
+        },
+        "strategy_B_midpoint": {
+          "count": 11534,
+          "pct": 24.21
+        },
+        "strategy_C1_50pct": {
+          "count": 11964,
+          "pct": 25.11
+        },
+        "strategy_C2_80pct": {
+          "count": 7538,
+          "pct": 15.82
+        },
+        "strategy_D_end_causal": {
+          "count": 11534,
+          "pct": 24.21
+        }
+      },
+      "20260303_multi_sonnet": {
+        "total_sequences": 14990,
+        "point_level_attack_pct": 58.06,
+        "strategy_A_any_overlap": {
+          "count": 11134,
+          "pct": 74.28
+        },
+        "strategy_B_midpoint": {
+          "count": 8738,
+          "pct": 58.29
+        },
+        "strategy_C1_50pct": {
+          "count": 9123,
+          "pct": 60.86
+        },
+        "strategy_C2_80pct": {
+          "count": 7503,
+          "pct": 50.05
+        },
+        "strategy_D_end_causal": {
+          "count": 8738,
+          "pct": 58.29
+        }
+      }
+    }
+  },
+  "global_metrics": {
+    "total_process_rows": 165483,
+    "total_attack_runs": 5,
+    "total_normal_runs": 1,
+    "total_attack_sessions": 436,
+    "total_exec_steps": 1723,
+    "total_valid_exec_steps": 1716,
+    "total_overlapping_exec_steps": 1716,
+    "global_exec_step_overlap_pct": 100.0,
+    "total_packet_level_modifications": 11073,
+    "total_judge_evaluations": 1009,
+    "total_physically_impactful_steps": 364,
+    "global_physical_impact_rate_pct": 36.08,
+    "nominal_sampling_rate_hz": 1.903,
+    "nominal_sampling_interval_sec": 0.5254,
+    "sequence_60_duration_sec": 31.524
+  }
+}

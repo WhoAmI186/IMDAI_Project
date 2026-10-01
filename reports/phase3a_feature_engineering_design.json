@@ -1,0 +1,562 @@
+{
+  "document_metadata": {
+    "title": "Phase 3A Feature Engineering Discovery & Design for Process Anomaly Detection",
+    "version": "1.0.0",
+    "date": "September 29, 2026",
+    "phase": "Phase 3A (Discovery & Design)",
+    "status": "PROPOSED_FOR_REVIEW",
+    "training_performed": false,
+    "existing_model_modified": false,
+    "existing_scaler_modified": false
+  },
+  "authoritative_baseline": {
+    "baseline_configuration_name": "config_a",
+    "baseline_feature_count": 14,
+    "source_subsystems": [
+      "Photovoltaic (PV) Solar",
+      "Wind Turbine Generation"
+    ],
+    "quarantined_subsystems": [
+      "Battery Energy Storage System (BESS)",
+      "Grid Power Demand"
+    ],
+    "baseline_performance_phase2c42": {
+      "evaluation_scope": "All Attacks (Phase 2C.4.2 Benchmark)",
+      "roc_auc": 0.4594,
+      "pr_auc": 0.2953,
+      "p995_precision": 0.2805,
+      "p995_recall": 0.2506,
+      "p995_f1": 0.2647
+    },
+    "baseline_performance_phase2c43": {
+      "evaluation_scope": "Scope-Appropriate Primary (PV/Wind Impactful)",
+      "roc_auc": 0.4882,
+      "pr_auc": 0.0401,
+      "p995_precision": 0.0382,
+      "p995_recall": 0.2615,
+      "p995_f1": 0.0666
+    },
+    "features": [
+      {
+        "feature_name": "pv_m_temp_air",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "\u00b0C",
+        "physical_meaning": "Ambient atmospheric air temperature at solar array",
+        "train_min": 1.3,
+        "train_max": 25.2,
+        "train_mean": 11.31,
+        "train_std": 6.13,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_poa_direct",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "int64",
+        "unit": "W/m\u00b2",
+        "physical_meaning": "Direct plane-of-array solar beam irradiance",
+        "train_min": 0.0,
+        "train_max": 734.0,
+        "train_mean": 240.13,
+        "train_std": 311.24,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_wind_speed",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "m/s",
+        "physical_meaning": "Local wind speed across PV panels governing convective cooling",
+        "train_min": 0.3,
+        "train_max": 8.6,
+        "train_mean": 2.74,
+        "train_std": 2.17,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_poa_diffuse",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "int64",
+        "unit": "W/m\u00b2",
+        "physical_meaning": "Diffuse sky radiation scattering onto tilted array",
+        "train_min": 0.0,
+        "train_max": 240.0,
+        "train_mean": 27.97,
+        "train_std": 40.42,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_cell_temperature",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "\u00b0C",
+        "physical_meaning": "Photovoltaic cell silicon wafer surface temperature",
+        "train_min": 1.3,
+        "train_max": 43.28,
+        "train_mean": 16.86,
+        "train_std": 12.45,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_inverter_ac_power",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "int64",
+        "unit": "W",
+        "physical_meaning": "Inverter electrical AC active power output injected to AC bus",
+        "train_min": 0.0,
+        "train_max": 1655.0,
+        "train_mean": 540.6,
+        "train_std": 689.37,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_m_inverter_dc_power",
+        "subsystem": "Solar/PV",
+        "type": "Measurement",
+        "datatype": "int64",
+        "unit": "W",
+        "physical_meaning": "Solar panel DC power delivered to inverter input",
+        "train_min": 0.0,
+        "train_max": 1702.0,
+        "train_mean": 555.02,
+        "train_std": 707.77,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "pv_c_on_off",
+        "subsystem": "Solar/PV",
+        "type": "Control",
+        "datatype": "bool",
+        "unit": "binary",
+        "physical_meaning": "Inverter DC-side contactor control switch command",
+        "train_min": 0.0,
+        "train_max": 1.0,
+        "train_mean": 0.0228,
+        "train_std": 0.1492,
+        "missing_values": 0,
+        "is_continuous": false
+      },
+      {
+        "feature_name": "wind_m_power",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "int64",
+        "unit": "W",
+        "physical_meaning": "Active electrical generator output power of the turbine",
+        "train_min": 224.0,
+        "train_max": 21840.0,
+        "train_mean": 6567.09,
+        "train_std": 4875.82,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "wind_m_pressure",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "Pa",
+        "physical_meaning": "Barometric atmospheric air pressure determining air density rho",
+        "train_min": 98697.7,
+        "train_max": 101849.0,
+        "train_mean": 100383.49,
+        "train_std": 760.86,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "wind_m_wind_speed_a",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "m/s",
+        "physical_meaning": "Primary nacelle ultrasonic anemometer A reading",
+        "train_min": 0.12,
+        "train_max": 7.92,
+        "train_mean": 3.74,
+        "train_std": 1.62,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "wind_m_wind_speed_b",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "m/s",
+        "physical_meaning": "Secondary nacelle mechanical cup anemometer B reading",
+        "train_min": 2.4,
+        "train_max": 10.75,
+        "train_mean": 6.38,
+        "train_std": 1.65,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "wind_m_temperature_a",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "\u00b0C",
+        "physical_meaning": "Nacelle generator housing internal temperature sensor A",
+        "train_min": 0.45,
+        "train_max": 23.35,
+        "train_mean": 8.85,
+        "train_std": 3.91,
+        "missing_values": 0,
+        "is_continuous": true
+      },
+      {
+        "feature_name": "wind_m_temperature_b",
+        "subsystem": "Wind",
+        "type": "Measurement",
+        "datatype": "float64",
+        "unit": "\u00b0C",
+        "physical_meaning": "Nacelle gearbox housing external temperature sensor B",
+        "train_min": 0.39,
+        "train_max": 23.29,
+        "train_mean": 8.8,
+        "train_std": 3.91,
+        "missing_values": 0,
+        "is_continuous": true
+      }
+    ]
+  },
+  "dataset_characteristics": {
+    "dataset_id": "21c851bc-384f-5b81-8747-6dcacdceff35",
+    "run_name": "2026_AttackPlans/20260225_normal",
+    "total_baseline_rows": 11991,
+    "train_rows": 9592,
+    "val_rows": 2399,
+    "chronological_split_ratio": 0.8,
+    "sampling_delta_seconds": {
+      "mean": 0.526239,
+      "median": 0.525489,
+      "std": 0.003295,
+      "min": 0.52,
+      "max": 0.5447,
+      "nominal_frequency_hz": 1.9
+    },
+    "boundary_gap_seconds": 0.525294,
+    "temporal_ordering": "Strictly monotonic increasing, zero temporal shuffling",
+    "missing_value_behavior": "Zero nulls across all 11,991 rows in all 14 channels",
+    "preexisting_derived_features": "None; existing pipeline processes strictly raw physical sensor columns"
+  },
+  "candidate_engineered_features": [
+    {
+      "category": "A. First-Order Temporal Differences",
+      "feature_name": "diff_pv_ac_power",
+      "formula": "x_t - x_{t-1} for pv_m_inverter_ac_power, fillna(0.0)",
+      "unit": "W / step",
+      "train_std": 32.32,
+      "raw_feature_std": 689.37,
+      "corr_with_raw": 0.0256,
+      "physical_interpretation": "Instantaneous rate of change of solar AC generation; isolates sudden inverter tripping or power step spoofing",
+      "causality_status": "Strictly Causal (uses t and t-1)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "A. First-Order Temporal Differences",
+      "feature_name": "diff_wind_power",
+      "formula": "x_t - x_{t-1} for wind_m_power, fillna(0.0)",
+      "unit": "W / step",
+      "train_std": 606.27,
+      "raw_feature_std": 4875.82,
+      "corr_with_raw": 0.0618,
+      "physical_interpretation": "Instantaneous wind turbine active power change; captures mechanical disconnect or power setpoint clamping",
+      "causality_status": "Strictly Causal (uses t and t-1)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "A. First-Order Temporal Differences",
+      "feature_name": "diff_wind_speed_a",
+      "formula": "x_t - x_{t-1} for wind_m_wind_speed_a, fillna(0.0)",
+      "unit": "m/s / step",
+      "train_std": 0.1462,
+      "raw_feature_std": 1.6246,
+      "corr_with_raw": 0.0441,
+      "physical_interpretation": "Nacelle aerodynamic acceleration/deceleration proxy; flags sharp anemometer register injections",
+      "causality_status": "Strictly Causal (uses t and t-1)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "B/C. Rolling Volatility",
+      "feature_name": "roll_std15_wind_power",
+      "formula": "rolling_std(wind_m_power, window=15, min_periods=1)",
+      "unit": "W",
+      "train_std": 490.12,
+      "raw_feature_std": 4875.82,
+      "corr_with_raw": 0.3852,
+      "physical_interpretation": "Short-term aerodynamic turbulence dispersion over ~7.9s; detects telemetry freeze (std drops to 0) or erratic noise injection",
+      "causality_status": "Strictly Causal (rolling window [t-14, t])",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "B/C. Rolling Volatility",
+      "feature_name": "roll_std15_pv_power",
+      "formula": "rolling_std(pv_m_inverter_ac_power, window=15, min_periods=1)",
+      "unit": "W",
+      "train_std": 20.35,
+      "raw_feature_std": 689.37,
+      "corr_with_raw": 0.2509,
+      "physical_interpretation": "Short-term solar generation variance over ~7.9s; separates steady-state clearsky solar from oscillating cyber injections",
+      "causality_status": "Strictly Causal (rolling window [t-14, t])",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "D. Temporal Persistence / Deviations",
+      "feature_name": "dev_mean15_wind_power",
+      "formula": "wind_m_power - rolling_mean(wind_m_power, window=15, min_periods=1)",
+      "unit": "W",
+      "train_std": 1298.87,
+      "raw_feature_std": 4875.82,
+      "corr_with_raw": 0.2745,
+      "physical_interpretation": "High-pass filtered local deviation from recent 8s mean; isolates sustained attack bias shifts from slow atmospheric trends",
+      "causality_status": "Strictly Causal (uses t and rolling [t-14, t])",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "E/G. Cross-Feature Physical Invariants",
+      "feature_name": "res_inv_loss",
+      "formula": "pv_m_inverter_dc_power - pv_m_inverter_ac_power",
+      "unit": "W",
+      "train_std": 19.37,
+      "raw_feature_std": 689.37,
+      "corr_with_raw": 0.9484,
+      "physical_interpretation": "Inverter electrical conversion loss (P_dc - P_ac). Under First Law of Thermodynamics, loss must remain strictly positive (~2-3% of power). Any single-channel Modbus spoofing on AC or DC power immediately shatters this physical invariant.",
+      "causality_status": "Strictly Causal (point-in-time cross-channel difference at timestamp t)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "E/G. Cross-Feature Physical Invariants",
+      "feature_name": "diff_anemometer_ab",
+      "formula": "wind_m_wind_speed_b - wind_m_wind_speed_a",
+      "unit": "m/s",
+      "train_std": 0.3476,
+      "raw_feature_std": 1.6246,
+      "corr_with_raw": 0.1652,
+      "physical_interpretation": "Dual nacelle anemometer redundancy residual. Both sensors observe the identical atmospheric wind field. In baseline, mean offset is 2.65 m/s with tiny standard deviation (0.35 m/s). An attack spoofing one anemometer creates a massive multi-sigma residual.",
+      "causality_status": "Strictly Causal (point-in-time difference at timestamp t)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "E/G. Cross-Feature Physical Invariants",
+      "feature_name": "diff_nac_temp_ab",
+      "formula": "wind_m_temperature_b - wind_m_temperature_a",
+      "unit": "\u00b0C",
+      "train_std": 0.3563,
+      "raw_feature_std": 3.909,
+      "corr_with_raw": -0.0124,
+      "physical_interpretation": "Dual nacelle temperature symmetry residual. Temperature sensors A and B share thermal equilibrium inside the nacelle casing. Mean delta is -0.05\u00b0C (std 0.36\u00b0C). Spoofing either temperature channel causes immediate residual breakdown.",
+      "causality_status": "Strictly Causal (point-in-time difference at timestamp t)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    },
+    {
+      "category": "E/G. Cross-Feature Physical Invariants",
+      "feature_name": "diff_pv_cell_thermal",
+      "formula": "pv_m_cell_temperature - pv_m_temp_air",
+      "unit": "\u00b0C",
+      "train_std": 6.5615,
+      "raw_feature_std": 11.8663,
+      "corr_with_raw": 0.8939,
+      "physical_interpretation": "Solar panel cell thermal rise above ambient air temperature. Driven by absorbed solar photon flux; cell temperature must exceed air temperature when irradiance is positive.",
+      "causality_status": "Strictly Causal (point-in-time difference at timestamp t)",
+      "leakage_risk": "Zero",
+      "status": "APPROVED"
+    }
+  ],
+  "rejected_features": [
+    {
+      "feature_candidate": "Multiple Rolling Means (rolling_mean(x, W) for W in [5, 15, 30, 60])",
+      "rejection_reason": "Extreme collinearity with raw features (r = 0.9987 for W=5, r = 0.9957 for W=15). Duplicates raw input channels almost perfectly without providing orthogonal anomaly information, causing feature explosion."
+    },
+    {
+      "feature_candidate": "Rate of Change (\u0394x / \u0394t)",
+      "rejection_reason": "Redundant and noise-prone. Because telemetry sampling interval is nearly perfectly uniform (mean 0.5262s, jitter std 3.3 ms), \u0394x / \u0394t is identical to \u0394x * 1.9004. Dividing by timestamp deltas injects 3 ms jitter noise without adding physical signal."
+    },
+    {
+      "feature_candidate": "Nonlinear Physical Ratios (e.g., P_ac / P_dc, P_ac / G_poa, P_wind / v^3)",
+      "rejection_reason": "Numerical instability due to zero and near-zero denominators during nighttime, zero-wind, or transition regimes. Even with epsilon padding, ratios produce severe non-linear gradient spikes. Linear conservation residuals (P_dc - P_ac) capture the exact same invariant with 100% stability."
+    },
+    {
+      "feature_candidate": "Rolling z-scores with Local Variances ((x - \u03bc) / \u03c3)",
+      "rejection_reason": "When signals are steady or zero (e.g. night-time solar irradiance or steady barometric pressure), local rolling standard deviation approaches zero (\u03c3 \u2192 0), causing artificial catastrophic division-by-zero spikes on clean normal data."
+    },
+    {
+      "feature_candidate": "Differences on Sparse / Discrete Signals (diff_pv_c_on_off)",
+      "rejection_reason": "pv_c_on_off is an intermittent boolean pulse active for only 2.3% of baseline. Discrete {-1, 0, 1} impulse differences are inappropriate for continuous recurrent neural representations."
+    },
+    {
+      "feature_candidate": "Differences on Quantized Slow Drift Signals (diff_pv_m_temp_air, diff_wind_m_pressure)",
+      "rejection_reason": "Sensors have large physical time constants and 0.1-unit digital quantization. First differences at 0.5s are 99% zeros with occasional step quantization noise."
+    },
+    {
+      "feature_candidate": "Centered or Forward Rolling Windows ([t-k, t+k] or [t, t+k])",
+      "rejection_reason": "Violates fundamental anti-leakage and operational causality constraints. Using future information causes lookahead contamination and is completely unexecutable in real-time streaming detection."
+    },
+    {
+      "feature_candidate": "Battery and Grid Demand Signals (batt_*, grid_*)",
+      "rejection_reason": "Strictly quarantined per project scope enforcement. Silent addition of battery or demand channels is strictly prohibited."
+    }
+  ],
+  "proposed_experiment_configurations": {
+    "config_a_baseline": {
+      "name": "CONFIG A (Authoritative Baseline)",
+      "feature_count": 14,
+      "description": "Existing 14 raw physical Solar/PV and Wind telemetry channels from Phase 2B. Retained completely unchanged as the primary comparative anchor.",
+      "features": [
+        "pv_m_temp_air",
+        "pv_m_poa_direct",
+        "pv_m_wind_speed",
+        "pv_m_poa_diffuse",
+        "pv_m_cell_temperature",
+        "pv_m_inverter_ac_power",
+        "pv_m_inverter_dc_power",
+        "pv_c_on_off",
+        "wind_m_power",
+        "wind_m_pressure",
+        "wind_m_wind_speed_a",
+        "wind_m_wind_speed_b",
+        "wind_m_temperature_a",
+        "wind_m_temperature_b"
+      ],
+      "justification": "Required benchmark anchor for rigorous experimental ablation."
+    },
+    "config_b_temporal_dynamics": {
+      "name": "CONFIG B (Raw + Temporal Dynamics)",
+      "feature_count": 19,
+      "description": "14 raw baseline features + 3 first-order temporal differences + 2 rolling volatility features.",
+      "features": [
+        "pv_m_temp_air",
+        "pv_m_poa_direct",
+        "pv_m_wind_speed",
+        "pv_m_poa_diffuse",
+        "pv_m_cell_temperature",
+        "pv_m_inverter_ac_power",
+        "pv_m_inverter_dc_power",
+        "pv_c_on_off",
+        "wind_m_power",
+        "wind_m_pressure",
+        "wind_m_wind_speed_a",
+        "wind_m_wind_speed_b",
+        "wind_m_temperature_a",
+        "wind_m_temperature_b",
+        "diff_pv_ac_power",
+        "diff_wind_power",
+        "diff_wind_speed_a",
+        "roll_std15_wind_power",
+        "roll_std15_pv_power"
+      ],
+      "justification": "Tests whether explicit temporal derivative and short-term volatility representations enable the LSTM to capture step tampering and sensor freeze attacks without cross-sensor coupling."
+    },
+    "config_c_physical_invariants": {
+      "name": "CONFIG C (Raw + Physical Invariants)",
+      "feature_count": 18,
+      "description": "14 raw baseline features + 4 linear cross-feature physical & cross-sensor redundancy residuals.",
+      "features": [
+        "pv_m_temp_air",
+        "pv_m_poa_direct",
+        "pv_m_wind_speed",
+        "pv_m_poa_diffuse",
+        "pv_m_cell_temperature",
+        "pv_m_inverter_ac_power",
+        "pv_m_inverter_dc_power",
+        "pv_c_on_off",
+        "wind_m_power",
+        "wind_m_pressure",
+        "wind_m_wind_speed_a",
+        "wind_m_wind_speed_b",
+        "wind_m_temperature_a",
+        "wind_m_temperature_b",
+        "res_inv_loss",
+        "diff_anemometer_ab",
+        "diff_nac_temp_ab",
+        "diff_pv_cell_thermal"
+      ],
+      "justification": "Directly forces the model to monitor physical conservation laws (inverter loss, cell heating) and cross-sensor parity (dual anemometers, dual nacelle temps). Isolates the specific contribution of physical consistency."
+    },
+    "config_d_recommended_hybrid": {
+      "name": "CONFIG D (Recommended Parsimonious Hybrid)",
+      "feature_count": 22,
+      "description": "14 raw baseline features + 4 physical invariant residuals + 3 first-order temporal differences + 1 temporal persistence feature.",
+      "features": [
+        "pv_m_temp_air",
+        "pv_m_poa_direct",
+        "pv_m_wind_speed",
+        "pv_m_poa_diffuse",
+        "pv_m_cell_temperature",
+        "pv_m_inverter_ac_power",
+        "pv_m_inverter_dc_power",
+        "pv_c_on_off",
+        "wind_m_power",
+        "wind_m_pressure",
+        "wind_m_wind_speed_a",
+        "wind_m_wind_speed_b",
+        "wind_m_temperature_a",
+        "wind_m_temperature_b",
+        "res_inv_loss",
+        "diff_anemometer_ab",
+        "diff_nac_temp_ab",
+        "diff_pv_cell_thermal",
+        "diff_pv_ac_power",
+        "diff_wind_power",
+        "diff_wind_speed_a",
+        "dev_mean15_wind_power"
+      ],
+      "justification": "Provides a compact, highly expressive 22-channel representation uniting physical conservation, sensor redundancy, temporal acceleration, and local deviation, while strictly avoiding feature explosion (+8 features over baseline)."
+    }
+  },
+  "future_preprocessing_strategy": {
+    "chronological_split": "80% train (9,592 rows), 20% val (2,399 rows) strictly chronological",
+    "scaler_family": "MinMaxScaler(feature_range=(-1.0, 1.0))",
+    "fitting_constraint": "Fitted STRICTLY on training partition of clean normal baseline (run 20260225_normal). Zero attack data seen.",
+    "derived_feature_execution_order": [
+      "1. Extract raw 14 features from ASOF-aligned telemetry.",
+      "2. Compute first differences (\u0394x) causally with fillna(0.0).",
+      "3. Compute rolling statistics causally with min_periods=1.",
+      "4. Compute cross-feature residuals at each point in time t.",
+      "5. Concatenate raw + engineered features into unscaled matrix.",
+      "6. Fit scaler strictly on training rows; apply .transform() to validation and attack evaluation sets.",
+      "7. Generate boundary-isolated sliding sequences with sequence length L=60, stride s=1."
+    ]
+  },
+  "expected_risks_and_mitigations": [
+    {
+      "risk": "Noise Amplification in Differences",
+      "description": "First-order temporal differences (\u0394x) amplify sensor quantization noise.",
+      "mitigation": "Confine differences strictly to high-SNR active electrical/kinematic signals (power, wind speed) and reject differences on slow, quantized temperature or pressure signals."
+    },
+    {
+      "risk": "Collinearity and Feature Explosion",
+      "description": "Generating multiple rolling windows and overlapping statistics bloats latent representations.",
+      "mitigation": "Strict feature count cap (22 features max). Explicitly reject rolling means which have r > 0.99 with raw signals."
+    },
+    {
+      "risk": "Warm-Up Boundary Transients",
+      "description": "Rolling windows and differences have warm-up periods at sequence starts.",
+      "mitigation": "Use min_periods=1 and fillna(0.0) so array length is strictly preserved without NaN propagation."
+    }
+  ]
+}

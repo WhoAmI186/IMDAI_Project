@@ -1,0 +1,482 @@
+{
+  "data1.csv": {
+    "total_rows": 4966,
+    "counts": {
+      "Attack": 3866,
+      "Natural": 927,
+      "NoEvents": 173
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        173
+      ],
+      [
+        "Attack",
+        3297
+      ],
+      [
+        "Natural",
+        264
+      ],
+      [
+        "Attack",
+        569
+      ],
+      [
+        "Natural",
+        663
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data2.csv": {
+    "total_rows": 5069,
+    "counts": {
+      "Attack": 3525,
+      "Natural": 1222,
+      "NoEvents": 322
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        322
+      ],
+      [
+        "Attack",
+        2944
+      ],
+      [
+        "Natural",
+        341
+      ],
+      [
+        "Attack",
+        581
+      ],
+      [
+        "Natural",
+        881
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data3.csv": {
+    "total_rows": 5415,
+    "counts": {
+      "Attack": 3811,
+      "Natural": 1250,
+      "NoEvents": 354
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        354
+      ],
+      [
+        "Attack",
+        3238
+      ],
+      [
+        "Natural",
+        236
+      ],
+      [
+        "Attack",
+        573
+      ],
+      [
+        "Natural",
+        1014
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data4.csv": {
+    "total_rows": 5202,
+    "counts": {
+      "Attack": 3402,
+      "Natural": 1397,
+      "NoEvents": 403
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        403
+      ],
+      [
+        "Attack",
+        2783
+      ],
+      [
+        "Natural",
+        193
+      ],
+      [
+        "Attack",
+        619
+      ],
+      [
+        "Natural",
+        1204
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data5.csv": {
+    "total_rows": 5161,
+    "counts": {
+      "Attack": 3680,
+      "Natural": 1211,
+      "NoEvents": 270
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        270
+      ],
+      [
+        "Attack",
+        2907
+      ],
+      [
+        "Natural",
+        176
+      ],
+      [
+        "Attack",
+        773
+      ],
+      [
+        "Natural",
+        1035
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data6.csv": {
+    "total_rows": 4967,
+    "counts": {
+      "Attack": 3490,
+      "Natural": 1287,
+      "NoEvents": 190
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        190
+      ],
+      [
+        "Attack",
+        2957
+      ],
+      [
+        "Natural",
+        233
+      ],
+      [
+        "Attack",
+        533
+      ],
+      [
+        "Natural",
+        1054
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data7.csv": {
+    "total_rows": 5236,
+    "counts": {
+      "Attack": 3910,
+      "Natural": 1118,
+      "NoEvents": 208
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        208
+      ],
+      [
+        "Attack",
+        3235
+      ],
+      [
+        "Natural",
+        193
+      ],
+      [
+        "Attack",
+        675
+      ],
+      [
+        "Natural",
+        925
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data8.csv": {
+    "total_rows": 5315,
+    "counts": {
+      "Attack": 3771,
+      "Natural": 1188,
+      "NoEvents": 356
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        356
+      ],
+      [
+        "Attack",
+        3033
+      ],
+      [
+        "Natural",
+        149
+      ],
+      [
+        "Attack",
+        738
+      ],
+      [
+        "Natural",
+        1039
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data9.csv": {
+    "total_rows": 5340,
+    "counts": {
+      "Attack": 3570,
+      "Natural": 1292,
+      "NoEvents": 478
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        478
+      ],
+      [
+        "Attack",
+        2910
+      ],
+      [
+        "Natural",
+        159
+      ],
+      [
+        "Attack",
+        660
+      ],
+      [
+        "Natural",
+        1133
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data10.csv": {
+    "total_rows": 5569,
+    "counts": {
+      "Attack": 3921,
+      "Natural": 1322,
+      "NoEvents": 326
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        326
+      ],
+      [
+        "Attack",
+        3191
+      ],
+      [
+        "Natural",
+        345
+      ],
+      [
+        "Attack",
+        730
+      ],
+      [
+        "Natural",
+        977
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data11.csv": {
+    "total_rows": 5251,
+    "counts": {
+      "Attack": 3969,
+      "Natural": 1137,
+      "NoEvents": 145
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        145
+      ],
+      [
+        "Attack",
+        3153
+      ],
+      [
+        "Natural",
+        294
+      ],
+      [
+        "Attack",
+        816
+      ],
+      [
+        "Natural",
+        843
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data12.csv": {
+    "total_rows": 5224,
+    "counts": {
+      "Attack": 3453,
+      "Natural": 1387,
+      "NoEvents": 384
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        384
+      ],
+      [
+        "Attack",
+        2749
+      ],
+      [
+        "Natural",
+        123
+      ],
+      [
+        "Attack",
+        704
+      ],
+      [
+        "Natural",
+        1264
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data13.csv": {
+    "total_rows": 5271,
+    "counts": {
+      "Attack": 4118,
+      "Natural": 950,
+      "NoEvents": 203
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        203
+      ],
+      [
+        "Attack",
+        3537
+      ],
+      [
+        "Natural",
+        106
+      ],
+      [
+        "Attack",
+        581
+      ],
+      [
+        "Natural",
+        844
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data14.csv": {
+    "total_rows": 5115,
+    "counts": {
+      "Attack": 3762,
+      "Natural": 1274,
+      "NoEvents": 79
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        79
+      ],
+      [
+        "Attack",
+        3167
+      ],
+      [
+        "Natural",
+        351
+      ],
+      [
+        "Attack",
+        595
+      ],
+      [
+        "Natural",
+        923
+      ]
+    ],
+    "has_more_intervals": false
+  },
+  "data15.csv": {
+    "total_rows": 5276,
+    "counts": {
+      "Attack": 3415,
+      "Natural": 1347,
+      "NoEvents": 514
+    },
+    "num_intervals": 5,
+    "intervals": [
+      [
+        "NoEvents",
+        514
+      ],
+      [
+        "Attack",
+        2980
+      ],
+      [
+        "Natural",
+        146
+      ],
+      [
+        "Attack",
+        435
+      ],
+      [
+        "Natural",
+        1201
+      ]
+    ],
+    "has_more_intervals": false
+  }
+}

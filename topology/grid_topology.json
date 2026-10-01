@@ -1,0 +1,291 @@
+{
+  "system_info": {
+    "name": "MSU/ORNL Two-Generator Four-Bus Power Transmission Grid",
+    "benchmark": "Mississippi State University / Oak Ridge National Laboratory ICS Cyber Attack Dataset",
+    "nominal_voltage_kv": 138.0,
+    "nominal_frequency_hz": 60.0,
+    "system_base_mva": 100.0,
+    "topology_type": "Two-generator two-parallel-line interconnected transmission system",
+    "documentation_reference": "reports/triple_dataset_audit.md"
+  },
+  "substations": {
+    "Substation_1": {
+      "name": "Substation 1 (Bus 1 Sending Station)",
+      "buses": ["Bus_1"],
+      "generators": ["Generator_1"],
+      "relays": ["R1", "R4"],
+      "breakers": ["BR1", "BR4"],
+      "lines_connected": ["Line_1", "Line_2"]
+    },
+    "Substation_2": {
+      "name": "Substation 2 (Bus 2 Receiving Station)",
+      "buses": ["Bus_2"],
+      "generators": ["Generator_2"],
+      "relays": ["R2", "R3"],
+      "breakers": ["BR2", "BR3"],
+      "lines_connected": ["Line_1", "Line_2"]
+    }
+  },
+  "buses": {
+    "Bus_1": {
+      "bus_id": "Bus_1",
+      "name": "Substation 1 138kV Transmission Bus",
+      "substation": "Substation_1",
+      "nominal_voltage_v": 138000.0,
+      "measured_normal_voltage_mean_v": 131617.0,
+      "measured_normal_voltage_std_v": 797.0,
+      "voltage_tolerance_v": 5000.0,
+      "monitoring_relays": ["R1", "R4"],
+      "voltage_channels": {
+        "phase_a_magnitude": ["R1-PM1:V", "R4-PM1:V"],
+        "phase_b_magnitude": ["R1-PM2:V", "R4-PM2:V"],
+        "phase_c_magnitude": ["R1-PM3:V", "R4-PM3:V"],
+        "phase_a_angle": ["R1-PA1:VH", "R4-PA1:VH"]
+      },
+      "connected_equipment": ["Generator_1", "Line_1", "Line_2"],
+      "state_status": "MONITORED"
+    },
+    "Bus_2": {
+      "bus_id": "Bus_2",
+      "name": "Substation 2 138kV Transmission Bus",
+      "substation": "Substation_2",
+      "nominal_voltage_v": 138000.0,
+      "measured_normal_voltage_mean_v": 130049.0,
+      "measured_normal_voltage_std_v": 1226.0,
+      "voltage_tolerance_v": 5000.0,
+      "monitoring_relays": ["R2", "R3"],
+      "voltage_channels": {
+        "phase_a_magnitude": ["R2-PM1:V", "R3-PM1:V"],
+        "phase_b_magnitude": ["R2-PM2:V", "R3-PM2:V"],
+        "phase_c_magnitude": ["R2-PM3:V", "R3-PM3:V"],
+        "phase_a_angle": ["R2-PA1:VH", "R3-PA1:VH"]
+      },
+      "connected_equipment": ["Generator_2", "Line_1", "Line_2"],
+      "state_status": "MONITORED"
+    },
+    "Bus_3": {
+      "bus_id": "Bus_3",
+      "name": "Substation 1 Generator Internal Bus",
+      "substation": "Substation_1",
+      "nominal_voltage_v": 13800.0,
+      "state_status": "UNKNOWN",
+      "monitoring_relays": [],
+      "documentation_note": "Internal generator bus in 4-bus formulation; not directly instrumented by synchrophasor PMUs."
+    },
+    "Bus_4": {
+      "bus_id": "Bus_4",
+      "name": "Substation 2 Generator/Load Internal Bus",
+      "substation": "Substation_2",
+      "nominal_voltage_v": 13800.0,
+      "state_status": "UNKNOWN",
+      "monitoring_relays": [],
+      "documentation_note": "Internal generator/load bus in 4-bus formulation; not directly instrumented by synchrophasor PMUs."
+    }
+  },
+  "transmission_lines": {
+    "Line_1": {
+      "line_id": "Line_1",
+      "name": "138kV Transmission Line 1",
+      "from_bus": "Bus_1",
+      "to_bus": "Bus_2",
+      "parallel_line_id": "Line_2",
+      "from_substation": "Substation_1",
+      "to_substation": "Substation_2",
+      "sending_breaker": "BR1",
+      "receiving_breaker": "BR2",
+      "sending_relay": "R1",
+      "receiving_relay": "R2",
+      "nominal_current_a": 393.0,
+      "normal_current_std_a": 81.5,
+      "deenergized_threshold_a": 30.0,
+      "fault_current_threshold_a": 800.0,
+      "sending_current_channels": {
+        "phase_a_magnitude": "R1-PM4:I",
+        "phase_a_angle": "R1-PA4:IH",
+        "phase_b_magnitude": "R1-PM5:I",
+        "phase_c_magnitude": "R1-PM6:I"
+      },
+      "receiving_current_channels": {
+        "phase_a_magnitude": "R2-PM4:I",
+        "phase_a_angle": "R2-PA4:IH",
+        "phase_b_magnitude": "R2-PM5:I",
+        "phase_c_magnitude": "R2-PM6:I"
+      },
+      "impedance_channels": {
+        "sending_angle": "R1-PA:ZH",
+        "receiving_angle": "R2-PA:ZH"
+      }
+    },
+    "Line_2": {
+      "line_id": "Line_2",
+      "name": "138kV Transmission Line 2",
+      "from_bus": "Bus_1",
+      "to_bus": "Bus_2",
+      "parallel_line_id": "Line_1",
+      "from_substation": "Substation_1",
+      "to_substation": "Substation_2",
+      "sending_breaker": "BR4",
+      "receiving_breaker": "BR3",
+      "sending_relay": "R4",
+      "receiving_relay": "R3",
+      "nominal_current_a": 390.5,
+      "normal_current_std_a": 81.2,
+      "deenergized_threshold_a": 30.0,
+      "fault_current_threshold_a": 800.0,
+      "sending_current_channels": {
+        "phase_a_magnitude": "R4-PM4:I",
+        "phase_a_angle": "R4-PA4:IH",
+        "phase_b_magnitude": "R4-PM5:I",
+        "phase_c_magnitude": "R4-PM6:I"
+      },
+      "receiving_current_channels": {
+        "phase_a_magnitude": "R3-PM4:I",
+        "phase_a_angle": "R3-PA4:IH",
+        "phase_b_magnitude": "R3-PM5:I",
+        "phase_c_magnitude": "R3-PM6:I"
+      },
+      "impedance_channels": {
+        "sending_angle": "R4-PA:ZH",
+        "receiving_angle": "R3-PA:ZH"
+      }
+    }
+  },
+  "generators": {
+    "Generator_1": {
+      "generator_id": "Generator_1",
+      "name": "Generator 1 (Substation 1 Source)",
+      "bus": "Bus_1",
+      "substation": "Substation_1",
+      "nominal_capacity_mva": "UNKNOWN",
+      "frequency_channels": ["R1:F", "R4:F"],
+      "rocof_channels": ["R1:DF", "R4:DF"]
+    },
+    "Generator_2": {
+      "generator_id": "Generator_2",
+      "name": "Generator 2 (Substation 2 Source / Slack)",
+      "bus": "Bus_2",
+      "substation": "Substation_2",
+      "nominal_capacity_mva": "UNKNOWN",
+      "frequency_channels": ["R2:F", "R3:F"],
+      "rocof_channels": ["R2:DF", "R3:DF"]
+    }
+  },
+  "circuit_breakers": {
+    "BR1": {
+      "breaker_id": "BR1",
+      "name": "Line 1 Substation 1 Circuit Breaker",
+      "substation": "Substation_1",
+      "line": "Line_1",
+      "bus": "Bus_1",
+      "controlling_relay": "R1",
+      "status_word_channel": "R1:S",
+      "trip_log_channel": "relay1_log",
+      "trip_bitmask": 2048
+    },
+    "BR2": {
+      "breaker_id": "BR2",
+      "name": "Line 1 Substation 2 Circuit Breaker",
+      "substation": "Substation_2",
+      "line": "Line_1",
+      "bus": "Bus_2",
+      "controlling_relay": "R2",
+      "status_word_channel": "R2:S",
+      "trip_log_channel": "relay2_log",
+      "trip_bitmask": 2048
+    },
+    "BR3": {
+      "breaker_id": "BR3",
+      "name": "Line 2 Substation 2 Circuit Breaker",
+      "substation": "Substation_2",
+      "line": "Line_2",
+      "bus": "Bus_2",
+      "controlling_relay": "R3",
+      "status_word_channel": "R3:S",
+      "trip_log_channel": "relay3_log",
+      "trip_bitmask": 2048
+    },
+    "BR4": {
+      "breaker_id": "BR4",
+      "name": "Line 2 Substation 1 Circuit Breaker",
+      "substation": "Substation_1",
+      "line": "Line_2",
+      "bus": "Bus_1",
+      "controlling_relay": "R4",
+      "status_word_channel": "R4:S",
+      "trip_log_channel": "relay4_log",
+      "trip_bitmask": 2048
+    }
+  },
+  "protective_relays": {
+    "R1": {
+      "relay_id": "R1",
+      "type": "SEL-421 Distance Protection Relay",
+      "substation": "Substation_1",
+      "protected_line": "Line_1",
+      "monitored_bus": "Bus_1",
+      "associated_breaker": "BR1"
+    },
+    "R2": {
+      "relay_id": "R2",
+      "type": "SEL-421 Distance Protection Relay",
+      "substation": "Substation_2",
+      "protected_line": "Line_1",
+      "monitored_bus": "Bus_2",
+      "associated_breaker": "BR2"
+    },
+    "R3": {
+      "relay_id": "R3",
+      "type": "SEL-421 Distance Protection Relay",
+      "substation": "Substation_2",
+      "protected_line": "Line_2",
+      "monitored_bus": "Bus_2",
+      "associated_breaker": "BR3"
+    },
+    "R4": {
+      "relay_id": "R4",
+      "type": "SEL-421 Distance Protection Relay",
+      "substation": "Substation_1",
+      "protected_line": "Line_2",
+      "monitored_bus": "Bus_1",
+      "associated_breaker": "BR4"
+    }
+  },
+  "physical_laws": {
+    "bus1_voltage_equipotential": {
+      "name": "Bus 1 Voltage Equipotential",
+      "description": "R1 and R4 are wired to the same physical busbar at Substation 1; measured voltages must be nearly identical.",
+      "channels": ["R1-PM1:V", "R4-PM1:V"],
+      "max_normal_residual_v": 250.0
+    },
+    "bus2_voltage_equipotential": {
+      "name": "Bus 2 Voltage Equipotential",
+      "description": "R2 and R3 are wired to the same physical busbar at Substation 2; measured voltages must be nearly identical.",
+      "channels": ["R2-PM1:V", "R3-PM1:V"],
+      "max_normal_residual_v": 600.0
+    },
+    "line1_current_continuity": {
+      "name": "Line 1 Series Current Continuity",
+      "description": "Kirchhoff's Current Law across Transmission Line 1; sending and receiving currents must match.",
+      "channels": ["R1-PM4:I", "R2-PM4:I"],
+      "max_normal_residual_a": 20.0
+    },
+    "line2_current_continuity": {
+      "name": "Line 2 Series Current Continuity",
+      "description": "Kirchhoff's Current Law across Transmission Line 2; sending and receiving currents must match.",
+      "channels": ["R4-PM4:I", "R3-PM4:I"],
+      "max_normal_residual_a": 20.0
+    },
+    "parallel_line_balance": {
+      "name": "Parallel Transmission Line Current Division",
+      "description": "When both lines are energized, identical line impedances dictate balanced current sharing (I1 ~ I2).",
+      "channels": ["R1-PM4:I", "R4-PM4:I"],
+      "max_normal_difference_a": 30.0
+    },
+    "frequency_synchronization": {
+      "name": "Grid Electrical Frequency Synchronism",
+      "description": "Across a synchronized AC transmission network, PMU electrical frequencies must match within tight bounds.",
+      "channels": ["R1:F", "R2:F", "R3:F", "R4:F"],
+      "max_normal_spread_hz": 0.05
+    }
+  }
+}

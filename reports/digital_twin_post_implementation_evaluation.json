@@ -1,0 +1,151 @@
+{
+  "evaluation_title": "Digital Twin Post-Implementation Regression Benchmark",
+  "total_evaluated_sequences": 15485,
+  "before_distribution": {
+    "Attack": {
+      "Normal steady-state grid operation": 1.0624169986719787,
+      "Physical event consistent with observed topology": 3.284639220894201,
+      "Possible measurement/sensor issue": 9.296148738379815,
+      "Unexpected physical law discrepancy without clear topology explanation": 76.6091190792386,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 5.772465692784418,
+      "Unknown / insufficient evidence": 3.975210270030987
+    },
+    "Natural": {
+      "Normal steady-state grid operation": 0.0,
+      "Physical event consistent with observed topology": 9.017082049845982,
+      "Possible measurement/sensor issue": 10.473256790814897,
+      "Unexpected physical law discrepancy without clear topology explanation": 72.44469336320358,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 2.9403528423410807,
+      "Unknown / insufficient evidence": 5.124614953794455
+    },
+    "NoEvents": {
+      "Normal steady-state grid operation": 80.2907915993538,
+      "Physical event consistent with observed topology": 0.0,
+      "Possible measurement/sensor issue": 0.16155088852988692,
+      "Unexpected physical law discrepancy without clear topology explanation": 14.70113085621971,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 0.0,
+      "Unknown / insufficient evidence": 4.846526655896607
+    }
+  },
+  "after_distribution": {
+    "NoEvents": {
+      "Normal steady-state grid operation": 80.2907915993538,
+      "Statistical ML anomaly with verified normal physical topology": 14.70113085621971,
+      "Unknown / insufficient evidence": 4.846526655896607,
+      "Possible measurement/sensor issue": 0.16155088852988692
+    },
+    "Natural": {
+      "Statistical ML anomaly with verified normal physical topology": 72.44469336320358,
+      "Physical event consistent with observed topology": 11.229347521702604,
+      "Possible measurement/sensor issue": 10.669280313637637,
+      "Unknown / insufficient evidence": 5.152618314197704,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 0.504060487258471
+    },
+    "Attack": {
+      "Statistical ML anomaly with verified normal physical topology": 76.6622399291722,
+      "Possible measurement/sensor issue": 9.56175298804781,
+      "Physical event consistent with observed topology": 5.320938468348827,
+      "Unknown / insufficient evidence": 3.975210270030987,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 3.4174413457281982,
+      "Normal steady-state grid operation": 1.0624169986719787
+    }
+  },
+  "comparison_table": [
+    {
+      "Hypothesis": "Normal steady-state grid operation",
+      "NoEvents_BEFORE": 80.29,
+      "NoEvents_AFTER": 80.29,
+      "NoEvents_DIFF": 0.0,
+      "Natural_BEFORE": 0.0,
+      "Natural_AFTER": 0.0,
+      "Natural_DIFF": 0.0,
+      "Attack_BEFORE": 1.06,
+      "Attack_AFTER": 1.06,
+      "Attack_DIFF": 0.0
+    },
+    {
+      "Hypothesis": "Physical event consistent with observed topology",
+      "NoEvents_BEFORE": 0.0,
+      "NoEvents_AFTER": 0.0,
+      "NoEvents_DIFF": 0.0,
+      "Natural_BEFORE": 9.02,
+      "Natural_AFTER": 11.23,
+      "Natural_DIFF": 2.21,
+      "Attack_BEFORE": 3.28,
+      "Attack_AFTER": 5.32,
+      "Attack_DIFF": 2.04
+    },
+    {
+      "Hypothesis": "Possible measurement/sensor issue",
+      "NoEvents_BEFORE": 0.16,
+      "NoEvents_AFTER": 0.16,
+      "NoEvents_DIFF": 0.0,
+      "Natural_BEFORE": 10.47,
+      "Natural_AFTER": 10.67,
+      "Natural_DIFF": 0.2,
+      "Attack_BEFORE": 9.3,
+      "Attack_AFTER": 9.56,
+      "Attack_DIFF": 0.27
+    },
+    {
+      "Hypothesis": "Unexpected topology/state inconsistency; possible cyber-related event",
+      "NoEvents_BEFORE": 0.0,
+      "NoEvents_AFTER": 0.0,
+      "NoEvents_DIFF": 0.0,
+      "Natural_BEFORE": 2.94,
+      "Natural_AFTER": 0.5,
+      "Natural_DIFF": -2.44,
+      "Attack_BEFORE": 5.77,
+      "Attack_AFTER": 3.42,
+      "Attack_DIFF": -2.36
+    },
+    {
+      "Hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+      "NoEvents_BEFORE": 14.7,
+      "NoEvents_AFTER": 0.0,
+      "NoEvents_DIFF": -14.7,
+      "Natural_BEFORE": 72.44,
+      "Natural_AFTER": 0.0,
+      "Natural_DIFF": -72.44,
+      "Attack_BEFORE": 76.61,
+      "Attack_AFTER": 0.0,
+      "Attack_DIFF": -76.61
+    },
+    {
+      "Hypothesis": "Statistical ML anomaly with verified normal physical topology",
+      "NoEvents_BEFORE": 0.0,
+      "NoEvents_AFTER": 14.7,
+      "NoEvents_DIFF": 14.7,
+      "Natural_BEFORE": 0.0,
+      "Natural_AFTER": 72.44,
+      "Natural_DIFF": 72.44,
+      "Attack_BEFORE": 0.0,
+      "Attack_AFTER": 76.66,
+      "Attack_DIFF": 76.66
+    },
+    {
+      "Hypothesis": "Unknown / insufficient evidence",
+      "NoEvents_BEFORE": 4.85,
+      "NoEvents_AFTER": 4.85,
+      "NoEvents_DIFF": 0.0,
+      "Natural_BEFORE": 5.12,
+      "Natural_AFTER": 5.15,
+      "Natural_DIFF": 0.03,
+      "Attack_BEFORE": 3.98,
+      "Attack_AFTER": 3.98,
+      "Attack_DIFF": 0.0
+    }
+  ],
+  "critical_checks": {
+    "normal_topology_inconsistency_count": 0,
+    "natural_topology_inconsistency_before": 105,
+    "natural_topology_inconsistency_after": 18,
+    "attack_topology_inconsistency_before": 652,
+    "attack_topology_inconsistency_after": 386,
+    "physical_law_discrepancy_count_after": 0,
+    "statistical_disturbance_count_after": 11337,
+    "natural_consistent_events_before": 322,
+    "natural_consistent_events_after": 401,
+    "both_lines_islanded_count": 0
+  }
+}

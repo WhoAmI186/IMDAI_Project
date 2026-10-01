@@ -1,0 +1,133 @@
+{
+  "evaluation_standard": "Strategy D (Sequence End Timestamp t_59)",
+  "campaigns_evaluated": [
+    "20260228_multi_openai",
+    "20260301_multi_google",
+    "20260301_multi_sonnet",
+    "20260302_multi_minimax",
+    "20260303_multi_sonnet"
+  ],
+  "total_test_sequences": 153196,
+  "normal_summary": {
+    "train": {
+      "samples": 9533,
+      "mean_score": 0.3506214617004992,
+      "median_score": 0.27269591886294575,
+      "P95": 0.6847415154751626,
+      "P99": 0.7593139159283477,
+      "P99.5": 0.7843383340360567,
+      "P99.9": 0.8597615766516048,
+      "agreement_rate_pct": 0.010489877268435959
+    },
+    "val": {
+      "samples": 2340,
+      "mean_score": 0.5066835056824212,
+      "median_score": 0.3892546995638897,
+      "P95": 1.0,
+      "P99": 1.0,
+      "P99.5": 1.0,
+      "P99.9": 1.0,
+      "agreement_rate_pct": 6.239316239316239,
+      "agreement_count": 146
+    }
+  },
+  "metrics": {
+    "layer1_alone": {
+      "name": "Layer 1 (Temporal TCN-AE)",
+      "roc_auc": 0.5007,
+      "pr_auc": 0.057,
+      "precision": 0.0559,
+      "recall": 0.3617,
+      "f1": 0.0969,
+      "fpr": 0.3724,
+      "fnr": 0.6383,
+      "tp": 2303,
+      "fp": 38868,
+      "tn": 65495,
+      "fn": 4064,
+      "episodes_detected": 122,
+      "total_episodes": 304,
+      "episode_detection_rate_pct": 40.13,
+      "median_latency_sec": 0.2863095,
+      "mean_latency_sec": 1.007938073770492
+    },
+    "layer2_alone": {
+      "name": "Layer 2 (Physical Relationships Max)",
+      "roc_auc": 0.4445,
+      "pr_auc": 0.0482,
+      "precision": 0.0351,
+      "recall": 0.2218,
+      "f1": 0.0605,
+      "fpr": 0.3725,
+      "fnr": 0.7782,
+      "tp": 1412,
+      "fp": 38872,
+      "tn": 65491,
+      "fn": 4955,
+      "episodes_detected": 133,
+      "total_episodes": 304,
+      "episode_detection_rate_pct": 43.75,
+      "median_latency_sec": 1.7229619999999999,
+      "mean_latency_sec": 3.5802825789473687
+    },
+    "evidence_fusion": {
+      "name": "Evidence Fusion (w1=0.5, w2=0.5)",
+      "roc_auc": 0.473,
+      "pr_auc": 0.0516,
+      "precision": 0.0525,
+      "recall": 0.3746,
+      "f1": 0.0921,
+      "fpr": 0.4125,
+      "fnr": 0.6254,
+      "tp": 2385,
+      "fp": 43052,
+      "tn": 61311,
+      "fn": 3982,
+      "episodes_detected": 141,
+      "total_episodes": 304,
+      "episode_detection_rate_pct": 46.38,
+      "median_latency_sec": 0.315019,
+      "mean_latency_sec": 1.1803031063829788
+    },
+    "cross_layer_agreement": {
+      "name": "Cross-Layer Agreement (L1 & L2)",
+      "roc_auc": 0.4657,
+      "pr_auc": 0.0549,
+      "precision": 0.0401,
+      "recall": 0.1494,
+      "f1": 0.0633,
+      "fpr": 0.218,
+      "fnr": 0.8506,
+      "tp": 951,
+      "fp": 22746,
+      "tn": 81617,
+      "fn": 5416,
+      "episodes_detected": 78,
+      "total_episodes": 304,
+      "episode_detection_rate_pct": 25.66,
+      "median_latency_sec": 0.4438415,
+      "mean_latency_sec": 3.279937512820513
+    }
+  },
+  "agreement_analysis": {
+    "total_test_sequences": 153196,
+    "overall_agreement_sequences": 31048,
+    "overall_agreement_rate_pct": 20.27,
+    "attack_sequences_total": 6367,
+    "attack_sequences_agreed": 951,
+    "attack_sequences_agreement_rate_pct": 14.94,
+    "clean_normal_sequences_total": 104363,
+    "clean_normal_sequences_agreed": 22746,
+    "clean_normal_agreement_rate_pct": 21.8,
+    "attack_episodes_total": 304,
+    "attack_episodes_with_agreement": 78,
+    "attack_episodes_agreement_rate_pct": 25.66,
+    "normal_validation_agreement_count": 146,
+    "normal_validation_agreement_rate_pct": 6.24
+  },
+  "figures": [
+    "reports\\figures\\evidence_fusion_roc_pr.png",
+    "reports\\figures\\evidence_fusion_comparison.png",
+    "reports\\figures\\evidence_fusion_agreement.png"
+  ]
+}

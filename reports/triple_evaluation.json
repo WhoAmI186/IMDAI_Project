@@ -1,0 +1,303 @@
+{
+  "evaluation_title": "Held-Out Benchmark Evaluation of Triple Synchrophasor Dataset",
+  "test_files": [
+    "data13.csv",
+    "data14.csv",
+    "data15.csv"
+  ],
+  "total_test_sequences": 15485,
+  "label_distribution": {
+    "Attack": 11295,
+    "Natural": 3571,
+    "NoEvents": 619
+  },
+  "sequence_level_evaluations": {
+    "Layer 1 (TCN-AE)": {
+      "attack_vs_clean_normal": {
+        "precision": 0.9939106295334468,
+        "recall": 0.982647189021691,
+        "f1": 0.9882468168462292,
+        "f2": 0.9848794079542835,
+        "fpr": 0.1098546042003231,
+        "fnr": 0.017352810978308986,
+        "roc_auc": 0.9405711564082924,
+        "pr_auc": 0.9937216867719824,
+        "tp": 11099,
+        "fp": 68,
+        "tn": 551,
+        "fn": 196,
+        "threshold": 1.0
+      },
+      "attack_vs_all": {
+        "precision": 0.7530872574297733,
+        "recall": 0.982647189021691,
+        "f1": 0.8526869742250222,
+        "f2": 0.9261824493474415,
+        "fpr": 0.8684964200477326,
+        "fnr": 0.017352810978308986,
+        "roc_auc": 0.5576921484045255,
+        "pr_auc": 0.7530055548342898,
+        "tp": 11099,
+        "fp": 3639,
+        "tn": 551,
+        "fn": 196,
+        "threshold": 1.0
+      },
+      "disturbance_vs_normal": {
+        "precision": 0.9953860768082508,
+        "recall": 0.9868155522669178,
+        "f1": 0.9910822861775436,
+        "f2": 0.9885178297080941,
+        "fpr": 0.1098546042003231,
+        "fnr": 0.013184447733082201,
+        "roc_auc": 0.941652483239068,
+        "pr_auc": 0.9952762506162397,
+        "tp": 14670,
+        "fp": 68,
+        "tn": 551,
+        "fn": 196,
+        "threshold": 1.0
+      }
+    },
+    "Layer 2 (TOP-2 MEAN)": {
+      "attack_vs_clean_normal": {
+        "precision": 0.993895909188263,
+        "recall": 0.8216910137228862,
+        "f1": 0.8996268114186012,
+        "f2": 0.851186764004549,
+        "fpr": 0.09208400646203554,
+        "fnr": 0.17830898627711378,
+        "roc_auc": 0.8844328305160261,
+        "pr_auc": 0.9905937986199916,
+        "tp": 9281,
+        "fp": 57,
+        "tn": 562,
+        "fn": 2014,
+        "threshold": 1.0
+      },
+      "attack_vs_all": {
+        "precision": 0.7676592224979322,
+        "recall": 0.8216910137228862,
+        "f1": 0.7937566816335256,
+        "f2": 0.8102846167277807,
+        "fpr": 0.6704057279236277,
+        "fnr": 0.17830898627711378,
+        "roc_auc": 0.5784830553152017,
+        "pr_auc": 0.7646253963634186,
+        "tp": 9281,
+        "fp": 2809,
+        "tn": 1381,
+        "fn": 2014,
+        "threshold": 1.0
+      },
+      "disturbance_vs_normal": {
+        "precision": 0.9952853598014888,
+        "recall": 0.8094309161845823,
+        "f1": 0.892788247514468,
+        "f2": 0.8408334963803562,
+        "fpr": 0.09208400646203554,
+        "fnr": 0.19056908381541773,
+        "roc_auc": 0.8799825560684604,
+        "pr_auc": 0.9925866765855074,
+        "tp": 12033,
+        "fp": 57,
+        "tn": 562,
+        "fn": 2833,
+        "threshold": 1.0
+      }
+    },
+    "Evidence Fusion (P99 th)": {
+      "attack_vs_clean_normal": {
+        "precision": 0.9915927568366593,
+        "recall": 0.9502434705621957,
+        "f1": 0.9704778697047788,
+        "f2": 0.9582351260624242,
+        "fpr": 0.1470113085621971,
+        "fnr": 0.049756529437804335,
+        "roc_auc": 0.9716163885116506,
+        "pr_auc": 0.9979191359673196,
+        "tp": 10733,
+        "fp": 91,
+        "tn": 528,
+        "fn": 562,
+        "threshold": 0.7394559383392334
+      },
+      "attack_vs_all": {
+        "precision": 0.7549412674966589,
+        "recall": 0.9502434705621957,
+        "f1": 0.8414079648792726,
+        "f2": 0.9034968096031786,
+        "fpr": 0.8315035799522673,
+        "fnr": 0.049756529437804335,
+        "roc_auc": 0.5877950938225354,
+        "pr_auc": 0.7674985899276348,
+        "tp": 10733,
+        "fp": 3484,
+        "tn": 706,
+        "fn": 562,
+        "threshold": 0.7394559383392334
+      },
+      "disturbance_vs_normal": {
+        "precision": 0.9935992122107337,
+        "recall": 0.9502219830485672,
+        "f1": 0.9714266066086716,
+        "f2": 0.9585917672127142,
+        "fpr": 0.1470113085621971,
+        "fnr": 0.0497780169514328,
+        "roc_auc": 0.9713978531314856,
+        "pr_auc": 0.9983975577171023,
+        "tp": 14126,
+        "fp": 91,
+        "tn": 528,
+        "fn": 740,
+        "threshold": 0.7394559383392334
+      }
+    },
+    "Evidence Fusion (P95 th)": {
+      "attack_vs_clean_normal": {
+        "precision": 0.9796861377506538,
+        "recall": 0.9948649845064188,
+        "f1": 0.9872172194157699,
+        "f2": 0.9917917034421888,
+        "fpr": 0.3764135702746365,
+        "fnr": 0.00513501549358123,
+        "roc_auc": 0.9716163885116506,
+        "pr_auc": 0.9979191359673196,
+        "tp": 11237,
+        "fp": 233,
+        "tn": 386,
+        "fn": 58,
+        "threshold": 0.5656783580780029
+      },
+      "attack_vs_all": {
+        "precision": 0.747439137953971,
+        "recall": 0.9948649845064188,
+        "f1": 0.8535835010824567,
+        "f2": 0.9330886504799548,
+        "fpr": 0.9062052505966587,
+        "fnr": 0.00513501549358123,
+        "roc_auc": 0.5877950938225354,
+        "pr_auc": 0.7674985899276348,
+        "tp": 11237,
+        "fp": 3797,
+        "tn": 393,
+        "fn": 58,
+        "threshold": 0.5656783580780029
+      },
+      "disturbance_vs_normal": {
+        "precision": 0.984501795929227,
+        "recall": 0.9956276066191309,
+        "f1": 0.9900334448160534,
+        "f2": 0.9933823726811458,
+        "fpr": 0.3764135702746365,
+        "fnr": 0.004372393380869097,
+        "roc_auc": 0.9713978531314856,
+        "pr_auc": 0.9983975577171023,
+        "tp": 14801,
+        "fp": 233,
+        "tn": 386,
+        "fn": 65,
+        "threshold": 0.5656783580780029
+      }
+    }
+  },
+  "class_behavior_breakdown": {
+    "NoEvents": {
+      "total_samples": 619,
+      "flagged_l1": 68,
+      "pct_l1": 10.99,
+      "flagged_l2": 57,
+      "pct_l2": 9.21,
+      "flagged_fused_p99": 91,
+      "pct_fused_p99": 14.7,
+      "flagged_fused_p95": 233,
+      "pct_fused_p95": 37.64
+    },
+    "Natural": {
+      "total_samples": 3571,
+      "flagged_l1": 3571,
+      "pct_l1": 100.0,
+      "flagged_l2": 2752,
+      "pct_l2": 77.07,
+      "flagged_fused_p99": 3393,
+      "pct_fused_p99": 95.02,
+      "flagged_fused_p95": 3564,
+      "pct_fused_p95": 99.8
+    },
+    "Attack": {
+      "total_samples": 11295,
+      "flagged_l1": 11099,
+      "pct_l1": 98.26,
+      "flagged_l2": 9281,
+      "pct_l2": 82.17,
+      "flagged_fused_p99": 10733,
+      "pct_fused_p99": 95.02,
+      "flagged_fused_p95": 11237,
+      "pct_fused_p95": 99.49
+    }
+  },
+  "episode_level_evaluation": {
+    "total_attack_episodes": 6,
+    "detected_attack_episodes": 6,
+    "detection_rate_pct": 100.0,
+    "median_latency_steps": 0.0,
+    "mean_latency_steps": 1.0,
+    "median_latency_sec_at_30hz": 0.0,
+    "episodes": [
+      {
+        "scenario": "data13.csv",
+        "episode_id": "data13.csv_attack_ep1",
+        "start_step": 144,
+        "end_step": 3681,
+        "length_steps": 3537,
+        "detected": true,
+        "first_detection_latency_steps": 1
+      },
+      {
+        "scenario": "data13.csv",
+        "episode_id": "data13.csv_attack_ep2",
+        "start_step": 3787,
+        "end_step": 4368,
+        "length_steps": 581,
+        "detected": true,
+        "first_detection_latency_steps": 0
+      },
+      {
+        "scenario": "data14.csv",
+        "episode_id": "data14.csv_attack_ep1",
+        "start_step": 20,
+        "end_step": 3187,
+        "length_steps": 3167,
+        "detected": true,
+        "first_detection_latency_steps": 5
+      },
+      {
+        "scenario": "data14.csv",
+        "episode_id": "data14.csv_attack_ep2",
+        "start_step": 3538,
+        "end_step": 4133,
+        "length_steps": 595,
+        "detected": true,
+        "first_detection_latency_steps": 0
+      },
+      {
+        "scenario": "data15.csv",
+        "episode_id": "data15.csv_attack_ep1",
+        "start_step": 455,
+        "end_step": 3435,
+        "length_steps": 2980,
+        "detected": true,
+        "first_detection_latency_steps": 0
+      },
+      {
+        "scenario": "data15.csv",
+        "episode_id": "data15.csv_attack_ep2",
+        "start_step": 3581,
+        "end_step": 4016,
+        "length_steps": 435,
+        "detected": true,
+        "first_detection_latency_steps": 0
+      }
+    ]
+  }
+}

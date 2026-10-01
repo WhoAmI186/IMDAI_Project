@@ -1,0 +1,108 @@
+{
+  "deterministic_expert_benchmark": {
+    "backend": "DeterministicExpertBackend",
+    "total_scenarios_evaluated": 5,
+    "mean_latency_ms": 0.48,
+    "schema_compliance_rate": "100.0%",
+    "semantic_integrity_rate": "100.0%",
+    "grounding_rate": "100.0%",
+    "reproducible": true,
+    "results": [
+      {
+        "scenario": "Scenario 1: Clean Normal Steady-State",
+        "latency_ms": 1.43,
+        "schema_valid": true,
+        "semantic_valid": true,
+        "breaker_grounded": true,
+        "no_definite_attack_assertion": true,
+        "explanations_count": 1,
+        "recommendations_count": 2,
+        "summary": "Grid operating within normal steady-state tolerances with fully consistent physical laws and breaker positions.",
+        "primary_hypothesis": "Normal steady-state grid operation",
+        "primary_confidence": 0.98,
+        "violations": []
+      },
+      {
+        "scenario": "Scenario 2: Coordinated Natural Transmission Line Outage",
+        "latency_ms": 0.24,
+        "schema_valid": true,
+        "semantic_valid": true,
+        "breaker_grounded": true,
+        "no_definite_attack_assertion": true,
+        "explanations_count": 2,
+        "recommendations_count": 3,
+        "summary": "Detected physical transmission event consistent with network topology resulting in LINE_1_OUTAGE.",
+        "primary_hypothesis": "Physical transmission line fault and coordinated protection clearing",
+        "primary_confidence": 0.9,
+        "violations": []
+      },
+      {
+        "scenario": "Scenario 3: Topology Inconsistency / Uncoordinated Trip",
+        "latency_ms": 0.35,
+        "schema_valid": true,
+        "semantic_valid": true,
+        "breaker_grounded": true,
+        "no_definite_attack_assertion": true,
+        "explanations_count": 2,
+        "recommendations_count": 3,
+        "summary": "Detected physical topology inconsistency where breaker contact status contradicts power flow under state LINE_1_OUTAGE.",
+        "primary_hypothesis": "Unauthorized remote trip or breaker status manipulation",
+        "primary_confidence": 0.85,
+        "violations": []
+      },
+      {
+        "scenario": "Scenario 4: Statistical ML Anomaly (Normal Physical Topology)",
+        "latency_ms": 0.19,
+        "schema_valid": true,
+        "semantic_valid": true,
+        "breaker_grounded": true,
+        "no_definite_attack_assertion": true,
+        "explanations_count": 2,
+        "recommendations_count": 3,
+        "summary": "Statistical anomaly detected by ML models while deterministic physical conservation laws and switchgear topology remain verified normal.",
+        "primary_hypothesis": "Statistical feature drift or inter-area dynamic power swing",
+        "primary_confidence": 0.7,
+        "violations": []
+      },
+      {
+        "scenario": "Scenario 5: Ambiguous / Incomplete Telemetry",
+        "latency_ms": 0.18,
+        "schema_valid": true,
+        "semantic_valid": true,
+        "breaker_grounded": true,
+        "no_definite_attack_assertion": true,
+        "explanations_count": 1,
+        "recommendations_count": 2,
+        "summary": "Ambiguous or unclassified operational event with incomplete or diverging telemetry.",
+        "primary_hypothesis": "Inconclusive telemetry or transient measurement divergence",
+        "primary_confidence": 0.5,
+        "violations": []
+      }
+    ]
+  },
+  "qwen3_8b_real_model_evaluation": {
+    "model_name": "Qwen/Qwen3-8B",
+    "backend_attempted": "TransformersBackend",
+    "hardware_target": "NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM, WDDM)",
+    "execution_status": "HALTED_RESOURCE_CONSTRAINT",
+    "total_parameters": "8.19 Billion",
+    "parameter_breakdown": {
+      "linear_layers_parameters": "6.95 Billion (36 Transformer Layers)",
+      "embedding_and_lm_head_parameters": "1.24 Billion (Vocab 151,936 x Hidden 4,096)"
+    },
+    "memory_budget_analysis": {
+      "full_precision_fp16_model_size_gb": 15.26,
+      "unquantized_checkpoint_download_size_gb": 16.38,
+      "bnb_4bit_quantized_model_weights_gb": 5.94,
+      "pytorch_cuda_context_overhead_gb": 0.50,
+      "kv_cache_overhead_gb": 0.35,
+      "total_active_vram_required_gb": 6.79,
+      "gpu_physical_vram_total_gb": 6.00,
+      "wddm_os_desktop_vram_used_gb": 0.87,
+      "usable_dedicated_vram_gb": 5.13,
+      "vram_deficit_gb": 1.66,
+      "host_system_ram_available_gb": 10.03
+    },
+    "limitation_summary": "TransformersBackend with on-the-fly BitsAndBytes 4-bit quantization requires downloading 16.38 GB of unquantized float16 weights. Because BitsAndBytes retains the 152k vocabulary embeddings and LM-head in 16-bit for precision, the model weights alone require 5.94 GB VRAM. Adding PyTorch CUDA runtime and KV cache brings the minimum requirement to 6.79 GB, exceeding the 5.13 GB dedicated usable VRAM of the RTX 4050 Laptop GPU by 1.66 GB. In accordance with Section 3 and Section 12 instructions, inference was safely halted rather than risking further system crashes or thrashing."
+  }
+}

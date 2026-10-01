@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "phase": "2C.4.3",
+    "title": "Scope-Appropriate Frozen LSTM Evaluation",
+    "model_checkpoint": "models/lstm_autoencoder_baseline.pt",
+    "best_epoch": 27,
+    "strategy": "Strategy D (Causal Sequence End t59)",
+    "primary_threshold": "P99.5",
+    "primary_threshold_value": 0.070686,
+    "allowed_tables": [
+      "pv_process_data",
+      "wind_process_data"
+    ],
+    "physical_impact_field": "delta_observed_during_active == True"
+  },
+  "sample_counts": {
+    "total_execution_steps_valid": 1716,
+    "evaluated_steps_with_judge": 1009,
+    "impactful_steps_total": 364,
+    "battery_impactful_excluded": 60,
+    "qualifying_pv_wind_impactful_steps": 304,
+    "total_sequences_pooled": 153196,
+    "primary_subset": {
+      "positive_sequences": 6367,
+      "negative_sequences": 146829,
+      "prevalence_pct": 4.1561
+    },
+    "secondary_clean_subset": {
+      "positive_sequences": 6367,
+      "clean_negative_sequences": 104363,
+      "excluded_other_attack_sequences": 42466,
+      "prevalence_pct": 5.75
+    }
+  },
+  "primary_evaluation": {
+    "roc_auc": 0.4881861485899128,
+    "pr_auc": 0.04010970282656288,
+    "threshold_metrics": {
+      "P95": {
+        "threshold_value": 0.038284,
+        "tp": 2678,
+        "fp": 66785,
+        "tn": 80044,
+        "fn": 3689,
+        "precision": 0.0386,
+        "recall": 0.4206,
+        "f1": 0.0706,
+        "fpr": 0.4548,
+        "fnr": 0.5794
+      },
+      "Mean+3sigma": {
+        "threshold_value": 0.051625,
+        "tp": 2150,
+        "fp": 54751,
+        "tn": 92078,
+        "fn": 4217,
+        "precision": 0.0378,
+        "recall": 0.3377,
+        "f1": 0.068,
+        "fpr": 0.3729,
+        "fnr": 0.6623
+      },
+      "P99": {
+        "threshold_value": 0.055999,
+        "tp": 1987,
+        "fp": 51364,
+        "tn": 95465,
+        "fn": 4380,
+        "precision": 0.0372,
+        "recall": 0.3121,
+        "f1": 0.0665,
+        "fpr": 0.3498,
+        "fnr": 0.6879
+      },
+      "P99.5": {
+        "threshold_value": 0.070686,
+        "tp": 1665,
+        "fp": 41970,
+        "tn": 104859,
+        "fn": 4702,
+        "precision": 0.0382,
+        "recall": 0.2615,
+        "f1": 0.0666,
+        "fpr": 0.2858,
+        "fnr": 0.7385
+      },
+      "P99.9": {
+        "threshold_value": 0.080325,
+        "tp": 1433,
+        "fp": 37344,
+        "tn": 109485,
+        "fn": 4934,
+        "precision": 0.037,
+        "recall": 0.2251,
+        "f1": 0.0635,
+        "fpr": 0.2543,
+        "fnr": 0.7749
+      }
+    },
+    "event_level_detection_at_p99_5": {
+      "qualifying_attack_intervals": 304,
+      "detected_intervals": 95,
+      "missed_intervals": 209,
+      "detection_rate_pct": 31.25,
+      "median_latency_sec": 0.33,
+      "mean_latency_sec": 1.6,
+      "min_latency_sec": 0.0,
+      "max_latency_sec": 20.69
+    }
+  },
+  "secondary_clean_evaluation": {
+    "roc_auc": 0.4752517897019386,
+    "pr_auc": 0.053884823163351206,
+    "threshold_metrics": {
+      "P95": {
+        "threshold_value": 0.038284,
+        "tp": 2678,
+        "fp": 49794,
+        "tn": 54569,
+        "fn": 3689,
+        "precision": 0.051,
+        "recall": 0.4206,
+        "f1": 0.091,
+        "fpr": 0.4771,
+        "fnr": 0.5794
+      },
+      "Mean+3sigma": {
+        "threshold_value": 0.051625,
+        "tp": 2150,
+        "fp": 40731,
+        "tn": 63632,
+        "fn": 4217,
+        "precision": 0.0501,
+        "recall": 0.3377,
+        "f1": 0.0873,
+        "fpr": 0.3903,
+        "fnr": 0.6623
+      },
+      "P99": {
+        "threshold_value": 0.055999,
+        "tp": 1987,
+        "fp": 38202,
+        "tn": 66161,
+        "fn": 4380,
+        "precision": 0.0494,
+        "recall": 0.3121,
+        "f1": 0.0854,
+        "fpr": 0.366,
+        "fnr": 0.6879
+      },
+      "P99.5": {
+        "threshold_value": 0.070686,
+        "tp": 1665,
+        "fp": 31396,
+        "tn": 72967,
+        "fn": 4702,
+        "precision": 0.0504,
+        "recall": 0.2615,
+        "f1": 0.0845,
+        "fpr": 0.3008,
+        "fnr": 0.7385
+      },
+      "P99.9": {
+        "threshold_value": 0.080325,
+        "tp": 1433,
+        "fp": 28100,
+        "tn": 76263,
+        "fn": 4934,
+        "precision": 0.0485,
+        "recall": 0.2251,
+        "f1": 0.0798,
+        "fpr": 0.2693,
+        "fnr": 0.7749
+      }
+    }
+  },
+  "per_run_evaluation": {
+    "20260228_multi_openai": {
+      "total_sequences": 31025,
+      "qualifying_positive_sequences": 1053,
+      "prevalence_pct": 3.394,
+      "roc_auc": 0.517706174385742,
+      "pr_auc": 0.03550269973108204,
+      "p99_5_metrics": {
+        "tp": 194,
+        "fp": 6024,
+        "tn": 23948,
+        "fn": 859,
+        "precision": 0.0312,
+        "recall": 0.1842,
+        "f1": 0.0534,
+        "fpr": 0.201,
+        "fnr": 0.8158
+      },
+      "event_detection": {
+        "qualifying_attack_intervals": 68,
+        "detected_intervals": 14,
+        "missed_intervals": 54,
+        "detection_rate_pct": 20.59,
+        "median_latency_sec": 0.27,
+        "mean_latency_sec": 1.19,
+        "min_latency_sec": 0.01,
+        "max_latency_sec": 11.54
+      }
+    },
+    "20260301_multi_google": {
+      "total_sequences": 41968,
+      "qualifying_positive_sequences": 212,
+      "prevalence_pct": 0.5051,
+      "roc_auc": 0.432867516949321,
+      "pr_auc": 0.004010867898584174,
+      "p99_5_metrics": {
+        "tp": 47,
+        "fp": 15377,
+        "tn": 26379,
+        "fn": 165,
+        "precision": 0.003,
+        "recall": 0.2217,
+        "f1": 0.006,
+        "fpr": 0.3683,
+        "fnr": 0.7783
+      },
+      "event_detection": {
+        "qualifying_attack_intervals": 10,
+        "detected_intervals": 3,
+        "missed_intervals": 7,
+        "detection_rate_pct": 30.0,
+        "median_latency_sec": 0.31,
+        "mean_latency_sec": 0.28,
+        "min_latency_sec": 0.07,
+        "max_latency_sec": 0.46
+      }
+    },
+    "20260301_multi_sonnet": {
+      "total_sequences": 17565,
+      "qualifying_positive_sequences": 1848,
+      "prevalence_pct": 10.5209,
+      "roc_auc": 0.49103114627308175,
+      "pr_auc": 0.09801293707836092,
+      "p99_5_metrics": {
+        "tp": 525,
+        "fp": 4762,
+        "tn": 10955,
+        "fn": 1323,
+        "precision": 0.0993,
+        "recall": 0.2841,
+        "f1": 0.1472,
+        "fpr": 0.303,
+        "fnr": 0.7159
+      },
+      "event_detection": {
+        "qualifying_attack_intervals": 100,
+        "detected_intervals": 36,
+        "missed_intervals": 64,
+        "detection_rate_pct": 36.0,
+        "median_latency_sec": 0.34,
+        "mean_latency_sec": 1.16,
+        "min_latency_sec": 0.0,
+        "max_latency_sec": 12.46
+      }
+    },
+    "20260302_multi_minimax": {
+      "total_sequences": 47648,
+      "qualifying_positive_sequences": 2087,
+      "prevalence_pct": 4.38,
+      "roc_auc": 0.5182090635251169,
+      "pr_auc": 0.05047897005080047,
+      "p99_5_metrics": {
+        "tp": 611,
+        "fp": 12663,
+        "tn": 32898,
+        "fn": 1476,
+        "precision": 0.046,
+        "recall": 0.2928,
+        "f1": 0.0796,
+        "fpr": 0.2779,
+        "fnr": 0.7072
+      },
+      "event_detection": {
+        "qualifying_attack_intervals": 62,
+        "detected_intervals": 25,
+        "missed_intervals": 37,
+        "detection_rate_pct": 40.32,
+        "median_latency_sec": 0.37,
+        "mean_latency_sec": 3.11,
+        "min_latency_sec": 0.03,
+        "max_latency_sec": 20.69
+      }
+    },
+    "20260303_multi_sonnet": {
+      "total_sequences": 14990,
+      "qualifying_positive_sequences": 1167,
+      "prevalence_pct": 7.7852,
+      "roc_auc": 0.47718012296607604,
+      "pr_auc": 0.07880888461849275,
+      "p99_5_metrics": {
+        "tp": 288,
+        "fp": 3144,
+        "tn": 10679,
+        "fn": 879,
+        "precision": 0.0839,
+        "recall": 0.2468,
+        "f1": 0.1252,
+        "fpr": 0.2274,
+        "fnr": 0.7532
+      },
+      "event_detection": {
+        "qualifying_attack_intervals": 64,
+        "detected_intervals": 17,
+        "missed_intervals": 47,
+        "detection_rate_pct": 26.56,
+        "median_latency_sec": 0.26,
+        "mean_latency_sec": 0.89,
+        "min_latency_sec": 0.0,
+        "max_latency_sec": 11.32
+      }
+    }
+  },
+  "benchmark_comparison": {
+    "all_attacks_phase2c42": {
+      "roc_auc": 0.4594,
+      "pr_auc": 0.2953,
+      "precision_p99_5": 0.2805,
+      "recall_p99_5": 0.2506,
+      "f1_p99_5": 0.2647,
+      "fpr_p99_5": 0.3008,
+      "fnr_p99_5": 0.7494,
+      "event_detection_rate_pct": 21.04,
+      "median_latency_sec": 3.0
+    },
+    "scope_appropriate_primary": {
+      "roc_auc": 0.4881861485899128,
+      "pr_auc": 0.04010970282656288,
+      "precision_p99_5": 0.0382,
+      "recall_p99_5": 0.2615,
+      "f1_p99_5": 0.0666,
+      "fpr_p99_5": 0.2858,
+      "fnr_p99_5": 0.7385,
+      "event_detection_rate_pct": 31.25,
+      "median_latency_sec": 0.33
+    },
+    "scope_appropriate_clean_neg": {
+      "roc_auc": 0.4752517897019386,
+      "pr_auc": 0.053884823163351206,
+      "precision_p99_5": 0.0504,
+      "recall_p99_5": 0.2615,
+      "f1_p99_5": 0.0845,
+      "fpr_p99_5": 0.3008,
+      "fnr_p99_5": 0.7385
+    }
+  },
+  "integrity_verification": {
+    "model_weights_frozen": true,
+    "scaler_parameters_frozen": true,
+    "zero_retraining": true,
+    "zero_attack_fitting": true,
+    "original_phase2c42_unchanged": true,
+    "strategy_d_preserved": true,
+    "no_missing_labels_treated_as_false": true,
+    "battery_attacks_strictly_excluded": true,
+    "negative_definitions_separated": true
+  }
+}

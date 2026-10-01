@@ -1,0 +1,1146 @@
+{
+  "phase": "Phase 3B",
+  "title": "Feature Engineering Implementation & LSTM Ablation Benchmark",
+  "date": "September 29, 2026",
+  "status": "COMPLETE",
+  "training_configurations": {
+    "config_a": {
+      "features_count": 14,
+      "best_epoch": 27,
+      "best_val_loss": 0.023807482173045475,
+      "training_time_sec": 22.24,
+      "checkpoint": "models/lstm_autoencoder_baseline.pt"
+    },
+    "config_b": {
+      "features_count": 19,
+      "best_epoch": 17,
+      "best_val_loss": 0.02089166871757589,
+      "training_time_sec": 27.223056316375732,
+      "checkpoint": "C:\\Users\\LENOVO\\Downloads\\IMDAI project\\models\\lstm_autoencoder_config_b.pt"
+    },
+    "config_c": {
+      "features_count": 18,
+      "best_epoch": 14,
+      "best_val_loss": 0.022752496138469785,
+      "training_time_sec": 21.40547823905945,
+      "checkpoint": "C:\\Users\\LENOVO\\Downloads\\IMDAI project\\models\\lstm_autoencoder_config_c.pt"
+    },
+    "config_d": {
+      "features_count": 24,
+      "best_epoch": 16,
+      "best_val_loss": 0.017136568025263966,
+      "training_time_sec": 24.77683424949646,
+      "checkpoint": "C:\\Users\\LENOVO\\Downloads\\IMDAI project\\models\\lstm_autoencoder_config_d.pt"
+    }
+  },
+  "evaluation_results": {
+    "config_a": {
+      "broad_metrics": {
+        "roc_auc": 0.459351656203454,
+        "pr_auc": 0.2953374097774896,
+        "prevalence": 0.31876158646439856,
+        "total_sequences": 153196,
+        "total_positive_sequences": 48833,
+        "threshold_metrics": {
+          "P95": {
+            "tp": 19669,
+            "fp": 49794,
+            "tn": 54569,
+            "fn": 29164,
+            "precision": 0.2832,
+            "recall": 0.4028,
+            "f1": 0.3325,
+            "fpr": 0.4771,
+            "fnr": 0.5972,
+            "threshold_value": 0.038284
+          },
+          "Mean+3\u03c3": {
+            "tp": 16170,
+            "fp": 40731,
+            "tn": 63632,
+            "fn": 32663,
+            "precision": 0.2842,
+            "recall": 0.3311,
+            "f1": 0.3059,
+            "fpr": 0.3903,
+            "fnr": 0.6689,
+            "threshold_value": 0.051625
+          },
+          "P99": {
+            "tp": 15149,
+            "fp": 38202,
+            "tn": 66161,
+            "fn": 33684,
+            "precision": 0.2839,
+            "recall": 0.3102,
+            "f1": 0.2965,
+            "fpr": 0.366,
+            "fnr": 0.6898,
+            "threshold_value": 0.055999
+          },
+          "P99.5": {
+            "tp": 12239,
+            "fp": 31396,
+            "tn": 72967,
+            "fn": 36594,
+            "precision": 0.2805,
+            "recall": 0.2506,
+            "f1": 0.2647,
+            "fpr": 0.3008,
+            "fnr": 0.7494,
+            "threshold_value": 0.070686
+          },
+          "P99.9": {
+            "tp": 10677,
+            "fp": 28100,
+            "tn": 76263,
+            "fn": 38156,
+            "precision": 0.2753,
+            "recall": 0.2186,
+            "f1": 0.2437,
+            "fpr": 0.2693,
+            "fnr": 0.7814,
+            "threshold_value": 0.080325
+          }
+        },
+        "event_detection": {
+          "total_intervals": 1716,
+          "detected_intervals": 554,
+          "detection_rate_pct": 32.28,
+          "median_latency_sec": 0.36,
+          "mean_latency_sec": 6.66
+        }
+      },
+      "scope_metrics": {
+        "primary": {
+          "roc_auc": 0.4881861485899128,
+          "pr_auc": 0.04010970282656288,
+          "prevalence": 0.041561137366510875,
+          "total_sequences": 153196,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2678,
+              "fp": 66785,
+              "tn": 80044,
+              "fn": 3689,
+              "precision": 0.0386,
+              "recall": 0.4206,
+              "f1": 0.0706,
+              "fpr": 0.4548,
+              "fnr": 0.5794,
+              "threshold_value": 0.038284
+            },
+            "Mean+3\u03c3": {
+              "tp": 2150,
+              "fp": 54751,
+              "tn": 92078,
+              "fn": 4217,
+              "precision": 0.0378,
+              "recall": 0.3377,
+              "f1": 0.068,
+              "fpr": 0.3729,
+              "fnr": 0.6623,
+              "threshold_value": 0.051625
+            },
+            "P99": {
+              "tp": 1987,
+              "fp": 51364,
+              "tn": 95465,
+              "fn": 4380,
+              "precision": 0.0372,
+              "recall": 0.3121,
+              "f1": 0.0665,
+              "fpr": 0.3498,
+              "fnr": 0.6879,
+              "threshold_value": 0.055999
+            },
+            "P99.5": {
+              "tp": 1665,
+              "fp": 41970,
+              "tn": 104859,
+              "fn": 4702,
+              "precision": 0.0382,
+              "recall": 0.2615,
+              "f1": 0.0666,
+              "fpr": 0.2858,
+              "fnr": 0.7385,
+              "threshold_value": 0.070686
+            },
+            "P99.9": {
+              "tp": 1433,
+              "fp": 37344,
+              "tn": 109485,
+              "fn": 4934,
+              "precision": 0.037,
+              "recall": 0.2251,
+              "f1": 0.0635,
+              "fpr": 0.2543,
+              "fnr": 0.7749,
+              "threshold_value": 0.080325
+            }
+          }
+        },
+        "secondary_clean": {
+          "roc_auc": 0.4752517897019386,
+          "pr_auc": 0.053884823163351206,
+          "prevalence": 0.057500225774406215,
+          "total_sequences": 110730,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2678,
+              "fp": 49794,
+              "tn": 54569,
+              "fn": 3689,
+              "precision": 0.051,
+              "recall": 0.4206,
+              "f1": 0.091,
+              "fpr": 0.4771,
+              "fnr": 0.5794,
+              "threshold_value": 0.038284
+            },
+            "Mean+3\u03c3": {
+              "tp": 2150,
+              "fp": 40731,
+              "tn": 63632,
+              "fn": 4217,
+              "precision": 0.0501,
+              "recall": 0.3377,
+              "f1": 0.0873,
+              "fpr": 0.3903,
+              "fnr": 0.6623,
+              "threshold_value": 0.051625
+            },
+            "P99": {
+              "tp": 1987,
+              "fp": 38202,
+              "tn": 66161,
+              "fn": 4380,
+              "precision": 0.0494,
+              "recall": 0.3121,
+              "f1": 0.0854,
+              "fpr": 0.366,
+              "fnr": 0.6879,
+              "threshold_value": 0.055999
+            },
+            "P99.5": {
+              "tp": 1665,
+              "fp": 31396,
+              "tn": 72967,
+              "fn": 4702,
+              "precision": 0.0504,
+              "recall": 0.2615,
+              "f1": 0.0845,
+              "fpr": 0.3008,
+              "fnr": 0.7385,
+              "threshold_value": 0.070686
+            },
+            "P99.9": {
+              "tp": 1433,
+              "fp": 28100,
+              "tn": 76263,
+              "fn": 4934,
+              "precision": 0.0485,
+              "recall": 0.2251,
+              "f1": 0.0798,
+              "fpr": 0.2693,
+              "fnr": 0.7749,
+              "threshold_value": 0.080325
+            }
+          }
+        },
+        "event_detection": {
+          "total_intervals": 304,
+          "detected_intervals": 95,
+          "detection_rate_pct": 31.25,
+          "median_latency_sec": 0.33,
+          "mean_latency_sec": 1.6
+        }
+      },
+      "per_campaign": {
+        "20260228_multi_openai": {
+          "total_sequences": 31025,
+          "broad_positives": 14847,
+          "scope_positives": 1053,
+          "broad_roc_auc": 0.5319,
+          "scope_roc_auc": 0.5177,
+          "scope_clean_roc_auc": 0.5332,
+          "broad_intervals_detected": 92,
+          "scope_intervals_detected": 14
+        },
+        "20260301_multi_google": {
+          "total_sequences": 41968,
+          "broad_positives": 2876,
+          "scope_positives": 212,
+          "broad_roc_auc": 0.4825,
+          "scope_roc_auc": 0.4329,
+          "scope_clean_roc_auc": 0.4319,
+          "broad_intervals_detected": 72,
+          "scope_intervals_detected": 3
+        },
+        "20260301_multi_sonnet": {
+          "total_sequences": 17565,
+          "broad_positives": 10838,
+          "scope_positives": 1848,
+          "broad_roc_auc": 0.5306,
+          "scope_roc_auc": 0.491,
+          "scope_clean_roc_auc": 0.5113,
+          "broad_intervals_detected": 167,
+          "scope_intervals_detected": 36
+        },
+        "20260302_multi_minimax": {
+          "total_sequences": 47648,
+          "broad_positives": 11534,
+          "scope_positives": 2087,
+          "broad_roc_auc": 0.4314,
+          "scope_roc_auc": 0.5182,
+          "scope_clean_roc_auc": 0.5003,
+          "broad_intervals_detected": 135,
+          "scope_intervals_detected": 25
+        },
+        "20260303_multi_sonnet": {
+          "total_sequences": 14990,
+          "broad_positives": 8738,
+          "scope_positives": 1167,
+          "broad_roc_auc": 0.4857,
+          "scope_roc_auc": 0.4772,
+          "scope_clean_roc_auc": 0.4663,
+          "broad_intervals_detected": 88,
+          "scope_intervals_detected": 17
+        }
+      }
+    },
+    "config_b": {
+      "broad_metrics": {
+        "roc_auc": 0.43872599721660976,
+        "pr_auc": 0.2786928632128191,
+        "prevalence": 0.31876158646439856,
+        "total_sequences": 153196,
+        "total_positive_sequences": 48833,
+        "threshold_metrics": {
+          "P95": {
+            "tp": 17185,
+            "fp": 47523,
+            "tn": 56840,
+            "fn": 31648,
+            "precision": 0.2656,
+            "recall": 0.3519,
+            "f1": 0.3027,
+            "fpr": 0.4554,
+            "fnr": 0.6481,
+            "threshold_value": 0.040611833333969116
+          },
+          "Mean+3\u03c3": {
+            "tp": 13925,
+            "fp": 39203,
+            "tn": 65160,
+            "fn": 34908,
+            "precision": 0.2621,
+            "recall": 0.2852,
+            "f1": 0.2731,
+            "fpr": 0.3756,
+            "fnr": 0.7148,
+            "threshold_value": 0.052641481161117554
+          },
+          "P99": {
+            "tp": 12004,
+            "fp": 34809,
+            "tn": 69554,
+            "fn": 36829,
+            "precision": 0.2564,
+            "recall": 0.2458,
+            "f1": 0.251,
+            "fpr": 0.3335,
+            "fnr": 0.7542,
+            "threshold_value": 0.06150418519973755
+          },
+          "P99.5": {
+            "tp": 10685,
+            "fp": 31774,
+            "tn": 72589,
+            "fn": 38148,
+            "precision": 0.2517,
+            "recall": 0.2188,
+            "f1": 0.2341,
+            "fpr": 0.3045,
+            "fnr": 0.7812,
+            "threshold_value": 0.068243607878685
+          },
+          "P99.9": {
+            "tp": 10139,
+            "fp": 30566,
+            "tn": 73797,
+            "fn": 38694,
+            "precision": 0.2491,
+            "recall": 0.2076,
+            "f1": 0.2265,
+            "fpr": 0.2929,
+            "fnr": 0.7924,
+            "threshold_value": 0.07095887511968613
+          }
+        },
+        "event_detection": {
+          "total_intervals": 1716,
+          "detected_intervals": 509,
+          "detection_rate_pct": 29.66,
+          "median_latency_sec": 0.37,
+          "mean_latency_sec": 7.16
+        }
+      },
+      "scope_metrics": {
+        "primary": {
+          "roc_auc": 0.4783807471209362,
+          "pr_auc": 0.037919216198802466,
+          "prevalence": 0.041561137366510875,
+          "total_sequences": 153196,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2439,
+              "fp": 62269,
+              "tn": 84560,
+              "fn": 3928,
+              "precision": 0.0377,
+              "recall": 0.3831,
+              "f1": 0.0686,
+              "fpr": 0.4241,
+              "fnr": 0.6169,
+              "threshold_value": 0.040611833333969116
+            },
+            "Mean+3\u03c3": {
+              "tp": 1997,
+              "fp": 51131,
+              "tn": 95698,
+              "fn": 4370,
+              "precision": 0.0376,
+              "recall": 0.3136,
+              "f1": 0.0671,
+              "fpr": 0.3482,
+              "fnr": 0.6864,
+              "threshold_value": 0.052641481161117554
+            },
+            "P99": {
+              "tp": 1807,
+              "fp": 45006,
+              "tn": 101823,
+              "fn": 4560,
+              "precision": 0.0386,
+              "recall": 0.2838,
+              "f1": 0.068,
+              "fpr": 0.3065,
+              "fnr": 0.7162,
+              "threshold_value": 0.06150418519973755
+            },
+            "P99.5": {
+              "tp": 1619,
+              "fp": 40840,
+              "tn": 105989,
+              "fn": 4748,
+              "precision": 0.0381,
+              "recall": 0.2543,
+              "f1": 0.0663,
+              "fpr": 0.2781,
+              "fnr": 0.7457,
+              "threshold_value": 0.068243607878685
+            },
+            "P99.9": {
+              "tp": 1523,
+              "fp": 39182,
+              "tn": 107647,
+              "fn": 4844,
+              "precision": 0.0374,
+              "recall": 0.2392,
+              "f1": 0.0647,
+              "fpr": 0.2669,
+              "fnr": 0.7608,
+              "threshold_value": 0.07095887511968613
+            }
+          }
+        },
+        "secondary_clean": {
+          "roc_auc": 0.45929014460483786,
+          "pr_auc": 0.049955266486985395,
+          "prevalence": 0.057500225774406215,
+          "total_sequences": 110730,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2439,
+              "fp": 47523,
+              "tn": 56840,
+              "fn": 3928,
+              "precision": 0.0488,
+              "recall": 0.3831,
+              "f1": 0.0866,
+              "fpr": 0.4554,
+              "fnr": 0.6169,
+              "threshold_value": 0.040611833333969116
+            },
+            "Mean+3\u03c3": {
+              "tp": 1997,
+              "fp": 39203,
+              "tn": 65160,
+              "fn": 4370,
+              "precision": 0.0485,
+              "recall": 0.3136,
+              "f1": 0.084,
+              "fpr": 0.3756,
+              "fnr": 0.6864,
+              "threshold_value": 0.052641481161117554
+            },
+            "P99": {
+              "tp": 1807,
+              "fp": 34809,
+              "tn": 69554,
+              "fn": 4560,
+              "precision": 0.0494,
+              "recall": 0.2838,
+              "f1": 0.0841,
+              "fpr": 0.3335,
+              "fnr": 0.7162,
+              "threshold_value": 0.06150418519973755
+            },
+            "P99.5": {
+              "tp": 1619,
+              "fp": 31774,
+              "tn": 72589,
+              "fn": 4748,
+              "precision": 0.0485,
+              "recall": 0.2543,
+              "f1": 0.0814,
+              "fpr": 0.3045,
+              "fnr": 0.7457,
+              "threshold_value": 0.068243607878685
+            },
+            "P99.9": {
+              "tp": 1523,
+              "fp": 30566,
+              "tn": 73797,
+              "fn": 4844,
+              "precision": 0.0475,
+              "recall": 0.2392,
+              "f1": 0.0792,
+              "fpr": 0.2929,
+              "fnr": 0.7608,
+              "threshold_value": 0.07095887511968613
+            }
+          }
+        },
+        "event_detection": {
+          "total_intervals": 304,
+          "detected_intervals": 93,
+          "detection_rate_pct": 30.59,
+          "median_latency_sec": 0.3,
+          "mean_latency_sec": 1.16
+        }
+      },
+      "per_campaign": {
+        "20260228_multi_openai": {
+          "total_sequences": 31025,
+          "broad_positives": 14847,
+          "scope_positives": 1053,
+          "broad_roc_auc": 0.521,
+          "scope_roc_auc": 0.5208,
+          "scope_clean_roc_auc": 0.5305,
+          "broad_intervals_detected": 85,
+          "scope_intervals_detected": 13
+        },
+        "20260301_multi_google": {
+          "total_sequences": 41968,
+          "broad_positives": 2876,
+          "scope_positives": 212,
+          "broad_roc_auc": 0.448,
+          "scope_roc_auc": 0.4537,
+          "scope_clean_roc_auc": 0.4508,
+          "broad_intervals_detected": 61,
+          "scope_intervals_detected": 5
+        },
+        "20260301_multi_sonnet": {
+          "total_sequences": 17565,
+          "broad_positives": 10838,
+          "scope_positives": 1848,
+          "broad_roc_auc": 0.5216,
+          "scope_roc_auc": 0.5036,
+          "scope_clean_roc_auc": 0.5173,
+          "broad_intervals_detected": 158,
+          "scope_intervals_detected": 36
+        },
+        "20260302_multi_minimax": {
+          "total_sequences": 47648,
+          "broad_positives": 11534,
+          "scope_positives": 2087,
+          "broad_roc_auc": 0.4136,
+          "scope_roc_auc": 0.5012,
+          "scope_clean_roc_auc": 0.4802,
+          "broad_intervals_detected": 116,
+          "scope_intervals_detected": 23
+        },
+        "20260303_multi_sonnet": {
+          "total_sequences": 14990,
+          "broad_positives": 8738,
+          "scope_positives": 1167,
+          "broad_roc_auc": 0.4638,
+          "scope_roc_auc": 0.4644,
+          "scope_clean_roc_auc": 0.4417,
+          "broad_intervals_detected": 89,
+          "scope_intervals_detected": 16
+        }
+      }
+    },
+    "config_c": {
+      "broad_metrics": {
+        "roc_auc": 0.45137480263924745,
+        "pr_auc": 0.289009426616892,
+        "prevalence": 0.31876158646439856,
+        "total_sequences": 153196,
+        "total_positive_sequences": 48833,
+        "threshold_metrics": {
+          "P95": {
+            "tp": 17523,
+            "fp": 47765,
+            "tn": 56598,
+            "fn": 31310,
+            "precision": 0.2684,
+            "recall": 0.3588,
+            "f1": 0.3071,
+            "fpr": 0.4577,
+            "fnr": 0.6412,
+            "threshold_value": 0.03246353194117546
+          },
+          "Mean+3\u03c3": {
+            "tp": 13495,
+            "fp": 37088,
+            "tn": 67275,
+            "fn": 35338,
+            "precision": 0.2668,
+            "recall": 0.2764,
+            "f1": 0.2715,
+            "fpr": 0.3554,
+            "fnr": 0.7236,
+            "threshold_value": 0.04453639127314091
+          },
+          "P99": {
+            "tp": 11951,
+            "fp": 33117,
+            "tn": 71246,
+            "fn": 36882,
+            "precision": 0.2652,
+            "recall": 0.2447,
+            "f1": 0.2545,
+            "fpr": 0.3173,
+            "fnr": 0.7553,
+            "threshold_value": 0.04986751452088356
+          },
+          "P99.5": {
+            "tp": 10032,
+            "fp": 27845,
+            "tn": 76518,
+            "fn": 38801,
+            "precision": 0.2649,
+            "recall": 0.2054,
+            "f1": 0.2314,
+            "fpr": 0.2668,
+            "fnr": 0.7946,
+            "threshold_value": 0.05807850882411003
+          },
+          "P99.9": {
+            "tp": 8818,
+            "fp": 24256,
+            "tn": 80107,
+            "fn": 40015,
+            "precision": 0.2666,
+            "recall": 0.1806,
+            "f1": 0.2153,
+            "fpr": 0.2324,
+            "fnr": 0.8194,
+            "threshold_value": 0.0642983466386795
+          }
+        },
+        "event_detection": {
+          "total_intervals": 1716,
+          "detected_intervals": 486,
+          "detection_rate_pct": 28.32,
+          "median_latency_sec": 0.37,
+          "mean_latency_sec": 7.97
+        }
+      },
+      "scope_metrics": {
+        "primary": {
+          "roc_auc": 0.479839123932025,
+          "pr_auc": 0.03819592816996986,
+          "prevalence": 0.041561137366510875,
+          "total_sequences": 153196,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2427,
+              "fp": 62861,
+              "tn": 83968,
+              "fn": 3940,
+              "precision": 0.0372,
+              "recall": 0.3812,
+              "f1": 0.0677,
+              "fpr": 0.4281,
+              "fnr": 0.6188,
+              "threshold_value": 0.03246353194117546
+            },
+            "Mean+3\u03c3": {
+              "tp": 1880,
+              "fp": 48703,
+              "tn": 98126,
+              "fn": 4487,
+              "precision": 0.0372,
+              "recall": 0.2953,
+              "f1": 0.066,
+              "fpr": 0.3317,
+              "fnr": 0.7047,
+              "threshold_value": 0.04453639127314091
+            },
+            "P99": {
+              "tp": 1601,
+              "fp": 43467,
+              "tn": 103362,
+              "fn": 4766,
+              "precision": 0.0355,
+              "recall": 0.2515,
+              "f1": 0.0623,
+              "fpr": 0.296,
+              "fnr": 0.7485,
+              "threshold_value": 0.04986751452088356
+            },
+            "P99.5": {
+              "tp": 1328,
+              "fp": 36549,
+              "tn": 110280,
+              "fn": 5039,
+              "precision": 0.0351,
+              "recall": 0.2086,
+              "f1": 0.06,
+              "fpr": 0.2489,
+              "fnr": 0.7914,
+              "threshold_value": 0.05807850882411003
+            },
+            "P99.9": {
+              "tp": 1157,
+              "fp": 31917,
+              "tn": 114912,
+              "fn": 5210,
+              "precision": 0.035,
+              "recall": 0.1817,
+              "f1": 0.0587,
+              "fpr": 0.2174,
+              "fnr": 0.8183,
+              "threshold_value": 0.0642983466386795
+            }
+          }
+        },
+        "secondary_clean": {
+          "roc_auc": 0.46468477303972766,
+          "pr_auc": 0.051004377076797884,
+          "prevalence": 0.057500225774406215,
+          "total_sequences": 110730,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2427,
+              "fp": 47765,
+              "tn": 56598,
+              "fn": 3940,
+              "precision": 0.0484,
+              "recall": 0.3812,
+              "f1": 0.0858,
+              "fpr": 0.4577,
+              "fnr": 0.6188,
+              "threshold_value": 0.03246353194117546
+            },
+            "Mean+3\u03c3": {
+              "tp": 1880,
+              "fp": 37088,
+              "tn": 67275,
+              "fn": 4487,
+              "precision": 0.0482,
+              "recall": 0.2953,
+              "f1": 0.0829,
+              "fpr": 0.3554,
+              "fnr": 0.7047,
+              "threshold_value": 0.04453639127314091
+            },
+            "P99": {
+              "tp": 1601,
+              "fp": 33117,
+              "tn": 71246,
+              "fn": 4766,
+              "precision": 0.0461,
+              "recall": 0.2515,
+              "f1": 0.0779,
+              "fpr": 0.3173,
+              "fnr": 0.7485,
+              "threshold_value": 0.04986751452088356
+            },
+            "P99.5": {
+              "tp": 1328,
+              "fp": 27845,
+              "tn": 76518,
+              "fn": 5039,
+              "precision": 0.0455,
+              "recall": 0.2086,
+              "f1": 0.0747,
+              "fpr": 0.2668,
+              "fnr": 0.7914,
+              "threshold_value": 0.05807850882411003
+            },
+            "P99.9": {
+              "tp": 1157,
+              "fp": 24256,
+              "tn": 80107,
+              "fn": 5210,
+              "precision": 0.0455,
+              "recall": 0.1817,
+              "f1": 0.0728,
+              "fpr": 0.2324,
+              "fnr": 0.8183,
+              "threshold_value": 0.0642983466386795
+            }
+          }
+        },
+        "event_detection": {
+          "total_intervals": 304,
+          "detected_intervals": 77,
+          "detection_rate_pct": 25.33,
+          "median_latency_sec": 0.32,
+          "mean_latency_sec": 1.48
+        }
+      },
+      "per_campaign": {
+        "20260228_multi_openai": {
+          "total_sequences": 31025,
+          "broad_positives": 14847,
+          "scope_positives": 1053,
+          "broad_roc_auc": 0.5309,
+          "scope_roc_auc": 0.5231,
+          "scope_clean_roc_auc": 0.5376,
+          "broad_intervals_detected": 75,
+          "scope_intervals_detected": 11
+        },
+        "20260301_multi_google": {
+          "total_sequences": 41968,
+          "broad_positives": 2876,
+          "scope_positives": 212,
+          "broad_roc_auc": 0.4603,
+          "scope_roc_auc": 0.4146,
+          "scope_clean_roc_auc": 0.412,
+          "broad_intervals_detected": 68,
+          "scope_intervals_detected": 4
+        },
+        "20260301_multi_sonnet": {
+          "total_sequences": 17565,
+          "broad_positives": 10838,
+          "scope_positives": 1848,
+          "broad_roc_auc": 0.5282,
+          "scope_roc_auc": 0.4887,
+          "scope_clean_roc_auc": 0.5062,
+          "broad_intervals_detected": 137,
+          "scope_intervals_detected": 26
+        },
+        "20260302_multi_minimax": {
+          "total_sequences": 47648,
+          "broad_positives": 11534,
+          "scope_positives": 2087,
+          "broad_roc_auc": 0.421,
+          "scope_roc_auc": 0.5132,
+          "scope_clean_roc_auc": 0.4929,
+          "broad_intervals_detected": 116,
+          "scope_intervals_detected": 21
+        },
+        "20260303_multi_sonnet": {
+          "total_sequences": 14990,
+          "broad_positives": 8738,
+          "scope_positives": 1167,
+          "broad_roc_auc": 0.4923,
+          "scope_roc_auc": 0.4657,
+          "scope_clean_roc_auc": 0.4624,
+          "broad_intervals_detected": 90,
+          "scope_intervals_detected": 15
+        }
+      }
+    },
+    "config_d": {
+      "broad_metrics": {
+        "roc_auc": 0.44477652176901583,
+        "pr_auc": 0.2869481029737153,
+        "prevalence": 0.31876158646439856,
+        "total_sequences": 153196,
+        "total_positive_sequences": 48833,
+        "threshold_metrics": {
+          "P95": {
+            "tp": 15286,
+            "fp": 42708,
+            "tn": 61655,
+            "fn": 33547,
+            "precision": 0.2636,
+            "recall": 0.313,
+            "f1": 0.2862,
+            "fpr": 0.4092,
+            "fnr": 0.687,
+            "threshold_value": 0.03317820280790329
+          },
+          "Mean+3\u03c3": {
+            "tp": 10967,
+            "fp": 31652,
+            "tn": 72711,
+            "fn": 37866,
+            "precision": 0.2573,
+            "recall": 0.2246,
+            "f1": 0.2398,
+            "fpr": 0.3033,
+            "fnr": 0.7754,
+            "threshold_value": 0.04422406852245331
+          },
+          "P99": {
+            "tp": 8996,
+            "fp": 26173,
+            "tn": 78190,
+            "fn": 39837,
+            "precision": 0.2558,
+            "recall": 0.1842,
+            "f1": 0.2142,
+            "fpr": 0.2508,
+            "fnr": 0.8158,
+            "threshold_value": 0.05131085589528084
+          },
+          "P99.5": {
+            "tp": 7982,
+            "fp": 23190,
+            "tn": 81173,
+            "fn": 40851,
+            "precision": 0.2561,
+            "recall": 0.1635,
+            "f1": 0.1995,
+            "fpr": 0.2222,
+            "fnr": 0.8365,
+            "threshold_value": 0.05600627511739731
+          },
+          "P99.9": {
+            "tp": 7098,
+            "fp": 21003,
+            "tn": 83360,
+            "fn": 41735,
+            "precision": 0.2526,
+            "recall": 0.1454,
+            "f1": 0.1845,
+            "fpr": 0.2012,
+            "fnr": 0.8546,
+            "threshold_value": 0.060010574758052826
+          }
+        },
+        "event_detection": {
+          "total_intervals": 1716,
+          "detected_intervals": 402,
+          "detection_rate_pct": 23.43,
+          "median_latency_sec": 0.39,
+          "mean_latency_sec": 9.05
+        }
+      },
+      "scope_metrics": {
+        "primary": {
+          "roc_auc": 0.4753680369098764,
+          "pr_auc": 0.037855003619699706,
+          "prevalence": 0.041561137366510875,
+          "total_sequences": 153196,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2133,
+              "fp": 55861,
+              "tn": 90968,
+              "fn": 4234,
+              "precision": 0.0368,
+              "recall": 0.335,
+              "f1": 0.0663,
+              "fpr": 0.3804,
+              "fnr": 0.665,
+              "threshold_value": 0.03317820280790329
+            },
+            "Mean+3\u03c3": {
+              "tp": 1520,
+              "fp": 41099,
+              "tn": 105730,
+              "fn": 4847,
+              "precision": 0.0357,
+              "recall": 0.2387,
+              "f1": 0.0621,
+              "fpr": 0.2799,
+              "fnr": 0.7613,
+              "threshold_value": 0.04422406852245331
+            },
+            "P99": {
+              "tp": 1213,
+              "fp": 33956,
+              "tn": 112873,
+              "fn": 5154,
+              "precision": 0.0345,
+              "recall": 0.1905,
+              "f1": 0.0584,
+              "fpr": 0.2313,
+              "fnr": 0.8095,
+              "threshold_value": 0.05131085589528084
+            },
+            "P99.5": {
+              "tp": 1074,
+              "fp": 30098,
+              "tn": 116731,
+              "fn": 5293,
+              "precision": 0.0345,
+              "recall": 0.1687,
+              "f1": 0.0572,
+              "fpr": 0.205,
+              "fnr": 0.8313,
+              "threshold_value": 0.05600627511739731
+            },
+            "P99.9": {
+              "tp": 937,
+              "fp": 27164,
+              "tn": 119665,
+              "fn": 5430,
+              "precision": 0.0333,
+              "recall": 0.1472,
+              "f1": 0.0544,
+              "fpr": 0.185,
+              "fnr": 0.8528,
+              "threshold_value": 0.060010574758052826
+            }
+          }
+        },
+        "secondary_clean": {
+          "roc_auc": 0.45823668803632917,
+          "pr_auc": 0.050313137295960306,
+          "prevalence": 0.057500225774406215,
+          "total_sequences": 110730,
+          "total_positive_sequences": 6367,
+          "threshold_metrics": {
+            "P95": {
+              "tp": 2133,
+              "fp": 42708,
+              "tn": 61655,
+              "fn": 4234,
+              "precision": 0.0476,
+              "recall": 0.335,
+              "f1": 0.0833,
+              "fpr": 0.4092,
+              "fnr": 0.665,
+              "threshold_value": 0.03317820280790329
+            },
+            "Mean+3\u03c3": {
+              "tp": 1520,
+              "fp": 31652,
+              "tn": 72711,
+              "fn": 4847,
+              "precision": 0.0458,
+              "recall": 0.2387,
+              "f1": 0.0769,
+              "fpr": 0.3033,
+              "fnr": 0.7613,
+              "threshold_value": 0.04422406852245331
+            },
+            "P99": {
+              "tp": 1213,
+              "fp": 26173,
+              "tn": 78190,
+              "fn": 5154,
+              "precision": 0.0443,
+              "recall": 0.1905,
+              "f1": 0.0719,
+              "fpr": 0.2508,
+              "fnr": 0.8095,
+              "threshold_value": 0.05131085589528084
+            },
+            "P99.5": {
+              "tp": 1074,
+              "fp": 23190,
+              "tn": 81173,
+              "fn": 5293,
+              "precision": 0.0443,
+              "recall": 0.1687,
+              "f1": 0.0701,
+              "fpr": 0.2222,
+              "fnr": 0.8313,
+              "threshold_value": 0.05600627511739731
+            },
+            "P99.9": {
+              "tp": 937,
+              "fp": 21003,
+              "tn": 83360,
+              "fn": 5430,
+              "precision": 0.0427,
+              "recall": 0.1472,
+              "f1": 0.0662,
+              "fpr": 0.2012,
+              "fnr": 0.8528,
+              "threshold_value": 0.060010574758052826
+            }
+          }
+        },
+        "event_detection": {
+          "total_intervals": 304,
+          "detected_intervals": 60,
+          "detection_rate_pct": 19.74,
+          "median_latency_sec": 0.31,
+          "mean_latency_sec": 1.23
+        }
+      },
+      "per_campaign": {
+        "20260228_multi_openai": {
+          "total_sequences": 31025,
+          "broad_positives": 14847,
+          "scope_positives": 1053,
+          "broad_roc_auc": 0.5227,
+          "scope_roc_auc": 0.5217,
+          "scope_clean_roc_auc": 0.532,
+          "broad_intervals_detected": 64,
+          "scope_intervals_detected": 11
+        },
+        "20260301_multi_google": {
+          "total_sequences": 41968,
+          "broad_positives": 2876,
+          "scope_positives": 212,
+          "broad_roc_auc": 0.4455,
+          "scope_roc_auc": 0.4237,
+          "scope_clean_roc_auc": 0.4206,
+          "broad_intervals_detected": 45,
+          "scope_intervals_detected": 2
+        },
+        "20260301_multi_sonnet": {
+          "total_sequences": 17565,
+          "broad_positives": 10838,
+          "scope_positives": 1848,
+          "broad_roc_auc": 0.5138,
+          "scope_roc_auc": 0.4822,
+          "scope_clean_roc_auc": 0.4924,
+          "broad_intervals_detected": 112,
+          "scope_intervals_detected": 16
+        },
+        "20260302_multi_minimax": {
+          "total_sequences": 47648,
+          "broad_positives": 11534,
+          "scope_positives": 2087,
+          "broad_roc_auc": 0.4262,
+          "scope_roc_auc": 0.5122,
+          "scope_clean_roc_auc": 0.4934,
+          "broad_intervals_detected": 101,
+          "scope_intervals_detected": 18
+        },
+        "20260303_multi_sonnet": {
+          "total_sequences": 14990,
+          "broad_positives": 8738,
+          "scope_positives": 1167,
+          "broad_roc_auc": 0.4624,
+          "scope_roc_auc": 0.4555,
+          "scope_clean_roc_auc": 0.4351,
+          "broad_intervals_detected": 80,
+          "scope_intervals_detected": 13
+        }
+      }
+    }
+  }
+}

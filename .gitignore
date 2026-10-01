@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Data and Models
+dataset/
+models/
+
+# Virtual Environments
+venv/
+env/
+.env
+.venv
+
+# VS Code / IDE
+.vscode/
+.idea/

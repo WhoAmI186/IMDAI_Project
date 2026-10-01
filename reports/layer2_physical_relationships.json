@@ -1,0 +1,871 @@
+{
+  "layer": "Layer 2 \u2014 Physical Relationships",
+  "architecture_type": "Independent Parallel Branch (Physics-Based Regression Residual Scoring)",
+  "dataset": {
+    "normal_dataset_id": "21c851bc-384f-5b81-8747-6dcacdceff35",
+    "normal_dataset_name": "20260225_normal",
+    "total_normal_rows": 11991,
+    "chronological_split": {
+      "train_ratio": 0.8,
+      "train_rows": 9592,
+      "val_rows": 2399,
+      "train_start_ts": "2026-02-25 22:02:02.395805+05:30",
+      "train_end_ts": "2026-02-25 23:26:09.550288+05:30",
+      "val_start_ts": "2026-02-25 23:26:10.075582+05:30",
+      "val_end_ts": "2026-02-25 23:47:11.941509+05:30",
+      "temporal_gap_sec": 0.525294
+    },
+    "missing_values": 0,
+    "leakage_controls": [
+      "100% normal data used for fitting (zero attack rows)",
+      "Zero attack labels or execution metadata used during fitting or threshold derivation",
+      "Chronological boundary strictly monotonic with 0.525s positive gap",
+      "Model thresholds calibrated exclusively on normal training residuals",
+      "Attack evaluation executed post-hoc after model and threshold freezing"
+    ]
+  },
+  "model_parameters": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "objective": "reg:squarederror",
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "model_paths": {
+    "pv_inverter": "models/layer2_pv_inverter_xgb.json",
+    "wind_speed": "models/layer2_wind_speed_xgb.json",
+    "wind_temperature": "models/layer2_wind_temperature_xgb.json",
+    "pv_thermal": "models/layer2_pv_thermal_xgb.json",
+    "metadata": "models/layer2_metadata.json"
+  },
+  "normal_validation_performance": {
+    "pv_inverter": {
+      "name": "PV Inverter Relationship",
+      "domain": "pv",
+      "input_feature": "pv_m_inverter_dc_power",
+      "target_feature": "pv_m_inverter_ac_power",
+      "unit": "kW",
+      "physical_description": "Inverter conversion efficiency: P_ac = eta * P_dc (eta ~ 97.4%).",
+      "model_file": "layer2_pv_inverter_xgb.json",
+      "target_range_val": [
+        0.0,
+        1596.0
+      ],
+      "mae": 5.2216,
+      "rmse": 6.8625,
+      "r2": 0.9999,
+      "mean_residual": 5.2216,
+      "median_residual": 3.1627,
+      "p95_residual": 12.5454,
+      "p99_residual": 27.4624,
+      "max_residual": 39.3672,
+      "thresholds": {
+        "P95": 7.0728759765625,
+        "P99": 9.36767578125,
+        "P99.5": 10.36767578125,
+        "P99.9": 21.46240234375
+      },
+      "val_exceedance_p995_pct": 5.59
+    },
+    "wind_speed": {
+      "name": "Wind Anemometer Relationship",
+      "domain": "wind",
+      "input_feature": "wind_m_wind_speed_a",
+      "target_feature": "wind_m_wind_speed_b",
+      "unit": "m/s",
+      "physical_description": "Dual anemometer aerodynamic agreement: ultrasonic vs mechanical nacelle sensors.",
+      "model_file": "layer2_wind_speed_xgb.json",
+      "target_range_val": [
+        2.4034600257873535,
+        10.725259780883789
+      ],
+      "mae": 0.3061,
+      "rmse": 0.3764,
+      "r2": 0.9449,
+      "mean_residual": 0.3061,
+      "median_residual": 0.2856,
+      "p95_residual": 0.638,
+      "p99_residual": 0.9431,
+      "max_residual": 2.8033,
+      "thresholds": {
+        "P95": 0.541111946105957,
+        "P99": 1.0185909271240234,
+        "P99.5": 1.2282524108886719,
+        "P99.9": 1.5746139287948608
+      },
+      "val_exceedance_p995_pct": 0.71
+    },
+    "wind_temperature": {
+      "name": "Wind Temperature Relationship",
+      "domain": "wind",
+      "input_feature": "wind_m_temperature_a",
+      "target_feature": "wind_m_temperature_b",
+      "unit": "\u00b0C",
+      "physical_description": "Thermal equilibrium between nacelle internal housing and ambient air sensors.",
+      "model_file": "layer2_wind_temperature_xgb.json",
+      "target_range_val": [
+        4.829999923706055,
+        20.809999465942383
+      ],
+      "mae": 0.1929,
+      "rmse": 0.3761,
+      "r2": 0.9857,
+      "mean_residual": 0.1929,
+      "median_residual": 0.0786,
+      "p95_residual": 0.888,
+      "p99_residual": 1.6257,
+      "max_residual": 2.2435,
+      "thresholds": {
+        "P95": 0.8566082715988159,
+        "P99": 1.7401657104492188,
+        "P99.5": 1.9437147378921509,
+        "P99.9": 2.403947353363037
+      },
+      "val_exceedance_p995_pct": 0.54
+    },
+    "pv_thermal": {
+      "name": "PV Thermal Relationship",
+      "domain": "pv",
+      "input_feature": "pv_m_temp_air",
+      "target_feature": "pv_m_cell_temperature",
+      "unit": "\u00b0C",
+      "physical_description": "Diurnal thermal coupling between ambient air temperature and PV cell temperature.",
+      "model_file": "layer2_pv_thermal_xgb.json",
+      "target_range_val": [
+        4.300000190734863,
+        40.5655517578125
+      ],
+      "mae": 4.6435,
+      "rmse": 7.1367,
+      "r2": 0.7574,
+      "mean_residual": 4.6435,
+      "median_residual": 1.4317,
+      "p95_residual": 17.3308,
+      "p99_residual": 19.2349,
+      "max_residual": 19.8141,
+      "thresholds": {
+        "P95": 10.347723007202148,
+        "P99": 14.960164070129395,
+        "P99.5": 15.28892707824707,
+        "P99.9": 15.8095121383667
+      },
+      "val_exceedance_p995_pct": 7.63
+    }
+  },
+  "attack_evaluation": {
+    "evaluation_standard": "Strategy D (Sequence End Timestamp t_59)",
+    "campaigns_evaluated": [
+      "20260228_multi_openai",
+      "20260301_multi_google",
+      "20260301_multi_sonnet",
+      "20260302_multi_minimax",
+      "20260303_multi_sonnet"
+    ],
+    "total_test_sequences": 153196,
+    "relationships": {
+      "pv_inverter": {
+        "name": "PV Inverter Relationship",
+        "domain": "pv",
+        "input_feature": "pv_m_inverter_dc_power",
+        "target_feature": "pv_m_inverter_ac_power",
+        "unit": "kW",
+        "thresholds": {
+          "P95": 7.0728759765625,
+          "P99": 9.36767578125,
+          "P99.5": 10.36767578125,
+          "P99.9": 21.46240234375
+        },
+        "roc_auc_scope_primary": 0.5284,
+        "pr_auc_scope_primary": 0.0417,
+        "roc_auc_clean_negatives": 0.5261,
+        "pr_auc_clean_negatives": 0.057,
+        "roc_auc_subsystem_domain": 0.6016,
+        "pr_auc_subsystem_domain": 0.0187,
+        "roc_auc_broad": 0.4969,
+        "pr_auc_broad": 0.3082,
+        "threshold_metrics": {
+          "P95": {
+            "threshold_val": 7.0729,
+            "scope_primary": {
+              "precision": 0.0446,
+              "recall": 0.202,
+              "f1": 0.073,
+              "fpr": 0.1878,
+              "fnr": 0.798,
+              "tp": 1286,
+              "fp": 27575,
+              "tn": 119254,
+              "fn": 5081,
+              "episode_detection_rate_pct": 37.17,
+              "episodes_detected": 113,
+              "episodes_total": 304,
+              "median_latency_sec": 0.39,
+              "mean_latency_sec": 2.27
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0597,
+              "recall": 0.202,
+              "f1": 0.0922,
+              "fpr": 0.194,
+              "fnr": 0.798
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0221,
+              "recall": 0.2676,
+              "f1": 0.0408,
+              "fpr": 0.1871,
+              "fnr": 0.7324,
+              "episode_detection_rate_pct": 52.94,
+              "episodes_detected": 54,
+              "episodes_total": 102,
+              "median_latency_sec": 0.45,
+              "mean_latency_sec": 2.6
+            }
+          },
+          "P99": {
+            "threshold_val": 9.3677,
+            "scope_primary": {
+              "precision": 0.035,
+              "recall": 0.0908,
+              "f1": 0.0505,
+              "fpr": 0.1085,
+              "fnr": 0.9092,
+              "tp": 578,
+              "fp": 15937,
+              "tn": 130892,
+              "fn": 5789,
+              "episode_detection_rate_pct": 20.72,
+              "episodes_detected": 63,
+              "episodes_total": 304,
+              "median_latency_sec": 0.45,
+              "mean_latency_sec": 3.19
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0458,
+              "recall": 0.0908,
+              "f1": 0.0609,
+              "fpr": 0.1154,
+              "fnr": 0.9092
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0162,
+              "recall": 0.1126,
+              "f1": 0.0284,
+              "fpr": 0.1077,
+              "fnr": 0.8874,
+              "episode_detection_rate_pct": 26.47,
+              "episodes_detected": 27,
+              "episodes_total": 102,
+              "median_latency_sec": 0.51,
+              "mean_latency_sec": 2.94
+            }
+          },
+          "P99.5": {
+            "threshold_val": 10.3677,
+            "scope_primary": {
+              "precision": 0.0363,
+              "recall": 0.0829,
+              "f1": 0.0505,
+              "fpr": 0.0955,
+              "fnr": 0.9171,
+              "tp": 528,
+              "fp": 14019,
+              "tn": 132810,
+              "fn": 5839,
+              "episode_detection_rate_pct": 18.09,
+              "episodes_detected": 55,
+              "episodes_total": 304,
+              "median_latency_sec": 0.42,
+              "mean_latency_sec": 3.37
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0471,
+              "recall": 0.0829,
+              "f1": 0.0601,
+              "fpr": 0.1023,
+              "fnr": 0.9171
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0166,
+              "recall": 0.1017,
+              "f1": 0.0286,
+              "fpr": 0.0949,
+              "fnr": 0.8983,
+              "episode_detection_rate_pct": 22.55,
+              "episodes_detected": 23,
+              "episodes_total": 102,
+              "median_latency_sec": 0.42,
+              "mean_latency_sec": 2.9
+            }
+          },
+          "P99.9": {
+            "threshold_val": 21.4624,
+            "scope_primary": {
+              "precision": 0.0239,
+              "recall": 0.0236,
+              "f1": 0.0237,
+              "fpr": 0.0417,
+              "fnr": 0.9764,
+              "tp": 150,
+              "fp": 6127,
+              "tn": 140702,
+              "fn": 6217,
+              "episode_detection_rate_pct": 6.91,
+              "episodes_detected": 21,
+              "episodes_total": 304,
+              "median_latency_sec": 6.76,
+              "mean_latency_sec": 6.04
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0305,
+              "recall": 0.0236,
+              "f1": 0.0266,
+              "fpr": 0.0457,
+              "fnr": 0.9764
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0118,
+              "recall": 0.0311,
+              "f1": 0.0171,
+              "fpr": 0.0411,
+              "fnr": 0.9689,
+              "episode_detection_rate_pct": 7.84,
+              "episodes_detected": 8,
+              "episodes_total": 102,
+              "median_latency_sec": 3.59,
+              "mean_latency_sec": 4.4
+            }
+          }
+        }
+      },
+      "wind_speed": {
+        "name": "Wind Anemometer Relationship",
+        "domain": "wind",
+        "input_feature": "wind_m_wind_speed_a",
+        "target_feature": "wind_m_wind_speed_b",
+        "unit": "m/s",
+        "thresholds": {
+          "P95": 0.541111946105957,
+          "P99": 1.0185909271240234,
+          "P99.5": 1.2282524108886719,
+          "P99.9": 1.5746139287948608
+        },
+        "roc_auc_scope_primary": 0.4905,
+        "pr_auc_scope_primary": 0.0397,
+        "roc_auc_clean_negatives": 0.4876,
+        "pr_auc_clean_negatives": 0.0544,
+        "roc_auc_subsystem_domain": 0.4874,
+        "pr_auc_subsystem_domain": 0.0292,
+        "roc_auc_broad": 0.4897,
+        "pr_auc_broad": 0.3078,
+        "threshold_metrics": {
+          "P95": {
+            "threshold_val": 0.5411,
+            "scope_primary": {
+              "precision": 0.0405,
+              "recall": 0.0834,
+              "f1": 0.0545,
+              "fpr": 0.0857,
+              "fnr": 0.9166,
+              "tp": 531,
+              "fp": 12578,
+              "tn": 134251,
+              "fn": 5836,
+              "episode_detection_rate_pct": 57.89,
+              "episodes_detected": 176,
+              "episodes_total": 304,
+              "median_latency_sec": 3.56,
+              "mean_latency_sec": 4.82
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0541,
+              "recall": 0.0834,
+              "f1": 0.0656,
+              "fpr": 0.089,
+              "fnr": 0.9166
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0314,
+              "recall": 0.0876,
+              "f1": 0.0463,
+              "fpr": 0.0855,
+              "fnr": 0.9124,
+              "episode_detection_rate_pct": 58.91,
+              "episodes_detected": 119,
+              "episodes_total": 202,
+              "median_latency_sec": 3.41,
+              "mean_latency_sec": 4.79
+            }
+          },
+          "P99": {
+            "threshold_val": 1.0186,
+            "scope_primary": {
+              "precision": 0.0185,
+              "recall": 0.0099,
+              "f1": 0.0129,
+              "fpr": 0.0228,
+              "fnr": 0.9901,
+              "tp": 63,
+              "fp": 3344,
+              "tn": 143485,
+              "fn": 6304,
+              "episode_detection_rate_pct": 13.16,
+              "episodes_detected": 40,
+              "episodes_total": 304,
+              "median_latency_sec": 5.19,
+              "mean_latency_sec": 6.14
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0229,
+              "recall": 0.0099,
+              "f1": 0.0138,
+              "fpr": 0.0258,
+              "fnr": 0.9901
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0138,
+              "recall": 0.01,
+              "f1": 0.0116,
+              "fpr": 0.0226,
+              "fnr": 0.99,
+              "episode_detection_rate_pct": 14.36,
+              "episodes_detected": 29,
+              "episodes_total": 202,
+              "median_latency_sec": 4.4,
+              "mean_latency_sec": 5.55
+            }
+          },
+          "P99.5": {
+            "threshold_val": 1.2283,
+            "scope_primary": {
+              "precision": 0.0147,
+              "recall": 0.0058,
+              "f1": 0.0083,
+              "fpr": 0.0168,
+              "fnr": 0.9942,
+              "tp": 37,
+              "fp": 2472,
+              "tn": 144357,
+              "fn": 6330,
+              "episode_detection_rate_pct": 8.22,
+              "episodes_detected": 25,
+              "episodes_total": 304,
+              "median_latency_sec": 5.26,
+              "mean_latency_sec": 6.38
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0178,
+              "recall": 0.0058,
+              "f1": 0.0088,
+              "fpr": 0.0195,
+              "fnr": 0.9942
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0112,
+              "recall": 0.006,
+              "f1": 0.0078,
+              "fpr": 0.0167,
+              "fnr": 0.994,
+              "episode_detection_rate_pct": 9.41,
+              "episodes_detected": 19,
+              "episodes_total": 202,
+              "median_latency_sec": 3.86,
+              "mean_latency_sec": 5.13
+            }
+          },
+          "P99.9": {
+            "threshold_val": 1.5746,
+            "scope_primary": {
+              "precision": 0.0054,
+              "recall": 0.0014,
+              "f1": 0.0022,
+              "fpr": 0.0113,
+              "fnr": 0.9986,
+              "tp": 9,
+              "fp": 1659,
+              "tn": 145170,
+              "fn": 6358,
+              "episode_detection_rate_pct": 1.97,
+              "episodes_detected": 6,
+              "episodes_total": 304,
+              "median_latency_sec": 10.47,
+              "mean_latency_sec": 10.29
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0065,
+              "recall": 0.0014,
+              "f1": 0.0023,
+              "fpr": 0.0132,
+              "fnr": 0.9986
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0042,
+              "recall": 0.0015,
+              "f1": 0.0022,
+              "fpr": 0.0112,
+              "fnr": 0.9985,
+              "episode_detection_rate_pct": 1.98,
+              "episodes_detected": 4,
+              "episodes_total": 202,
+              "median_latency_sec": 8.36,
+              "mean_latency_sec": 7.97
+            }
+          }
+        }
+      },
+      "wind_temperature": {
+        "name": "Wind Temperature Relationship",
+        "domain": "wind",
+        "input_feature": "wind_m_temperature_a",
+        "target_feature": "wind_m_temperature_b",
+        "unit": "\u00b0C",
+        "thresholds": {
+          "P95": 0.8566082715988159,
+          "P99": 1.7401657104492188,
+          "P99.5": 1.9437147378921509,
+          "P99.9": 2.403947353363037
+        },
+        "roc_auc_scope_primary": 0.4642,
+        "pr_auc_scope_primary": 0.0353,
+        "roc_auc_clean_negatives": 0.4496,
+        "pr_auc_clean_negatives": 0.0474,
+        "roc_auc_subsystem_domain": 0.461,
+        "pr_auc_subsystem_domain": 0.0258,
+        "roc_auc_broad": 0.4495,
+        "pr_auc_broad": 0.272,
+        "threshold_metrics": {
+          "P95": {
+            "threshold_val": 0.8566,
+            "scope_primary": {
+              "precision": 0.0305,
+              "recall": 0.2309,
+              "f1": 0.0539,
+              "fpr": 0.318,
+              "fnr": 0.7691,
+              "tp": 1470,
+              "fp": 46685,
+              "tn": 100144,
+              "fn": 4897,
+              "episode_detection_rate_pct": 62.5,
+              "episodes_detected": 190,
+              "episodes_total": 304,
+              "median_latency_sec": 1.44,
+              "mean_latency_sec": 3.05
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0389,
+              "recall": 0.2309,
+              "f1": 0.0665,
+              "fpr": 0.3483,
+              "fnr": 0.7691
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0216,
+              "recall": 0.2208,
+              "f1": 0.0393,
+              "fpr": 0.3173,
+              "fnr": 0.7792,
+              "episode_detection_rate_pct": 60.89,
+              "episodes_detected": 123,
+              "episodes_total": 202,
+              "median_latency_sec": 1.37,
+              "mean_latency_sec": 2.87
+            }
+          },
+          "P99": {
+            "threshold_val": 1.7402,
+            "scope_primary": {
+              "precision": 0.0221,
+              "recall": 0.1275,
+              "f1": 0.0377,
+              "fpr": 0.2446,
+              "fnr": 0.8725,
+              "tp": 812,
+              "fp": 35919,
+              "tn": 110910,
+              "fn": 5555,
+              "episode_detection_rate_pct": 26.32,
+              "episodes_detected": 80,
+              "episodes_total": 304,
+              "median_latency_sec": 2.15,
+              "mean_latency_sec": 3.78
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0268,
+              "recall": 0.1275,
+              "f1": 0.0443,
+              "fpr": 0.2824,
+              "fnr": 0.8725
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0146,
+              "recall": 0.1138,
+              "f1": 0.0258,
+              "fpr": 0.2438,
+              "fnr": 0.8862,
+              "episode_detection_rate_pct": 25.74,
+              "episodes_detected": 52,
+              "episodes_total": 202,
+              "median_latency_sec": 2.34,
+              "mean_latency_sec": 3.39
+            }
+          },
+          "P99.5": {
+            "threshold_val": 1.9437,
+            "scope_primary": {
+              "precision": 0.0212,
+              "recall": 0.1173,
+              "f1": 0.0359,
+              "fpr": 0.2351,
+              "fnr": 0.8827,
+              "tp": 747,
+              "fp": 34517,
+              "tn": 112312,
+              "fn": 5620,
+              "episode_detection_rate_pct": 21.38,
+              "episodes_detected": 65,
+              "episodes_total": 304,
+              "median_latency_sec": 2.06,
+              "mean_latency_sec": 3.86
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0255,
+              "recall": 0.1173,
+              "f1": 0.0419,
+              "fpr": 0.2738,
+              "fnr": 0.8827
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0134,
+              "recall": 0.1008,
+              "f1": 0.0237,
+              "fpr": 0.2343,
+              "fnr": 0.8992,
+              "episode_detection_rate_pct": 20.3,
+              "episodes_detected": 41,
+              "episodes_total": 202,
+              "median_latency_sec": 2.46,
+              "mean_latency_sec": 3.57
+            }
+          },
+          "P99.9": {
+            "threshold_val": 2.4039,
+            "scope_primary": {
+              "precision": 0.02,
+              "recall": 0.1024,
+              "f1": 0.0335,
+              "fpr": 0.2171,
+              "fnr": 0.8976,
+              "tp": 652,
+              "fp": 31875,
+              "tn": 114954,
+              "fn": 5715,
+              "episode_detection_rate_pct": 14.8,
+              "episodes_detected": 45,
+              "episodes_total": 304,
+              "median_latency_sec": 0.49,
+              "mean_latency_sec": 2.71
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0238,
+              "recall": 0.1024,
+              "f1": 0.0386,
+              "fpr": 0.2563,
+              "fnr": 0.8976
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0127,
+              "recall": 0.0878,
+              "f1": 0.0222,
+              "fpr": 0.2163,
+              "fnr": 0.9122,
+              "episode_detection_rate_pct": 14.36,
+              "episodes_detected": 29,
+              "episodes_total": 202,
+              "median_latency_sec": 2.49,
+              "mean_latency_sec": 3.07
+            }
+          }
+        }
+      },
+      "pv_thermal": {
+        "name": "PV Thermal Relationship",
+        "domain": "pv",
+        "input_feature": "pv_m_temp_air",
+        "target_feature": "pv_m_cell_temperature",
+        "unit": "\u00b0C",
+        "thresholds": {
+          "P95": 10.347723007202148,
+          "P99": 14.960164070129395,
+          "P99.5": 15.28892707824707,
+          "P99.9": 15.8095121383667
+        },
+        "roc_auc_scope_primary": 0.5294,
+        "pr_auc_scope_primary": 0.0456,
+        "roc_auc_clean_negatives": 0.5336,
+        "pr_auc_clean_negatives": 0.0644,
+        "roc_auc_subsystem_domain": 0.5881,
+        "pr_auc_subsystem_domain": 0.0209,
+        "roc_auc_broad": 0.5179,
+        "pr_auc_broad": 0.3372,
+        "threshold_metrics": {
+          "P95": {
+            "threshold_val": 10.3477,
+            "scope_primary": {
+              "precision": 0.0533,
+              "recall": 0.1751,
+              "f1": 0.0817,
+              "fpr": 0.1349,
+              "fnr": 0.8249,
+              "tp": 1115,
+              "fp": 19811,
+              "tn": 127018,
+              "fn": 5252,
+              "episode_detection_rate_pct": 20.39,
+              "episodes_detected": 62,
+              "episodes_total": 304,
+              "median_latency_sec": 0.25,
+              "mean_latency_sec": 1.12
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0753,
+              "recall": 0.1751,
+              "f1": 0.1053,
+              "fpr": 0.1312,
+              "fnr": 0.8249
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0268,
+              "recall": 0.2357,
+              "f1": 0.0481,
+              "fpr": 0.135,
+              "fnr": 0.7643,
+              "episode_detection_rate_pct": 27.45,
+              "episodes_detected": 28,
+              "episodes_total": 102,
+              "median_latency_sec": 0.22,
+              "mean_latency_sec": 1.31
+            }
+          },
+          "P99": {
+            "threshold_val": 14.9602,
+            "scope_primary": {
+              "precision": 0.0392,
+              "recall": 0.0364,
+              "f1": 0.0378,
+              "fpr": 0.0387,
+              "fnr": 0.9636,
+              "tp": 232,
+              "fp": 5689,
+              "tn": 141140,
+              "fn": 6135,
+              "episode_detection_rate_pct": 5.59,
+              "episodes_detected": 17,
+              "episodes_total": 304,
+              "median_latency_sec": 0.37,
+              "mean_latency_sec": 2.16
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0634,
+              "recall": 0.0364,
+              "f1": 0.0463,
+              "fpr": 0.0328,
+              "fnr": 0.9636
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0181,
+              "recall": 0.045,
+              "f1": 0.0258,
+              "fpr": 0.0386,
+              "fnr": 0.955,
+              "episode_detection_rate_pct": 5.88,
+              "episodes_detected": 6,
+              "episodes_total": 102,
+              "median_latency_sec": 0.3,
+              "mean_latency_sec": 1.85
+            }
+          },
+          "P99.5": {
+            "threshold_val": 15.2889,
+            "scope_primary": {
+              "precision": 0.0393,
+              "recall": 0.0309,
+              "f1": 0.0346,
+              "fpr": 0.0328,
+              "fnr": 0.9691,
+              "tp": 197,
+              "fp": 4816,
+              "tn": 142013,
+              "fn": 6170,
+              "episode_detection_rate_pct": 4.61,
+              "episodes_detected": 14,
+              "episodes_total": 304,
+              "median_latency_sec": 0.4,
+              "mean_latency_sec": 2.32
+            },
+            "scope_clean_negatives": {
+              "precision": 0.063,
+              "recall": 0.0309,
+              "f1": 0.0415,
+              "fpr": 0.0281,
+              "fnr": 0.9691
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0182,
+              "recall": 0.0382,
+              "f1": 0.0246,
+              "fpr": 0.0326,
+              "fnr": 0.9618,
+              "episode_detection_rate_pct": 5.88,
+              "episodes_detected": 6,
+              "episodes_total": 102,
+              "median_latency_sec": 1.84,
+              "mean_latency_sec": 3.17
+            }
+          },
+          "P99.9": {
+            "threshold_val": 15.8095,
+            "scope_primary": {
+              "precision": 0.038,
+              "recall": 0.0226,
+              "f1": 0.0284,
+              "fpr": 0.0248,
+              "fnr": 0.9774,
+              "tp": 144,
+              "fp": 3643,
+              "tn": 143186,
+              "fn": 6223,
+              "episode_detection_rate_pct": 3.29,
+              "episodes_detected": 10,
+              "episodes_total": 304,
+              "median_latency_sec": 0.45,
+              "mean_latency_sec": 2.64
+            },
+            "scope_clean_negatives": {
+              "precision": 0.0607,
+              "recall": 0.0226,
+              "f1": 0.033,
+              "fpr": 0.0213,
+              "fnr": 0.9774
+            },
+            "subsystem_domain_scope": {
+              "precision": 0.0198,
+              "recall": 0.0315,
+              "f1": 0.0243,
+              "fpr": 0.0246,
+              "fnr": 0.9685,
+              "episode_detection_rate_pct": 3.92,
+              "episodes_detected": 4,
+              "episodes_total": 102,
+              "median_latency_sec": 1.84,
+              "mean_latency_sec": 2.91
+            }
+          }
+        }
+      }
+    }
+  }
+}

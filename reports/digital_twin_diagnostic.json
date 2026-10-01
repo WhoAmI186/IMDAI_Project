@@ -1,0 +1,961 @@
+{
+  "audit_title": "Forensic Read-Only Diagnostic Audit of Power System Digital Twin",
+  "test_files": [
+    "data13.csv",
+    "data14.csv",
+    "data15.csv"
+  ],
+  "total_evaluated_sequences": 15485,
+  "interpretation_distribution_percentage": {
+    "Attack": {
+      "Normal steady-state grid operation": 1.0624169986719787,
+      "Physical event consistent with observed topology": 3.284639220894201,
+      "Possible measurement/sensor issue": 9.296148738379815,
+      "Unexpected physical law discrepancy without clear topology explanation": 76.6091190792386,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 5.772465692784418,
+      "Unknown / insufficient evidence": 3.975210270030987
+    },
+    "Natural": {
+      "Normal steady-state grid operation": 0.0,
+      "Physical event consistent with observed topology": 9.017082049845982,
+      "Possible measurement/sensor issue": 10.473256790814897,
+      "Unexpected physical law discrepancy without clear topology explanation": 72.44469336320358,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 2.9403528423410807,
+      "Unknown / insufficient evidence": 5.124614953794455
+    },
+    "NoEvents": {
+      "Normal steady-state grid operation": 80.2907915993538,
+      "Physical event consistent with observed topology": 0.0,
+      "Possible measurement/sensor issue": 0.16155088852988692,
+      "Unexpected physical law discrepancy without clear topology explanation": 14.70113085621971,
+      "Unexpected topology/state inconsistency; possible cyber-related event": 0.0,
+      "Unknown / insufficient evidence": 4.846526655896607
+    }
+  },
+  "physical_law_discrepancy_analysis": {
+    "total_pld_samples": 11331,
+    "check_failure_breakdown": [
+      {
+        "Check Name": "bus1_voltage_equipotential",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "bus2_voltage_equipotential",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "line1_current_continuity",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "line2_current_continuity",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "frequency_synchronization",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "three_phase_balance",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "Solely ML Triggered (0 physical checks failed)",
+        "NoEvents": "91 (100.00%)",
+        "Natural": "2587 (100.00%)",
+        "Attack": "8653 (100.00%)"
+      }
+    ],
+    "simultaneous_failures": [
+      {
+        "Check Name": "bus1_voltage_equipotential",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "bus2_voltage_equipotential",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "line1_current_continuity",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "line2_current_continuity",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "frequency_synchronization",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "three_phase_balance",
+        "NoEvents": "0 (0.00%)",
+        "Natural": "0 (0.00%)",
+        "Attack": "0 (0.00%)"
+      },
+      {
+        "Check Name": "Solely ML Triggered (0 physical checks failed)",
+        "NoEvents": "91 (100.00%)",
+        "Natural": "2587 (100.00%)",
+        "Attack": "8653 (100.00%)"
+      }
+    ]
+  },
+  "transition_analysis": {
+    "pld_in_transition_pct": {
+      "STEADY_STATE": {
+        "Attack": 96.25563388420201,
+        "Natural": 89.0993428681871,
+        "NoEvents": 100.0
+      },
+      "TRANSITION_WINDOW": {
+        "Attack": 3.744366115797989,
+        "Natural": 10.90065713181291,
+        "NoEvents": 0.0
+      }
+    }
+  },
+  "topology_inconsistency_analysis": {
+    "total_samples": 757,
+    "by_class": {
+      "Attack": 652,
+      "Natural": 105
+    }
+  },
+  "natural_event_analysis": {
+    "consistent_outages_count": 322,
+    "consistent_outages_pct": 9.017082049845982,
+    "topology_states": {
+      "ALL_LINES_IN_SERVICE": 3163,
+      "ACTIVE_TRANSMISSION_FAULT": 209,
+      "LINE_2_OUTAGE": 87,
+      "LINE_1_OUTAGE": 81,
+      "BUS_FAULT_COLLAPSE": 31
+    }
+  },
+  "normal_false_positive_analysis": {
+    "total_normal_fps": 91,
+    "by_scenario": {
+      "data13.csv": 46,
+      "data15.csv": 45
+    },
+    "failed_physical_checks": {}
+  },
+  "separation_analysis": [
+    {
+      "Primary Hypothesis": "Normal steady-state grid operation",
+      "Total Count": 617,
+      "% Normal (Clean)": 80.55,
+      "% Natural (Fault)": 0.0,
+      "% Attack (Cyber)": 19.45,
+      "Dominant Group": "Normal"
+    },
+    {
+      "Primary Hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+      "Total Count": 11331,
+      "% Normal (Clean)": 0.8,
+      "% Natural (Fault)": 22.83,
+      "% Attack (Cyber)": 76.37,
+      "Dominant Group": "Attack"
+    },
+    {
+      "Primary Hypothesis": "Unknown / insufficient evidence",
+      "Total Count": 662,
+      "% Normal (Clean)": 4.53,
+      "% Natural (Fault)": 27.64,
+      "% Attack (Cyber)": 67.82,
+      "Dominant Group": "Attack"
+    },
+    {
+      "Primary Hypothesis": "Physical event consistent with observed topology",
+      "Total Count": 693,
+      "% Normal (Clean)": 0.0,
+      "% Natural (Fault)": 46.46,
+      "% Attack (Cyber)": 53.54,
+      "Dominant Group": "Attack"
+    },
+    {
+      "Primary Hypothesis": "Possible measurement/sensor issue",
+      "Total Count": 1425,
+      "% Normal (Clean)": 0.07,
+      "% Natural (Fault)": 26.25,
+      "% Attack (Cyber)": 73.68,
+      "Dominant Group": "Attack"
+    },
+    {
+      "Primary Hypothesis": "Unexpected topology/state inconsistency; possible cyber-related event",
+      "Total Count": 757,
+      "% Normal (Clean)": 0.0,
+      "% Natural (Fault)": 13.87,
+      "% Attack (Cyber)": 86.13,
+      "Dominant Group": "Attack"
+    }
+  ],
+  "representative_case_studies": {
+    "Normal": [
+      {
+        "scenario": "data13.csv",
+        "step": 10,
+        "csv_row": 69,
+        "marker": "NoEvents",
+        "layer1_score": 0.19643111526966095,
+        "layer1_flag": 0,
+        "layer1_mse": 0.0026746331714093685,
+        "layer2_score": 0.7374728322029114,
+        "layer2_flag": 0,
+        "fused_score": 0.46695196628570557,
+        "fused_flag": 0,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Normal steady-state grid operation",
+        "confidence": 0.98,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "All monitored physical electrical laws and topology states are consistent."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 80,
+        "csv_row": 139,
+        "marker": "NoEvents",
+        "layer1_score": 0.7911005020141602,
+        "layer1_flag": 0,
+        "layer1_mse": 0.010771733708679676,
+        "layer2_score": 0.776939868927002,
+        "layer2_flag": 0,
+        "fused_score": 0.784020185470581,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+        "confidence": 0.75,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Evidence Fusion triggered: FusedScore=0.7840 exceeds threshold; L1_flag=0, L2_flag=0.",
+          "Physical conservation laws violated without corresponding breaker status change."
+        ]
+      },
+      {
+        "scenario": "data14.csv",
+        "step": 5,
+        "csv_row": 64,
+        "marker": "NoEvents",
+        "layer1_score": 0.12973009049892426,
+        "layer1_flag": 0,
+        "layer1_mse": 0.001766422763466835,
+        "layer2_score": 0.34477150440216064,
+        "layer2_flag": 0,
+        "fused_score": 0.23725080490112305,
+        "fused_flag": 0,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Normal steady-state grid operation",
+        "confidence": 0.98,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "All monitored physical electrical laws and topology states are consistent."
+        ]
+      },
+      {
+        "scenario": "data15.csv",
+        "step": 21,
+        "csv_row": 80,
+        "marker": "NoEvents",
+        "layer1_score": 0.8492701053619385,
+        "layer1_flag": 0,
+        "layer1_mse": 0.011563778854906559,
+        "layer2_score": 0.39600250124931335,
+        "layer2_flag": 0,
+        "fused_score": 0.6226363182067871,
+        "fused_flag": 0,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Normal steady-state grid operation",
+        "confidence": 0.98,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "All monitored physical electrical laws and topology states are consistent."
+        ]
+      },
+      {
+        "scenario": "data15.csv",
+        "step": 58,
+        "csv_row": 117,
+        "marker": "NoEvents",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 0.0283812265843153,
+        "layer2_score": 0.5460042953491211,
+        "layer2_flag": 0,
+        "fused_score": 0.7730021476745605,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+        "confidence": 0.75,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Evidence Fusion triggered: FusedScore=0.7730 exceeds threshold; L1_flag=1, L2_flag=0.",
+          "Physical conservation laws violated without corresponding breaker status change."
+        ]
+      }
+    ],
+    "Natural": [
+      {
+        "scenario": "data13.csv",
+        "step": 3689,
+        "csv_row": 3748,
+        "marker": "Natural",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 1.96526038646698,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ACTIVE_TRANSMISSION_FAULT",
+        "affected_buses": [
+          "Bus_2",
+          "Bus_1"
+        ],
+        "affected_lines": [
+          "Line_1",
+          "Line_2"
+        ],
+        "affected_relays": [
+          "R3",
+          "R4"
+        ],
+        "component_states": {
+          "Line_1": "FAULT",
+          "Line_2": "DE_ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ABNORMAL",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "OPEN",
+          "BR4": "OPEN"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Physical event consistent with observed topology",
+        "confidence": 0.9,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential"
+        ],
+        "num_failed_physical_checks": 1,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=124187.9V, R4=134558.3V, Diff=10370.4V (tol=600.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=124187.9V, R4=134558.3V, Diff=10370.4V (tol=600.0V)",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Physical anomaly matches recognized grid reconfiguration: ACTIVE_TRANSMISSION_FAULT."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 3689,
+        "csv_row": 3748,
+        "marker": "Natural",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 1.96526038646698,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ACTIVE_TRANSMISSION_FAULT",
+        "affected_buses": [
+          "Bus_2",
+          "Bus_1"
+        ],
+        "affected_lines": [
+          "Line_1",
+          "Line_2"
+        ],
+        "affected_relays": [
+          "R3",
+          "R4"
+        ],
+        "component_states": {
+          "Line_1": "FAULT",
+          "Line_2": "DE_ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ABNORMAL",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "OPEN",
+          "BR4": "OPEN"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Physical event consistent with observed topology",
+        "confidence": 0.9,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential"
+        ],
+        "num_failed_physical_checks": 1,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=124187.9V, R4=134558.3V, Diff=10370.4V (tol=600.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=124187.9V, R4=134558.3V, Diff=10370.4V (tol=600.0V)",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Physical anomaly matches recognized grid reconfiguration: ACTIVE_TRANSMISSION_FAULT."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 3693,
+        "csv_row": 3752,
+        "marker": "Natural",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 1.9766569137573242,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+        "confidence": 0.75,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Physical conservation laws violated without corresponding breaker status change."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 3712,
+        "csv_row": 3771,
+        "marker": "Natural",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 1.5546915531158447,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "LINE_2_OUTAGE",
+        "affected_buses": [
+          "Bus_1"
+        ],
+        "affected_lines": [
+          "Line_2"
+        ],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "DE_ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "inconsistent",
+        "primary_hypothesis": "Unexpected topology/state inconsistency; possible cyber-related event",
+        "confidence": 0.85,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential"
+        ],
+        "num_failed_physical_checks": 1,
+        "failed_topology_checks": [
+          "Line_2_breaker_consistency"
+        ],
+        "num_failed_topology_checks": 1,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=127347.1V, R4=133765.0V, Diff=6417.8V (tol=600.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=127347.1V, R4=133765.0V, Diff=6417.8V (tol=600.0V)",
+          "Topology inconsistency: Line_2 unexpected de-energization: breakers indicate CLOSED while power flow is 0A (possible false breaker telemetry or physical open phase).",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Observed power flows contradict reported circuit breaker status or protection logic."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 3690,
+        "csv_row": 3749,
+        "marker": "Natural",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 1.9697271585464478,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [
+          "Bus_1"
+        ],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Possible measurement/sensor issue",
+        "confidence": 0.8,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential"
+        ],
+        "num_failed_physical_checks": 1,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=130907.5V, R4=130261.2V, Diff=646.3V (tol=600.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=130907.5V, R4=130261.2V, Diff=646.3V (tol=600.0V)",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Redundant measurements on equipotential bus or synchronized frequency diverge while power flow remains intact."
+        ]
+      }
+    ],
+    "Attack": [
+      {
+        "scenario": "data13.csv",
+        "step": 440,
+        "csv_row": 499,
+        "marker": "Attack",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 29.4335880279541,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "BUS_FAULT_COLLAPSE",
+        "affected_buses": [
+          "Bus_1",
+          "Bus_2"
+        ],
+        "affected_lines": [
+          "Line_1",
+          "Line_2"
+        ],
+        "affected_relays": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "component_states": {
+          "Line_1": "DE_ENERGIZED",
+          "Line_2": "FAULT",
+          "Bus_1": "ABNORMAL",
+          "Bus_2": "FAULT",
+          "BR1": "OPEN",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "inconsistent",
+        "primary_hypothesis": "Unexpected topology/state inconsistency; possible cyber-related event",
+        "confidence": 0.85,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential",
+          "line2_current_continuity",
+          "frequency_synchronization",
+          "R2_three_phase_balance",
+          "R3_three_phase_balance",
+          "R4_three_phase_balance"
+        ],
+        "num_failed_physical_checks": 6,
+        "failed_topology_checks": [
+          "BR1_trip_coordination"
+        ],
+        "num_failed_topology_checks": 1,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=137100.6V, R4=60526.9V, Diff=76573.8V (tol=600.0V)",
+          "Physical violation: Line 2 Current Continuity: R4=1624.6A, R3=140.4A, Diff=1484.1A (tol=35.0A)",
+          "Physical violation: Grid Frequency Spread: Min=60.0200Hz, Max=60.0820Hz, Spread=0.0620Hz (tol=0.0500Hz)",
+          "Physical violation: R2 3-Phase Voltage Unbalance: MaxDiff=90506.2V (tol=1200.0V)",
+          "Physical violation: R3 3-Phase Voltage Unbalance: MaxDiff=90138.4V (tol=1200.0V)",
+          "Physical violation: R4 3-Phase Voltage Unbalance: MaxDiff=41822.2V (tol=1200.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=137100.6V, R4=60526.9V, Diff=76573.8V (tol=600.0V)",
+          "Measurement discrepancy: Grid Frequency Spread: Min=60.0200Hz, Max=60.0820Hz, Spread=0.0620Hz (tol=0.0500Hz)",
+          "Topology inconsistency: BR1 uncoordinated single-ended trip: breaker opened without bilateral isolation (possible cyber command or single relay trip).",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Observed power flows contradict reported circuit breaker status or protection logic."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 1378,
+        "csv_row": 1437,
+        "marker": "Attack",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 13.193010330200195,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ACTIVE_TRANSMISSION_FAULT",
+        "affected_buses": [
+          "Bus_2",
+          "Bus_1"
+        ],
+        "affected_lines": [
+          "Line_1",
+          "Line_2"
+        ],
+        "affected_relays": [
+          "R3",
+          "R4"
+        ],
+        "component_states": {
+          "Line_1": "FAULT",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ABNORMAL",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "OPEN",
+          "BR4": "OPEN"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "inconsistent",
+        "primary_hypothesis": "Unexpected topology/state inconsistency; possible cyber-related event",
+        "confidence": 0.85,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential",
+          "line2_current_continuity",
+          "R4_three_phase_balance"
+        ],
+        "num_failed_physical_checks": 3,
+        "failed_topology_checks": [
+          "Line_2_breaker_consistency",
+          "BR4_trip_coordination"
+        ],
+        "num_failed_topology_checks": 2,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=118546.4V, R4=141162.4V, Diff=22616.0V (tol=600.0V)",
+          "Physical violation: Line 2 Current Continuity: R4=71.6A, R3=0.0A, Diff=71.6A (tol=35.0A)",
+          "Physical violation: R4 3-Phase Voltage Unbalance: MaxDiff=4694.6V (tol=1200.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=118546.4V, R4=141162.4V, Diff=22616.0V (tol=600.0V)",
+          "Topology inconsistency: Line_2 inconsistency: active power flow observed despite reported OPEN breaker position (possible spoofed breaker status).",
+          "Topology inconsistency: BR4 inconsistent trip: breaker indicates OPEN while current flows.",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Observed power flows contradict reported circuit breaker status or protection logic."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 296,
+        "csv_row": 355,
+        "marker": "Attack",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 10.169059753417969,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [
+          "Bus_1"
+        ],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Possible measurement/sensor issue",
+        "confidence": 0.8,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential"
+        ],
+        "num_failed_physical_checks": 1,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=131183.3V, R4=132838.2V, Diff=1654.8V (tol=600.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=131183.3V, R4=132838.2V, Diff=1654.8V (tol=600.0V)",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Redundant measurements on equipotential bus or synchronized frequency diverge while power flow remains intact."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 165,
+        "csv_row": 224,
+        "marker": "Attack",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 0.01406805869191885,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "ALL_LINES_IN_SERVICE",
+        "affected_buses": [],
+        "affected_lines": [],
+        "affected_relays": [],
+        "component_states": {
+          "Line_1": "ENERGIZED",
+          "Line_2": "ENERGIZED",
+          "Bus_1": "ENERGIZED",
+          "Bus_2": "ENERGIZED",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "consistent",
+        "measurement_consistency": "consistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Unexpected physical law discrepancy without clear topology explanation",
+        "confidence": 0.75,
+        "failed_physical_checks": [],
+        "num_failed_physical_checks": 0,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "TRANSITION_WINDOW",
+        "evidence": [
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Physical conservation laws violated without corresponding breaker status change."
+        ]
+      },
+      {
+        "scenario": "data13.csv",
+        "step": 293,
+        "csv_row": 352,
+        "marker": "Attack",
+        "layer1_score": 1.0,
+        "layer1_flag": 1,
+        "layer1_mse": 4.828947067260742,
+        "layer2_score": 1.0,
+        "layer2_flag": 1,
+        "fused_score": 1.0,
+        "fused_flag": 1,
+        "topology_state": "BUS_FAULT_COLLAPSE",
+        "affected_buses": [
+          "Bus_1",
+          "Bus_2"
+        ],
+        "affected_lines": [
+          "Line_1",
+          "Line_2"
+        ],
+        "affected_relays": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "component_states": {
+          "Line_1": "FAULT",
+          "Line_2": "FAULT",
+          "Bus_1": "FAULT",
+          "Bus_2": "FAULT",
+          "BR1": "CLOSED",
+          "BR2": "CLOSED",
+          "BR3": "CLOSED",
+          "BR4": "CLOSED"
+        },
+        "physical_consistency": "inconsistent",
+        "measurement_consistency": "inconsistent",
+        "topology_consistency": "consistent",
+        "primary_hypothesis": "Physical event consistent with observed topology",
+        "confidence": 0.9,
+        "failed_physical_checks": [
+          "bus1_voltage_equipotential",
+          "line2_current_continuity",
+          "R1_three_phase_balance",
+          "R2_three_phase_balance",
+          "R3_three_phase_balance",
+          "R4_three_phase_balance"
+        ],
+        "num_failed_physical_checks": 6,
+        "failed_topology_checks": [],
+        "num_failed_topology_checks": 0,
+        "transition_phase": "STEADY_STATE",
+        "evidence": [
+          "Physical violation: Bus 1 Equipotential: R1=90589.7V, R4=29736.9V, Diff=60852.8V (tol=600.0V)",
+          "Physical violation: Line 2 Current Continuity: R4=1758.8A, R3=980.6A, Diff=778.2A (tol=35.0A)",
+          "Physical violation: R1 3-Phase Voltage Unbalance: MaxDiff=27605.7V (tol=1200.0V)",
+          "Physical violation: R2 3-Phase Voltage Unbalance: MaxDiff=67591.1V (tol=1200.0V)",
+          "Physical violation: R3 3-Phase Voltage Unbalance: MaxDiff=67321.7V (tol=1200.0V)",
+          "Physical violation: R4 3-Phase Voltage Unbalance: MaxDiff=80259.5V (tol=1200.0V)",
+          "Measurement discrepancy: Bus 1 Equipotential: R1=90589.7V, R4=29736.9V, Diff=60852.8V (tol=600.0V)",
+          "Evidence Fusion triggered: FusedScore=1.0000 exceeds threshold; L1_flag=1, L2_flag=1.",
+          "Physical anomaly matches recognized grid reconfiguration: BUS_FAULT_COLLAPSE."
+        ]
+      }
+    ]
+  }
+}

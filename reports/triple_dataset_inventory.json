@@ -1,0 +1,3216 @@
+{
+  "total_files": 15,
+  "total_rows": 78377,
+  "total_columns": 129,
+  "file_summaries": [
+    {
+      "filename": "data1.csv",
+      "rows": 4966,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 665,
+      "inf_columns": {
+        "R1-PA:Z": 192,
+        "R2-PA:Z": 170,
+        "R3-PA:Z": 153,
+        "R4-PA:Z": 150
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3866,
+        "Natural": 927,
+        "NoEvents": 173
+      },
+      "marker_percentages": {
+        "Attack": 77.85,
+        "Natural": 18.67,
+        "NoEvents": 3.48
+      }
+    },
+    {
+      "filename": "data2.csv",
+      "rows": 5069,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 650,
+      "inf_columns": {
+        "R1-PA:Z": 173,
+        "R2-PA:Z": 142,
+        "R3-PA:Z": 141,
+        "R4-PA:Z": 194
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3525,
+        "Natural": 1222,
+        "NoEvents": 322
+      },
+      "marker_percentages": {
+        "Attack": 69.54,
+        "Natural": 24.11,
+        "NoEvents": 6.35
+      }
+    },
+    {
+      "filename": "data3.csv",
+      "rows": 5415,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 740,
+      "inf_columns": {
+        "R1-PA:Z": 161,
+        "R2-PA:Z": 154,
+        "R3-PA:Z": 209,
+        "R4-PA:Z": 216
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 5,
+      "constant_columns": [
+        "control_panel_log1",
+        "control_panel_log2",
+        "snort_log1",
+        "snort_log2",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3811,
+        "Natural": 1250,
+        "NoEvents": 354
+      },
+      "marker_percentages": {
+        "Attack": 70.38,
+        "Natural": 23.08,
+        "NoEvents": 6.54
+      }
+    },
+    {
+      "filename": "data4.csv",
+      "rows": 5202,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 705,
+      "inf_columns": {
+        "R1-PA:Z": 185,
+        "R2-PA:Z": 178,
+        "R3-PA:Z": 176,
+        "R4-PA:Z": 166
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 5,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "snort_log1",
+        "snort_log2"
+      ],
+      "marker_distribution": {
+        "Attack": 3402,
+        "Natural": 1397,
+        "NoEvents": 403
+      },
+      "marker_percentages": {
+        "Attack": 65.4,
+        "Natural": 26.86,
+        "NoEvents": 7.75
+      }
+    },
+    {
+      "filename": "data5.csv",
+      "rows": 5161,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 734,
+      "inf_columns": {
+        "R1-PA:Z": 192,
+        "R2-PA:Z": 181,
+        "R3-PA:Z": 185,
+        "R4-PA:Z": 176
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3680,
+        "Natural": 1211,
+        "NoEvents": 270
+      },
+      "marker_percentages": {
+        "Attack": 71.3,
+        "Natural": 23.46,
+        "NoEvents": 5.23
+      }
+    },
+    {
+      "filename": "data6.csv",
+      "rows": 4967,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 675,
+      "inf_columns": {
+        "R1-PA:Z": 184,
+        "R2-PA:Z": 183,
+        "R3-PA:Z": 149,
+        "R4-PA:Z": 159
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 4,
+      "constant_columns": [
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3490,
+        "Natural": 1287,
+        "NoEvents": 190
+      },
+      "marker_percentages": {
+        "Attack": 70.26,
+        "Natural": 25.91,
+        "NoEvents": 3.83
+      }
+    },
+    {
+      "filename": "data7.csv",
+      "rows": 5236,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 703,
+      "inf_columns": {
+        "R1-PA:Z": 194,
+        "R2-PA:Z": 156,
+        "R3-PA:Z": 177,
+        "R4-PA:Z": 176
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 8,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3910,
+        "Natural": 1118,
+        "NoEvents": 208
+      },
+      "marker_percentages": {
+        "Attack": 74.68,
+        "Natural": 21.35,
+        "NoEvents": 3.97
+      }
+    },
+    {
+      "filename": "data8.csv",
+      "rows": 5315,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 783,
+      "inf_columns": {
+        "R1-PA:Z": 201,
+        "R2-PA:Z": 204,
+        "R3-PA:Z": 182,
+        "R4-PA:Z": 196
+      },
+      "duplicate_rows": 8,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3771,
+        "Natural": 1188,
+        "NoEvents": 356
+      },
+      "marker_percentages": {
+        "Attack": 70.95,
+        "Natural": 22.35,
+        "NoEvents": 6.7
+      }
+    },
+    {
+      "filename": "data9.csv",
+      "rows": 5340,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 736,
+      "inf_columns": {
+        "R1-PA:Z": 215,
+        "R2-PA:Z": 179,
+        "R3-PA:Z": 156,
+        "R4-PA:Z": 186
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 5,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2"
+      ],
+      "marker_distribution": {
+        "Attack": 3570,
+        "Natural": 1292,
+        "NoEvents": 478
+      },
+      "marker_percentages": {
+        "Attack": 66.85,
+        "Natural": 24.19,
+        "NoEvents": 8.95
+      }
+    },
+    {
+      "filename": "data10.csv",
+      "rows": 5569,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 922,
+      "inf_columns": {
+        "R1-PA:Z": 227,
+        "R2-PA:Z": 225,
+        "R3-PA:Z": 228,
+        "R4-PA:Z": 242
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 3,
+      "constant_columns": [
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1"
+      ],
+      "marker_distribution": {
+        "Attack": 3921,
+        "Natural": 1322,
+        "NoEvents": 326
+      },
+      "marker_percentages": {
+        "Attack": 70.41,
+        "Natural": 23.74,
+        "NoEvents": 5.85
+      }
+    },
+    {
+      "filename": "data11.csv",
+      "rows": 5251,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 723,
+      "inf_columns": {
+        "R1-PA:Z": 184,
+        "R2-PA:Z": 172,
+        "R3-PA:Z": 173,
+        "R4-PA:Z": 194
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 6,
+      "constant_columns": [
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2"
+      ],
+      "marker_distribution": {
+        "Attack": 3969,
+        "Natural": 1137,
+        "NoEvents": 145
+      },
+      "marker_percentages": {
+        "Attack": 75.59,
+        "Natural": 21.65,
+        "NoEvents": 2.76
+      }
+    },
+    {
+      "filename": "data12.csv",
+      "rows": 5224,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 766,
+      "inf_columns": {
+        "R1-PA:Z": 217,
+        "R2-PA:Z": 165,
+        "R3-PA:Z": 195,
+        "R4-PA:Z": 189
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3453,
+        "Natural": 1387,
+        "NoEvents": 384
+      },
+      "marker_percentages": {
+        "Attack": 66.1,
+        "Natural": 26.55,
+        "NoEvents": 7.35
+      }
+    },
+    {
+      "filename": "data13.csv",
+      "rows": 5271,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 656,
+      "inf_columns": {
+        "R1-PA:Z": 168,
+        "R2-PA:Z": 161,
+        "R3-PA:Z": 166,
+        "R4-PA:Z": 161
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 8,
+      "constant_columns": [
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 4118,
+        "Natural": 950,
+        "NoEvents": 203
+      },
+      "marker_percentages": {
+        "Attack": 78.13,
+        "Natural": 18.02,
+        "NoEvents": 3.85
+      }
+    },
+    {
+      "filename": "data14.csv",
+      "rows": 5115,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 726,
+      "inf_columns": {
+        "R1-PA:Z": 180,
+        "R2-PA:Z": 154,
+        "R3-PA:Z": 181,
+        "R4-PA:Z": 211
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 9,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log1",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3762,
+        "Natural": 1274,
+        "NoEvents": 79
+      },
+      "marker_percentages": {
+        "Attack": 73.55,
+        "Natural": 24.91,
+        "NoEvents": 1.54
+      }
+    },
+    {
+      "filename": "data15.csv",
+      "rows": 5276,
+      "columns": 129,
+      "missing_values": 0,
+      "inf_values": 722,
+      "inf_columns": {
+        "R1-PA:Z": 204,
+        "R2-PA:Z": 183,
+        "R3-PA:Z": 162,
+        "R4-PA:Z": 173
+      },
+      "duplicate_rows": 0,
+      "constant_columns_count": 8,
+      "constant_columns": [
+        "R2:S",
+        "control_panel_log1",
+        "control_panel_log2",
+        "control_panel_log3",
+        "control_panel_log4",
+        "snort_log2",
+        "snort_log3",
+        "snort_log4"
+      ],
+      "marker_distribution": {
+        "Attack": 3415,
+        "Natural": 1347,
+        "NoEvents": 514
+      },
+      "marker_percentages": {
+        "Attack": 64.73,
+        "Natural": 25.53,
+        "NoEvents": 9.74
+      }
+    }
+  ],
+  "column_inventory": [
+    {
+      "column_name": "R1-PA1:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        70.3993,
+        73.6881,
+        73.7339
+      ],
+      "min": -179.989,
+      "max": 179.9947,
+      "mean": -15.8024,
+      "std": 100.8768,
+      "unique_count": 43429,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM1:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127673.0908,
+        130280.7109,
+        130305.7842
+      ],
+      "min": 0.0,
+      "max": 151592.9904,
+      "mean": 130764.0396,
+      "std": 8546.1185,
+      "unique_count": 2194,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA2:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -49.5723,
+        -46.3007,
+        -46.2549
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 2.1752,
+      "std": 111.7432,
+      "unique_count": 43520,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM2:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127648.0176,
+        130255.6377,
+        130280.7109
+      ],
+      "min": 0.0,
+      "max": 151567.9172,
+      "mean": 131035.5281,
+      "std": 5393.1354,
+      "unique_count": 1532,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA3:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -169.5783,
+        -166.2781,
+        -166.2322
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": 6.8343,
+      "std": 97.0651,
+      "unique_count": 43434,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM3:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127723.2374,
+        130355.9307,
+        130381.004
+      ],
+      "min": 0.0,
+      "max": 151693.2835,
+      "mean": 131395.7176,
+      "std": 5443.7524,
+      "unique_count": 1566,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA4:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        65.6896,
+        71.8317,
+        71.8088
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": -14.335,
+      "std": 99.6011,
+      "unique_count": 42704,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM4:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        605.911,
+        483.5935,
+        482.8611
+      ],
+      "min": 0.0,
+      "max": 1779.463,
+      "mean": 393.9493,
+      "std": 190.966,
+      "unique_count": 4987,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PA5:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -57.0036,
+        -50.9474,
+        -50.913
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 3.5385,
+      "std": 109.505,
+      "unique_count": 42535,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM5:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        626.7855,
+        500.989,
+        499.1579
+      ],
+      "min": 0.0,
+      "max": 1265.6563,
+      "mean": 387.4381,
+      "std": 151.2772,
+      "unique_count": 4416,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PA6:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -173.589,
+        -167.487,
+        -167.4412
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 6.1298,
+      "std": 95.2949,
+      "unique_count": 42847,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM6:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        602.4319,
+        481.3962,
+        481.03
+      ],
+      "min": 0.0,
+      "max": 1263.459,
+      "mean": 381.9128,
+      "std": 153.3265,
+      "unique_count": 4511,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PA7:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        70.4222,
+        73.7053,
+        73.7511
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": -15.7988,
+      "std": 100.8771,
+      "unique_count": 43335,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM7:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127673.0908,
+        130305.7842,
+        130330.8575
+      ],
+      "min": 0.0,
+      "max": 151618.0637,
+      "mean": 131056.98,
+      "std": 6152.3797,
+      "unique_count": 1909,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA8:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        35.3228,
+        -16.6845
+      ],
+      "min": -179.5019,
+      "max": 179.9775,
+      "mean": 0.2079,
+      "std": 13.0759,
+      "unique_count": 1172,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM8:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        15821.2334,
+        16899.384
+      ],
+      "min": 0.0,
+      "max": 46987.308,
+      "mean": 297.0836,
+      "std": 2687.6172,
+      "unique_count": 719,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA9:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        30.2293,
+        -19.8587
+      ],
+      "min": -179.903,
+      "max": 179.4676,
+      "mean": 0.2276,
+      "std": 12.4886,
+      "unique_count": 1085,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PM9:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        1654.8358,
+        1930.6418
+      ],
+      "min": 0.0,
+      "max": 17501.1425,
+      "mean": 87.397,
+      "std": 897.5414,
+      "unique_count": 457,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R1-PA10:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        65.0078,
+        71.1098,
+        71.1327
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": -14.5043,
+      "std": 99.605,
+      "unique_count": 42722,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM10:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        611.5874,
+        488.3544,
+        487.6219
+      ],
+      "min": 0.0,
+      "max": 1263.459,
+      "mean": 386.5572,
+      "std": 154.4844,
+      "unique_count": 4530,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PA11:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        118.5679,
+        125.7929,
+        125.0079
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": -1.7349,
+      "std": 68.3833,
+      "unique_count": 27652,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM11:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        13.1839,
+        10.6204,
+        9.7048
+      ],
+      "min": 0.0,
+      "max": 611.4043,
+      "mean": 9.98,
+      "std": 47.2418,
+      "unique_count": 1230,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PA12:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -100.8692,
+        -95.8845,
+        -94.5208
+      ],
+      "min": -179.989,
+      "max": 179.989,
+      "mean": 6.1234,
+      "std": 73.0592,
+      "unique_count": 27931,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1-PM12:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        13.9164,
+        11.3528,
+        10.4373
+      ],
+      "min": 0.0,
+      "max": 723.4676,
+      "mean": 9.4942,
+      "std": 47.8756,
+      "unique_count": 1352,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R1:F",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        59.999,
+        60.005,
+        60.003
+      ],
+      "min": 0.0,
+      "max": 66.035,
+      "mean": 59.9928,
+      "std": 0.61,
+      "unique_count": 411,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R1:DF",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.01,
+        0.0,
+        1.34
+      ],
+      "min": -4.01,
+      "max": 3.72,
+      "mean": 0.0005,
+      "std": 0.0878,
+      "unique_count": 260,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R1-PA:Z",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        6.3914,
+        8.1855,
+        8.19
+      ],
+      "min": 0.1852,
+      "max": 1306.2466,
+      "mean": 10.9927,
+      "std": 12.7981,
+      "unique_count": 75487,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 2877,
+      "inf_pct": 3.671,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R1-PA:ZH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0763,
+        0.0249,
+        0.0279
+      ],
+      "min": -3.1406,
+      "max": 3.1259,
+      "mean": 0.0184,
+      "std": 0.2428,
+      "unique_count": 75485,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R1:S",
+      "category": "System state",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        2048,
+        2058
+      ],
+      "min": 0.0,
+      "max": 272394.0,
+      "mean": 788.8687,
+      "std": 14048.4485,
+      "unique_count": 7,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Digital relay Status word / bitmask (breaker open/close state, trip status). Discrete system state; discrete jumps and occasional data acquisition corruption (e.g. data4)."
+    },
+    {
+      "column_name": "R2-PA1:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        60.6583,
+        66.069,
+        66.113
+      ],
+      "min": -179.9947,
+      "max": 179.9973,
+      "mean": -15.2165,
+      "std": 101.8376,
+      "unique_count": 55623,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM1:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124631.8125,
+        128277.4297,
+        128283.9453
+      ],
+      "min": 0.0,
+      "max": 145336.6563,
+      "mean": 127033.3899,
+      "std": 16155.7672,
+      "unique_count": 27634,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA2:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -59.296,
+        -53.8852,
+        -53.8522
+      ],
+      "min": -179.9973,
+      "max": 179.9947,
+      "mean": 4.7511,
+      "std": 111.0432,
+      "unique_count": 55780,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM2:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124484.3594,
+        128126.3047,
+        128144.4688
+      ],
+      "min": 0.0,
+      "max": 145167.7969,
+      "mean": 128015.428,
+      "std": 12106.8762,
+      "unique_count": 27226,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA3:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -179.3381,
+        -173.9328,
+        -173.8834
+      ],
+      "min": -179.9947,
+      "max": 179.9973,
+      "mean": 5.5104,
+      "std": 96.2701,
+      "unique_count": 55694,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM3:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124715.0703,
+        128354.7578,
+        128382.9609
+      ],
+      "min": 0.0,
+      "max": 155526.7813,
+      "mean": 128362.2462,
+      "std": 11990.8638,
+      "unique_count": 27299,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA4:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -119.5505,
+        -114.9252,
+        -114.9197
+      ],
+      "min": -179.9973,
+      "max": 179.9973,
+      "mean": 15.8364,
+      "std": 99.8761,
+      "unique_count": 54821,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM4:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        612.7968,
+        489.3494,
+        488.8859
+      ],
+      "min": 0.0,
+      "max": 1416.7221,
+      "mean": 395.1095,
+      "std": 171.7657,
+      "unique_count": 25764,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PA5:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        117.7268,
+        122.1487,
+        122.2147
+      ],
+      "min": -179.9947,
+      "max": 179.9973,
+      "mean": -6.9616,
+      "std": 94.9961,
+      "unique_count": 54606,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM5:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        632.5321,
+        505.7545,
+        505.5313
+      ],
+      "min": 0.0,
+      "max": 1275.9105,
+      "mean": 392.5088,
+      "std": 152.3578,
+      "unique_count": 24988,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PA6:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.8597,
+        5.4684,
+        5.463
+      ],
+      "min": -179.9947,
+      "max": 179.9863,
+      "mean": -6.4371,
+      "std": 108.8963,
+      "unique_count": 54910,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM6:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        610.1417,
+        487.3352,
+        487.627
+      ],
+      "min": 0.0,
+      "max": 1272.9807,
+      "mean": 387.1351,
+      "std": 154.5482,
+      "unique_count": 25528,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PA7:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        60.6802,
+        66.0855,
+        66.1295
+      ],
+      "min": -179.9973,
+      "max": 179.9947,
+      "mean": -15.2239,
+      "std": 101.8674,
+      "unique_count": 55637,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM7:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124611.9844,
+        128251.625,
+        128269.5938
+      ],
+      "min": 0.0,
+      "max": 145313.9375,
+      "mean": 127795.5881,
+      "std": 12691.3756,
+      "unique_count": 27538,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA8:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        34.2691,
+        -17.7621
+      ],
+      "min": -179.6968,
+      "max": 179.1513,
+      "mean": 0.2187,
+      "std": 13.1092,
+      "unique_count": 1233,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM8:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        28983.2266,
+        30918.375
+      ],
+      "min": 0.0,
+      "max": 38813.422,
+      "mean": 399.1075,
+      "std": 3357.4729,
+      "unique_count": 979,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA9:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        16.0318,
+        -34.6481
+      ],
+      "min": -179.5194,
+      "max": 179.9808,
+      "mean": 0.192,
+      "std": 12.4002,
+      "unique_count": 1147,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PM9:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        17957.3066,
+        21021.1914
+      ],
+      "min": 0.0,
+      "max": 52929.673,
+      "mean": 411.2927,
+      "std": 3661.4511,
+      "unique_count": 1031,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R2-PA10:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -120.3415,
+        -115.7877,
+        -115.7657
+      ],
+      "min": -179.9973,
+      "max": 179.9973,
+      "mean": 15.8405,
+      "std": 99.8572,
+      "unique_count": 54742,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM10:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        618.3014,
+        493.9785,
+        493.8526
+      ],
+      "min": 0.0,
+      "max": 1274.2625,
+      "mean": 389.5724,
+      "std": 152.3011,
+      "unique_count": 25309,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PA11:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -64.053,
+        -59.6695,
+        -58.6533
+      ],
+      "min": -179.9947,
+      "max": 179.966,
+      "mean": 2.5848,
+      "std": 74.3351,
+      "unique_count": 31556,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM11:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        12.7659,
+        10.7975,
+        10.397
+      ],
+      "min": 0.0,
+      "max": 594.3751,
+      "mean": 10.0566,
+      "std": 48.2021,
+      "unique_count": 4656,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PA12:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        69.3979,
+        72.4246,
+        72.1774
+      ],
+      "min": -179.9973,
+      "max": 179.9753,
+      "mean": -4.5349,
+      "std": 70.1609,
+      "unique_count": 31689,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2-PM12:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        12.8288,
+        10.8089,
+        10.7689
+      ],
+      "min": 0.0,
+      "max": 672.9292,
+      "mean": 8.3793,
+      "std": 37.7331,
+      "unique_count": 4532,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R2:F",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        59.999,
+        60.005,
+        60.001
+      ],
+      "min": 0.0,
+      "max": 89.539,
+      "mean": 59.9931,
+      "std": 0.65,
+      "unique_count": 631,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R2:DF",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.02,
+        0.0,
+        1.37
+      ],
+      "min": -3.51,
+      "max": 4.93,
+      "mean": 0.0005,
+      "std": 0.0996,
+      "unique_count": 462,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R2-PA:Z",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        6.1301,
+        7.9249,
+        7.9317
+      ],
+      "min": 0.0,
+      "max": 2291.4649,
+      "mean": 10.7815,
+      "std": 13.6061,
+      "unique_count": 75758,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 2607,
+      "inf_pct": 3.326,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R2-PA:ZH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        3.1351,
+        -3.1367,
+        -3.1364
+      ],
+      "min": -3.1416,
+      "max": 3.1416,
+      "mean": -2.1584,
+      "std": 2.0558,
+      "unique_count": 75758,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R2:S",
+      "category": "System state",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        270336
+      ],
+      "min": 0.0,
+      "max": 270336.0,
+      "mean": 731.2251,
+      "std": 14040.8084,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Digital relay Status word / bitmask (breaker open/close state, trip status). Discrete system state; discrete jumps and occasional data acquisition corruption (e.g. data4)."
+    },
+    {
+      "column_name": "R3-PA1:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        60.6648,
+        66.062,
+        66.1193
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": -15.2195,
+      "std": 101.8351,
+      "unique_count": 43037,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM1:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124187.9063,
+        127823.5305,
+        128124.4097
+      ],
+      "min": 0.0,
+      "max": 324498.2603,
+      "mean": 126857.3777,
+      "std": 16141.5073,
+      "unique_count": 2506,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA2:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -59.3126,
+        -53.9096,
+        -53.8638
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 4.7498,
+      "std": 111.0534,
+      "unique_count": 43130,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM2:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124162.833,
+        127798.4572,
+        128099.3364
+      ],
+      "min": 0.0,
+      "max": 324021.8682,
+      "mean": 127784.7262,
+      "std": 12094.6103,
+      "unique_count": 1867,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA3:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -179.3014,
+        -173.8927,
+        -173.8526
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 5.5003,
+      "std": 96.2765,
+      "unique_count": 43195,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM3:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124212.9796,
+        127848.6037,
+        127873.677
+      ],
+      "min": 0.0,
+      "max": 324899.4327,
+      "mean": 128187.9881,
+      "std": 11985.7188,
+      "unique_count": 1881,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA4:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -119.7539,
+        -115.1244,
+        -115.1072
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 15.5741,
+      "std": 99.9596,
+      "unique_count": 42918,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM4:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        610.1225,
+        487.0726,
+        487.4388
+      ],
+      "min": 0.0,
+      "max": 12000.1138,
+      "mean": 391.9406,
+      "std": 175.4621,
+      "unique_count": 4893,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PA5:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        117.6855,
+        122.126,
+        122.1832
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": -6.891,
+      "std": 95.1055,
+      "unique_count": 42844,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM5:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        628.2504,
+        502.0876,
+        500.8059
+      ],
+      "min": 0.0,
+      "max": 12000.1138,
+      "mean": 389.0138,
+      "std": 155.8589,
+      "unique_count": 4476,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PA6:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.6589,
+        5.2598,
+        5.2655
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": -6.4656,
+      "std": 108.6788,
+      "unique_count": 42883,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM6:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        606.8265,
+        484.3259,
+        484.5091
+      ],
+      "min": 0.0,
+      "max": 12000.1138,
+      "mean": 384.0374,
+      "std": 158.003,
+      "unique_count": 4593,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PA7:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        60.6877,
+        66.0907,
+        66.1422
+      ],
+      "min": -179.9947,
+      "max": 179.9832,
+      "mean": -15.2284,
+      "std": 101.8629,
+      "unique_count": 43310,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM7:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        124187.9063,
+        127823.5305,
+        128124.4097
+      ],
+      "min": 0.0,
+      "max": 144973.6471,
+      "mean": 127597.7885,
+      "std": 12671.6479,
+      "unique_count": 2237,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA8:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        34.2056,
+        -17.8247
+      ],
+      "min": -179.7025,
+      "max": 179.078,
+      "mean": 0.2192,
+      "std": 13.1084,
+      "unique_count": 1225,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM8:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        28859.3338,
+        30789.9756
+      ],
+      "min": 0.0,
+      "max": 38813.422,
+      "mean": 398.1585,
+      "std": 3349.9033,
+      "unique_count": 605,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA9:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        16.2147,
+        -34.4863
+      ],
+      "min": -179.8285,
+      "max": 179.8572,
+      "mean": 0.1877,
+      "std": 12.4246,
+      "unique_count": 1146,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PM9:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        17927.3881,
+        20961.2537
+      ],
+      "min": 0.0,
+      "max": 324473.1871,
+      "mean": 414.9372,
+      "std": 3835.2231,
+      "unique_count": 806,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R3-PA10:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -120.4873,
+        -115.9323,
+        -115.9036
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 15.6831,
+      "std": 99.8814,
+      "unique_count": 42817,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM10:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        614.8834,
+        491.101,
+        490.9179
+      ],
+      "min": 0.0,
+      "max": 1277.9247,
+      "mean": 386.3748,
+      "std": 150.7417,
+      "unique_count": 4499,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PA11:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -64.813,
+        -60.172,
+        -60.6075
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": 2.3904,
+      "std": 74.0237,
+      "unique_count": 27384,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM11:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        12.0853,
+        10.2542,
+        9.1555
+      ],
+      "min": 0.0,
+      "max": 590.1635,
+      "mean": 9.7969,
+      "std": 47.0354,
+      "unique_count": 1318,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PA12:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        70.3879,
+        73.5334,
+        74.0204
+      ],
+      "min": -179.9947,
+      "max": 179.989,
+      "mean": -4.4709,
+      "std": 70.106,
+      "unique_count": 27350,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3-PM12:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        11.9022,
+        10.071,
+        9.7048
+      ],
+      "min": 0.0,
+      "max": 12000.1138,
+      "mean": 8.1945,
+      "std": 55.7327,
+      "unique_count": 1294,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R3:F",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        59.999,
+        60.005,
+        60.007
+      ],
+      "min": 0.0,
+      "max": 89.55,
+      "mean": 59.993,
+      "std": 0.65,
+      "unique_count": 487,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R3:DF",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.02,
+        0.0,
+        1.37
+      ],
+      "min": -3.54,
+      "max": 5.12,
+      "mean": 0.0003,
+      "std": 0.1009,
+      "unique_count": 308,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R3-PA:Z",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        6.1114,
+        7.8984,
+        7.8817
+      ],
+      "min": 0.0,
+      "max": 1629.989,
+      "mean": 10.9262,
+      "std": 14.7097,
+      "unique_count": 75725,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 2633,
+      "inf_pct": 3.359,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R3-PA:ZH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        3.1405,
+        -3.1311,
+        -3.1296
+      ],
+      "min": -3.1416,
+      "max": 3.1416,
+      "mean": -2.2097,
+      "std": 1.9995,
+      "unique_count": 75719,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R3:S",
+      "category": "System state",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        2048,
+        2056
+      ],
+      "min": 0.0,
+      "max": 272384.0,
+      "mean": 759.0053,
+      "std": 14043.3727,
+      "unique_count": 5,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Digital relay Status word / bitmask (breaker open/close state, trip status). Discrete system state; discrete jumps and occasional data acquisition corruption (e.g. data4)."
+    },
+    {
+      "column_name": "R4-PA1:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        70.4509,
+        73.7454,
+        73.7855
+      ],
+      "min": -179.9973,
+      "max": 179.989,
+      "mean": -15.5851,
+      "std": 100.881,
+      "unique_count": 56525,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM1:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127723.2374,
+        130330.8575,
+        130355.9307
+      ],
+      "min": -174.3419,
+      "max": 151899.9219,
+      "mean": 131117.4536,
+      "std": 7984.8855,
+      "unique_count": 34786,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA2:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -49.5379,
+        -46.2492,
+        -46.1976
+      ],
+      "min": -179.9973,
+      "max": 179.9973,
+      "mean": 2.279,
+      "std": 111.8286,
+      "unique_count": 56505,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM2:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127096.4056,
+        129704.0257,
+        129729.099
+      ],
+      "min": -169.9846,
+      "max": 151749.6875,
+      "mean": 131355.2127,
+      "std": 4733.9014,
+      "unique_count": 34560,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA3:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -169.5325,
+        -166.2322,
+        -166.1921
+      ],
+      "min": -179.9947,
+      "max": 179.9947,
+      "mean": 7.0658,
+      "std": 97.086,
+      "unique_count": 56356,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM3:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127773.3839,
+        130381.004,
+        130681.8832
+      ],
+      "min": -178.8754,
+      "max": 151924.0625,
+      "mean": 131745.0745,
+      "std": 4777.6482,
+      "unique_count": 34581,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA4:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        65.6438,
+        71.8374,
+        71.8661
+      ],
+      "min": -179.9973,
+      "max": 179.989,
+      "mean": -13.9317,
+      "std": 99.6533,
+      "unique_count": 55375,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM4:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        604.4461,
+        481.7624,
+        481.3962
+      ],
+      "min": -142.7906,
+      "max": 1781.3243,
+      "mean": 391.3309,
+      "std": 187.0941,
+      "unique_count": 34361,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PA5:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -56.8718,
+        -50.7927,
+        -50.7812
+      ],
+      "min": -179.9973,
+      "max": 179.9918,
+      "mean": 3.446,
+      "std": 109.5618,
+      "unique_count": 55339,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM5:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        621.8416,
+        496.045,
+        496.4112
+      ],
+      "min": -165.6866,
+      "max": 1266.2057,
+      "mean": 384.3998,
+      "std": 148.8825,
+      "unique_count": 33268,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PA6:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -173.8698,
+        -167.6188,
+        -167.5902
+      ],
+      "min": -179.989,
+      "max": 179.989,
+      "mean": 6.0964,
+      "std": 95.4955,
+      "unique_count": 55441,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM6:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        599.8684,
+        477.734,
+        478.1002
+      ],
+      "min": -155.4587,
+      "max": 1262.7266,
+      "mean": 379.9527,
+      "std": 150.9299,
+      "unique_count": 34245,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PA7:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        70.4623,
+        73.7569,
+        73.797
+      ],
+      "min": -179.9973,
+      "max": 179.9973,
+      "mean": -15.5639,
+      "std": 100.8823,
+      "unique_count": 56615,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM7:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        127522.6512,
+        130130.2713,
+        130155.3446
+      ],
+      "min": -145.204,
+      "max": 151859.3281,
+      "mean": 131397.9997,
+      "std": 5536.5425,
+      "unique_count": 34711,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA8:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        44.6162,
+        -10.7086
+      ],
+      "min": -179.7197,
+      "max": 179.9643,
+      "mean": 0.2571,
+      "std": 13.15,
+      "unique_count": 1217,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM8:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        35102.578,
+        36632.0475
+      ],
+      "min": 0.0,
+      "max": 45946.3203,
+      "mean": 292.1126,
+      "std": 2621.1558,
+      "unique_count": 1112,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA9:VH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        48.3404,
+        -8.8465
+      ],
+      "min": -179.6127,
+      "max": 179.9149,
+      "mean": 0.2071,
+      "std": 12.523,
+      "unique_count": 1112,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PM9:V",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        13915.6648,
+        14392.057
+      ],
+      "min": 0.0,
+      "max": 17351.043,
+      "mean": 82.4393,
+      "std": 850.697,
+      "unique_count": 946,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase voltage phasor magnitude (Volts RMS). Essential bus electrical state variable."
+    },
+    {
+      "column_name": "R4-PA10:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        64.9505,
+        71.1213,
+        71.1442
+      ],
+      "min": -179.9973,
+      "max": 179.9973,
+      "mean": -14.1446,
+      "std": 99.6278,
+      "unique_count": 55396,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM10:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        608.4745,
+        485.0584,
+        485.2415
+      ],
+      "min": 0.0,
+      "max": 1264.7408,
+      "mean": 384.036,
+      "std": 151.747,
+      "unique_count": 34126,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PA11:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        119.3013,
+        124.2745,
+        125.2772
+      ],
+      "min": -179.9973,
+      "max": 179.9775,
+      "mean": -1.8599,
+      "std": 67.784,
+      "unique_count": 31541,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM11:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        12.2684,
+        10.2542,
+        9.3386
+      ],
+      "min": 0.0,
+      "max": 610.0388,
+      "mean": 9.8346,
+      "std": 47.5623,
+      "unique_count": 4758,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PA12:IH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        -102.061,
+        -95.4548,
+        -95.9704
+      ],
+      "min": -179.9973,
+      "max": 179.9775,
+      "mean": 5.989,
+      "std": 72.0874,
+      "unique_count": 31429,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4-PM12:I",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        11.719,
+        9.7048,
+        10.071
+      ],
+      "min": 0.0,
+      "max": 715.8279,
+      "mean": 9.0732,
+      "std": 45.9986,
+      "unique_count": 4729,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "Three-phase current phasor magnitude (Amperes RMS). Direct physical indicator of line loading and fault current."
+    },
+    {
+      "column_name": "R4:F",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        59.999,
+        60.005,
+        60.003
+      ],
+      "min": 0.0,
+      "max": 62.226,
+      "mean": 59.9927,
+      "std": 0.61,
+      "unique_count": 561,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R4:DF",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.01,
+        0.0,
+        1.36
+      ],
+      "min": -3.46,
+      "max": 3.15,
+      "mean": 0.0006,
+      "std": 0.0873,
+      "unique_count": 405,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": true,
+      "reasoning": "System electrical frequency (Hz) or ROCOF (Hz/s). Fundamental power system state variable governed by generator-load balance."
+    },
+    {
+      "column_name": "R4-PA:Z",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        6.3418,
+        8.1413,
+        8.1628
+      ],
+      "min": 0.0068,
+      "max": 10359.4885,
+      "mean": 11.3267,
+      "std": 41.9495,
+      "unique_count": 75585,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 2789,
+      "inf_pct": 3.558,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R4-PA:ZH",
+      "category": "Physical electrical measurement",
+      "dtype": "float64",
+      "example_values": [
+        0.0779,
+        0.0272,
+        0.0267
+      ],
+      "min": -3.0937,
+      "max": 3.1067,
+      "mean": 0.0166,
+      "std": 0.248,
+      "unique_count": 75572,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Calculated apparent impedance magnitude (V/I). Contains infinite values (inf) when current drops to zero during breaker trip. Raw V and I magnitudes are preferable."
+    },
+    {
+      "column_name": "R4:S",
+      "category": "System state",
+      "dtype": "float64",
+      "example_values": [
+        0.0,
+        2058.0,
+        2048.0
+      ],
+      "min": -45.9983,
+      "max": 270336.0,
+      "mean": 749.0145,
+      "std": 14041.1709,
+      "unique_count": 12,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Digital relay Status word / bitmask (breaker open/close state, trip status). Discrete system state; discrete jumps and occasional data acquisition corruption (e.g. data4)."
+    },
+    {
+      "column_name": "control_panel_log1",
+      "category": "Control/actuator measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0,
+      "std": 0.0062,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Operator control panel log / SCADA event log. Extremely sparse (almost entirely 0), represents manual/operator action rather than grid state; risk of post-event logging leakage."
+    },
+    {
+      "column_name": "control_panel_log2",
+      "category": "Control/actuator measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0,
+      "std": 0.0062,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Operator control panel log / SCADA event log. Extremely sparse (almost entirely 0), represents manual/operator action rather than grid state; risk of post-event logging leakage."
+    },
+    {
+      "column_name": "control_panel_log3",
+      "category": "Control/actuator measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0,
+      "std": 0.0051,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Operator control panel log / SCADA event log. Extremely sparse (almost entirely 0), represents manual/operator action rather than grid state; risk of post-event logging leakage."
+    },
+    {
+      "column_name": "control_panel_log4",
+      "category": "Control/actuator measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0,
+      "std": 0.0051,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Operator control panel log / SCADA event log. Extremely sparse (almost entirely 0), represents manual/operator action rather than grid state; risk of post-event logging leakage."
+    },
+    {
+      "column_name": "relay1_log",
+      "category": "Relay/protection measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0359,
+      "std": 0.1861,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Discrete relay event/trip log flag. Binary trip indicator logged post-fault. Highly correlated with breaker tripping; potential leakage for pre-fault anomaly detection."
+    },
+    {
+      "column_name": "relay2_log",
+      "category": "Relay/protection measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0264,
+      "std": 0.1604,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Discrete relay event/trip log flag. Binary trip indicator logged post-fault. Highly correlated with breaker tripping; potential leakage for pre-fault anomaly detection."
+    },
+    {
+      "column_name": "relay3_log",
+      "category": "Relay/protection measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0265,
+      "std": 0.1606,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Discrete relay event/trip log flag. Binary trip indicator logged post-fault. Highly correlated with breaker tripping; potential leakage for pre-fault anomaly detection."
+    },
+    {
+      "column_name": "relay4_log",
+      "category": "Relay/protection measurement",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0356,
+      "std": 0.1853,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Discrete relay event/trip log flag. Binary trip indicator logged post-fault. Highly correlated with breaker tripping; potential leakage for pre-fault anomaly detection."
+    },
+    {
+      "column_name": "snort_log1",
+      "category": "Network/security/logging information",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0001,
+      "std": 0.0071,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Network Intrusion Detection System (Snort IDS) signature alert. Cyber security alert metadata, not physical smart-grid process telemetry. Must not be used for unsupervised physical anomaly detection."
+    },
+    {
+      "column_name": "snort_log2",
+      "category": "Network/security/logging information",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0001,
+      "std": 0.0071,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Network Intrusion Detection System (Snort IDS) signature alert. Cyber security alert metadata, not physical smart-grid process telemetry. Must not be used for unsupervised physical anomaly detection."
+    },
+    {
+      "column_name": "snort_log3",
+      "category": "Network/security/logging information",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0001,
+      "std": 0.0095,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Network Intrusion Detection System (Snort IDS) signature alert. Cyber security alert metadata, not physical smart-grid process telemetry. Must not be used for unsupervised physical anomaly detection."
+    },
+    {
+      "column_name": "snort_log4",
+      "category": "Network/security/logging information",
+      "dtype": "int64",
+      "example_values": [
+        0,
+        1
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0001,
+      "std": 0.0087,
+      "unique_count": 2,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Network Intrusion Detection System (Snort IDS) signature alert. Cyber security alert metadata, not physical smart-grid process telemetry. Must not be used for unsupervised physical anomaly detection."
+    },
+    {
+      "column_name": "marker",
+      "category": "Event/attack label",
+      "dtype": "str",
+      "example_values": [
+        "NoEvents",
+        "Attack",
+        "Natural"
+      ],
+      "min": null,
+      "max": null,
+      "mean": null,
+      "std": null,
+      "unique_count": 3,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "inf_count": 0,
+      "inf_pct": 0.0,
+      "ml_usability": false,
+      "reasoning": "Ground-truth event/attack target label. Strictly evaluation-only; using as input would constitute direct label leakage."
+    }
+  ]
+}
